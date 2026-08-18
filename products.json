@@ -1,0 +1,242 @@
+[
+  {
+    "product_name": "실제 분석 상품 (34종 특약)",
+    "conf_n": 0.95,
+    "riders": [
+      {
+        "coverage_name": "일반상해후유장해(80%이상)(건강고지형)",
+        "subscribed_amount": "5,000만원",
+        "premium": "250",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "보험료납입면제대상(4대진단,순환계(특정,2대제외)주요치료,갑상선암수술,상해질병후유장해(50%이상))(건강고지)",
+        "subscribed_amount": "10만원",
+        "premium": "51",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "일반상해사망(건강고지형)",
+        "subscribed_amount": "5,000만원",
+        "premium": "850",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "골절진단비(치아파절포함, 연간1회한)(건강고지형)",
+        "subscribed_amount": "20만원",
+        "premium": "1,376",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "5대골절진단비(건강고지형)",
+        "subscribed_amount": "50만원",
+        "premium": "420",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "뇌혈관질환진단비(감액없음)(건강고지형)",
+        "subscribed_amount": "2,000만원",
+        "premium": "11,720",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "허혈성심질환진단비(감액없음)(건강고지형)",
+        "subscribed_amount": "2,000만원",
+        "premium": "3,960",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "심근병증(허혈성제외)진단비(감액없음)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "750",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "양성뇌종양진단비(감액없음)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "230",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "크론병 및 궤양성대장염진단비(감액없음)(건강고지형)",
+        "subscribed_amount": "500만원",
+        "premium": "100",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "특정심혈관질환(기타심장부정맥)진단비(감액없음)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "1,700",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "특정심혈관질환(기타심장부정맥제외)진단비(감액없음)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "3,680",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "중대한화상및부식치료비(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "17",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "[갱신형]독감(인플루엔자) 항바이러스제치료비(연간1회한,10일면책)(건강고지형)",
+        "subscribed_amount": "20만원",
+        "premium": "1,082",
+        "payment_period": "10년갱신"
+      },
+      {
+        "coverage_name": "뇌졸중 혈전용해치료비(1회한)(감액없음)(건강고지형)",
+        "subscribed_amount": "2,000만원",
+        "premium": "670",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "특정허혈성심질환 혈전용해치료비(1회한)(감액없음)(건강고지형)",
+        "subscribed_amount": "2,000만원",
+        "premium": "70",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "순환계질환(특정질병제외) 주요치료비_수술비(혈전제거제외)(연간1회한)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "1,240",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "순환계질환(특정질병제외) 주요치료비_혈전제거치료비(연간1회한)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "330",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "순환계질환(특정질병제외) 주요치료비_혈전용해치료비(연간1회한)(건강고지형)",
+        "subscribed_amount": "100만원",
+        "premium": "239",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "순환계질환(특정질병제외) 주요치료비_중환자실치료비(종합병원)(연간1회한)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "1,700",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "암진단비(유사암제외)(감액없음)(건강고지형)",
+        "subscribed_amount": "5,000만원",
+        "premium": "32,350",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "유사암진단비(감액없음)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "4,520",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "조혈모세포이식수술비(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "60",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "5대장기이식수술비(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "46",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "각막이식수술비(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "6",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "보험료납입지원보장(유사암진단)(건강고지형)",
+        "subscribed_amount": "5만3,455원",
+        "premium": "1,619",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "항암약물치료비(감액없음)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "3,280",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "항암방사선치료비(감액없음)(건강고지형)",
+        "subscribed_amount": "1,000만원",
+        "premium": "2,190",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "항암중입자방사선치료비(건강고지형)",
+        "subscribed_amount": "5,000만원",
+        "premium": "1,000",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "[갱신형]항암호르몬약물허가치료비(기타피부암 및 갑상선암이외의 암)Ⅱ(건강고지형)(갱신형_10년)",
+        "subscribed_amount": "200만원",
+        "premium": "14",
+        "payment_period": "10년갱신"
+      },
+      {
+        "coverage_name": "[갱신형]항암세기조절방사선치료비Ⅱ(건강고지형)(갱신형_10년)",
+        "subscribed_amount": "1,000만원",
+        "premium": "270",
+        "payment_period": "10년갱신"
+      },
+      {
+        "coverage_name": "[갱신형]항암양성자방사선치료비Ⅱ(건강고지형)(갱신형_10년)",
+        "subscribed_amount": "1,000만원",
+        "premium": "60",
+        "payment_period": "10년갱신"
+      },
+      {
+        "coverage_name": "[갱신형]갑상선암호르몬약물허가치료비Ⅱ(건강고지형)(갱신형_10년)",
+        "subscribed_amount": "100만원",
+        "premium": "136",
+        "payment_period": "10년갱신"
+      },
+      {
+        "coverage_name": "[갱신형]표적항암약물허가치료비Ⅱ(건강고지형)(갱신형_10년)",
+        "subscribed_amount": "7,000만원",
+        "premium": "2,800",
+        "payment_period": "10년갱신"
+      }
+    ]
+  },
+  {
+    "product_name": "비교 상품 B (고액보장 / 고위험 면책)",
+    "conf_n": 0.88,
+    "riders": [
+      {
+        "coverage_name": "암진단비(전이암제외, 이륜차면책)",
+        "subscribed_amount": "1억원",
+        "premium": "45,000",
+        "payment_period": "20년납"
+      },
+      {
+        "coverage_name": "[갱신형]항암치료비",
+        "subscribed_amount": "2,000만원",
+        "premium": "3,000",
+        "payment_period": "3년갱신"
+      }
+    ]
+  },
+  {
+    "product_name": "비교 상품 C (알뜰 실속형)",
+    "conf_n": 0.90,
+    "riders": [
+      {
+        "coverage_name": "암진단비(소액암포함)",
+        "subscribed_amount": "2,000만원",
+        "premium": "12,000",
+        "payment_period": "20년납"
+      }
+    ]
+  }
+]
