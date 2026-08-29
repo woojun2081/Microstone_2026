@@ -12,7 +12,7 @@ WEIGHTS = {
     "risk": 0.40
 }
 
-
+#돈 단위 계산 로직
 def parse_korean_currency(amount_str: str) -> int:
     """'5,000만원', '1억원', '10만원' 등의 문자열을 정수(원)로 변환"""
     if not amount_str:
