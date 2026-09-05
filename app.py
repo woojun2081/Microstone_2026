@@ -6,7 +6,7 @@ import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 
-#아래 내용을 135번줄에서 떼옴(충돌떄문에 위로 끌어당김)
+#2.레이아웃 가장 첫 코드 내용을 떼옴(충돌떄문에 위로 끌어당김)
 st.set_page_config(page_title="AI 지능형 보험 추천 시스템", layout="wide", page_icon="🛡️")
 
 # -------------------------------------------------------------
