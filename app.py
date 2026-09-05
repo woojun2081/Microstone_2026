@@ -5,7 +5,7 @@ import streamlit as st
 import plotly.graph_objects as go
 from pipeline import run_evaluation_pipeline
 
-# 최상단 배치
+# 충돌 제거를 위해 2. 레이아웃 위치에서 최상위 배치함
 st.set_page_config(page_title="AI 지능형 보험 추천 시스템", layout="wide", page_icon="🛡️")
 
 # -------------------------------------------------------------
@@ -76,8 +76,12 @@ st.caption("공공데이터 통계 기반 자동 가이드라인 + 법률 약관
 
 st.sidebar.header("1️⃣ 기본 정보 설정")
 gender = st.sidebar.radio("성별", ["남성", "여성", "미지정"], horizontal=True)
+
+#24는 기본 세팅 값
 age = st.sidebar.slider("나이", 0, 90, 24)
 renewal_pref = st.sidebar.radio("갱신 유무 선호", ["비갱신", "갱신", "미지정"], horizontal=True)
+
+#67은 기본 세팅값
 royalty = st.sidebar.slider("로열티 (브랜드 선호도)", 0, 100, 67)
 
 baseline = get_public_baseline(gender, age)
@@ -89,6 +93,8 @@ st.sidebar.info(f"💡 {age}세 {gender} 공공데이터 기준선이 자동 적
 def scale_to_10(ratio_val):
     return int(max(1, min(round(float(ratio_val) * 10), 10)))
 
+
+#우선순위라는 말보다 다른말고 바꾸는게 나을거같음
 cancer_val = st.sidebar.slider("암 질환 보장 우선순위", 1, 10, scale_to_10(baseline["cancer"]), 1)
 vascular_val = st.sidebar.slider("뇌·심장 질환 보장 우선순위", 1, 10, scale_to_10(baseline["vascular"]), 1)
 injury_val = st.sidebar.slider("상해 및 생활 위험 우선순위", 1, 10, scale_to_10(baseline["injury"]), 1)

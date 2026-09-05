@@ -4,9 +4,10 @@ import math
 import ollama
 import streamlit as st
 
+#올라마 버전을 올리면 "여기있는 버전"을 바꿔야댐
 OLLAMA_MODEL_NAME = "qwen2.5:7b"
 
-# --- 1. 통화 파싱 및 효용 함수 ---
+# --- 1. 단위 맞춰주는 코드 ---
 def parse_currency(val) -> int:
     if not val: return 0
     if isinstance(val, (int, float)): return int(val)
@@ -121,6 +122,8 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
     sum_w = sum(raw_w) if sum(raw_w) > 0 else 1.0
     w_cancer, w_vasc, w_inj, w_inp = [v / sum_w for v in raw_w]
 
+
+# 리스크 부분에 대해 더 민감하거나 세밀하게 조절하고 싶으면 아래 알고리즘 수정 필요
     risk_weight = 0.20 + (claim_rate_val / 100.0) * 0.40
     base_weight = 1.0 - risk_weight
 
