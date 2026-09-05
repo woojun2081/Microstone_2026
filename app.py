@@ -6,6 +6,8 @@ import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 
+st.set_page_config(page_title="AI 지능형 보험 추천 시스템", layout="wide", page_icon="🛡️")
+
 # -------------------------------------------------------------
 # 1. 공공데이터 및 파일 경로 설정
 # -------------------------------------------------------------
@@ -132,7 +134,6 @@ def extract_valid_risk_intents(user_notes: str, selected_tags: list) -> list:
 # -------------------------------------------------------------
 # 2. UI 레이아웃 설정
 # -------------------------------------------------------------
-st.set_page_config(page_title="AI 지능형 보험 추천 시스템", layout="wide", page_icon="🛡️")
 st.title("🛡️ AHP-AgenaRisk-RAG 지능형 보험 추천 엔진")
 st.caption("공공데이터 통계 기반 자동 가이드라인 + 법률 약관 독소조항 팩트체크 추천")
 
