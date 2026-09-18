@@ -92,7 +92,7 @@ def get_public_w_base(gender: str, age: int):
 # -------------------------------------------------------------
 # 2. UI 레이아웃
 # -------------------------------------------------------------
-st.title("🛡️ AHP-AgenaRisk-RAG 지능형 보험 추천 엔진")
+st.title("🛡️ AHP-AgenaRisk-RAG를 활용한 사용자 지원형 보험 추천 시스템")
 st.caption("공공데이터 기준선(w_base) + 슬라이더 쌍대비교(w_user) + 편차보정(w_final) + 약관 독소조항 팩트체크")
 
 st.sidebar.header("1️⃣ 기본 정보 설정")

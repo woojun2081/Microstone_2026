@@ -17,7 +17,7 @@ def calculate_ahp_weights(matrix: np.ndarray, criteria: list) -> dict:
 
 def apply_delta_correction(w_base: dict, w_user: dict, tau: float = 0.3):
     """
-    3단계 편차 보정 수식 (이미지 공식 그대로 구현):
+    3단계 편차 보정 수식
     Delta_i = w_user_i - w_base_i
     D = sum(|Delta_i|)
     alpha = min(1, tau / D)
@@ -36,7 +36,7 @@ def apply_delta_correction(w_base: dict, w_user: dict, tau: float = 0.3):
         
     return w_final, deltas, alpha, D
 
-# --- 2. 통화 파싱 및 효용 함수 ---
+# --- 2. 통화 파싱 및 효용 함수(과도하게 큰 금액에 대한 보장 금액을 로그함수를 통해 점수 상승폭을 억제)---
 def parse_currency(val) -> int:
     if not val: return 0
     if isinstance(val, (int, float)): return int(val)
@@ -138,16 +138,17 @@ def extract_toxic_clauses_with_llm(user_input: str, clauses_tuple: tuple) -> lis
     except Exception:
         return []
 
-# --- 5. 통합 평가 파이프라인 (5개 영역 반영) ---
+# --- 5. 통합 평가 파이프라인 (5개 영역 반영) => 아제나리스크와 베이지안 추론 이용 ---
 def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: str, selected_tags: list):
     w_final = user_prefs["w_final"]
     claim_rate_val = user_prefs["claim_rate_val"]
     renewal_pref = user_prefs["renewal_pref"]
     D = user_prefs.get("D", 0.0)
 
-    # 편차 합계(D) 기반 AgenaRisk 민감도 증폭
+    # 증거에 따른 위험 민감도 동적 갱신
     sensitivity_multiplier = 1.0 + (D * 0.10)
 
+    # 사전 위험 가중치 (목표 지급률 + 편차 증거 반영)
     risk_weight = (0.20 + (claim_rate_val / 100.0) * 0.40) * min(sensitivity_multiplier, 1.3)
     risk_weight = min(risk_weight, 0.70)
     base_weight = 1.0 - risk_weight
@@ -218,7 +219,7 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         if user_notes.strip() and raw_clause_texts:
             llm_toxic_details = extract_toxic_clauses_with_llm(user_notes, tuple(raw_clause_texts[:35]))
 
-        # 5대 기준 w_final 효용 합산 (단위: 원)
+        # 5대 기준 w_final 효용 합산 (단위: 원) => Weighted Scoring 적용
         amt_n = (
             w_final["암"] * calc_coverage_utility(cancer_amt, 50_000_000) +
             w_final["뇌혈관"] * calc_coverage_utility(brain_amt, 30_000_000) +
@@ -232,6 +233,7 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         if total_prem > 80_000:
             price_penalty = min(((total_prem - 80_000) / 100_000) * 0.08, 0.10)
 
+        # 최상위 평가 기준 간의 가중 합산
         base_score = (w_amt_dyn * amt_n) + (w_breadth_dyn * breadth_n) + (w_conf_dyn * conf_n) - price_penalty
 
         llm_penalty = len(llm_toxic_details) * 0.20 * sensitivity_multiplier
@@ -244,6 +246,8 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
 
         raw_s1 = base_score / base_weight
         raw_s2 = base_score - (risk_weight * risk_naive_n)
+
+        # 최종 점수 도출
         raw_s3 = base_score - (risk_weight * risk_verified_n)
 
         s1 = max(0.0, raw_s1)
