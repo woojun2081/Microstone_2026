@@ -103,11 +103,7 @@ renewal_pref = st.sidebar.radio(
 
 st.sidebar.markdown("---")
 st.sidebar.header("2️⃣ 세부 보장 집중도 (AHP)")
-st.sidebar.info(
-    f"💡 **{age}세 {gender}** 공공 통계 기준선이 기본 적용되었습니다.\n\n"
-    f"• 진료비 비중: 암 {baseline['c_pct']}%, 뇌·심장 {baseline['v_pct']}%\n"
-    f"• 슬라이더를 움직여 개인 편차(가족력/생활위험)를 반영하세요."
-)
+st.sidebar.caption(f"💡 {age}세 {gender} 통계 기준선이 기본값으로 자동 배치되었습니다. 사용자가 원하는 값으로 슬라이딩 해주세요.")
 
 cancer_val = st.sidebar.slider("암 질환 보장 집중도", 1, 10, baseline["cancer"], 1, key=f"c_{gender}_{age}")
 vascular_val = st.sidebar.slider("뇌·심장 질환 보장 집중도", 1, 10, baseline["vascular"], 1, key=f"v_{gender}_{age}")
@@ -123,7 +119,15 @@ deltas = {
     "inpatient": inpatient_val - baseline["inpatient"]
 }
 
-active_deltas = [f"{k.upper()} ({v:+d})" for k, v in deltas.items() if v != 0]
+# 슬라이더 명칭과 일치하는 한글 라벨 맵
+KOREAN_NAMES = {
+    "cancer": "암 질환 보장 집중도",
+    "vascular": "뇌·심장 질환 보장 집중도",
+    "injury": "상해 및 생활 위험 집중도",
+    "inpatient": "입원/수술 보장 집중도"
+}
+
+active_deltas = [f"{KOREAN_NAMES.get(k, k.upper())} ({v:+d})" for k, v in deltas.items() if v != 0]
 if active_deltas:
     st.sidebar.caption(f"🎯 **통계 대비 개인 보정값:** {', '.join(active_deltas)}")
 else:
