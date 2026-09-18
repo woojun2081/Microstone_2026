@@ -115,7 +115,6 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
     inpatient_val = user_prefs["inpatient_val"]
     deltas = user_prefs.get("deltas", {})
     claim_rate_val = user_prefs["claim_rate_val"]
-    royalty = user_prefs["royalty"]
     renewal_pref = user_prefs["renewal_pref"]
 
     # 1. AHP 가중치 정규화
@@ -144,9 +143,7 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
     for p in raw_products:
         p_name = p.get("product_name", "보험 상품")
         conf_n = min(p.get("conf_n", 0.90), 1.0)
-        brand_bonus = (royalty / 100.0) * 0.02
         riders = p.get("riders", [])
-
         total_prem = 0
         cancer_amt, vasc_amt, inj_amt, treat_cnt = 0, 0, 0, 0
         renewable_cnt = 0
@@ -203,7 +200,7 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         if total_prem > 80_000:
             price_penalty = min(((total_prem - 80_000) / 100_000) * 0.08, 0.10)
 
-        base_score = (w_amt_dyn * amt_n) + (w_breadth_dyn * breadth_n) + (w_conf_dyn * conf_n) + brand_bonus - price_penalty
+        base_score = (w_amt_dyn * amt_n) + (w_breadth_dyn * breadth_n) + (w_conf_dyn * conf_n) - price_penalty
 
         # 편차에 따른 개별 페널티 스케일링
         llm_penalty = len(llm_toxic_details) * 0.20 * sensitivity_multiplier

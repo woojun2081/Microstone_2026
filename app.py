@@ -100,7 +100,6 @@ renewal_pref = st.sidebar.radio(
     index=0 if baseline["recommended_renewal"] == "비갱신" else 1,
     horizontal=True
 )
-royalty = st.sidebar.slider("로열티 (브랜드 선호도)", 0, 100, 67)
 
 st.sidebar.markdown("---")
 st.sidebar.header("2️⃣ 세부 보장 집중도 (AHP)")
@@ -158,7 +157,6 @@ user_prefs = {
     "baseline": baseline,
     "deltas": deltas,
     "claim_rate_val": claim_rate_val,
-    "royalty": royalty,
     "renewal_pref": renewal_pref
 }
 
