@@ -1,12 +1,42 @@
 import json
 import re
 import math
+import numpy as np
 import ollama
 import streamlit as st
 
 OLLAMA_MODEL_NAME = "qwen2.5:7b"
 
-# --- 1. 통화 파싱 및 효용 함수 ---
+# --- 1. AHP 쌍대비교 및 편차 보정 알고리즘 ---
+def calculate_ahp_weights(matrix: np.ndarray, criteria: list) -> dict:
+    """AHP 쌍대비교 행렬의 기하평균법 기반 가중치(w_user) 산출"""
+    n = len(criteria)
+    geo_means = np.prod(matrix, axis=1) ** (1.0 / n)
+    weights = geo_means / np.sum(geo_means)
+    return {criteria[i]: round(float(weights[i]), 4) for i in range(n)}
+
+def apply_delta_correction(w_base: dict, w_user: dict, tau: float = 0.3):
+    """
+    3단계 편차 보정 수식 (이미지 공식 그대로 구현):
+    Delta_i = w_user_i - w_base_i
+    D = sum(|Delta_i|)
+    alpha = min(1, tau / D)
+    w_final_i = w_base_i + alpha * Delta_i
+    """
+    keys = list(w_base.keys())
+    deltas = {k: w_user[k] - w_base[k] for k in keys}
+    D = sum(abs(v) for v in deltas.values())
+    
+    alpha = min(1.0, tau / D) if D > 0 else 1.0
+    w_final = {k: round(w_base[k] + alpha * deltas[k], 4) for k in keys}
+    
+    total_w = sum(w_final.values())
+    if total_w > 0:
+        w_final = {k: round(v / total_w, 4) for k, v in w_final.items()}
+        
+    return w_final, deltas, alpha, D
+
+# --- 2. 통화 파싱 및 효용 함수 ---
 def parse_currency(val) -> int:
     if not val: return 0
     if isinstance(val, (int, float)): return int(val)
@@ -23,7 +53,8 @@ def parse_currency(val) -> int:
         if digits: total += int(digits[0]) * 10_000
         clean_str = parts[1] if len(parts) > 1 else ""
     digits = re.findall(r'\d+', clean_str)
-    if digits: total += int(digits[0])
+    if digits and ("만" not in str(val) and "억" not in str(val)):
+        total += int(digits[0])
     return total
 
 def calc_coverage_utility(amt, baseline=50_000_000):
@@ -31,7 +62,7 @@ def calc_coverage_utility(amt, baseline=50_000_000):
     if amt <= baseline: return amt / baseline
     return min(1.0 + 0.25 * math.log10(amt / baseline + 1), 1.25)
 
-# --- 2. 정규식 부정어 판별 엔진 ---
+# --- 3. 정규식 부정어 판별 엔진 ---
 def extract_valid_risk_intents(user_notes: str, selected_tags: list) -> list:
     extracted = set()
     tag_mapping = {
@@ -49,7 +80,7 @@ def extract_valid_risk_intents(user_notes: str, selected_tags: list) -> list:
             "이륜차": ["이륜차", "오토바이", "바이크", "스쿠터", "원동기"],
             "전이암": ["전이암", "재발암", "유사암", "소액암"],
             "뇌혈관": ["뇌혈관", "뇌졸중", "뇌출혈", "뇌경색"],
-            "심혈관": ["허혈성", "심근경색", "부정맥", "협심증"],
+            "심혈관": ["허혈성", "심근경색", "부정맥", "협심증", "심장"],
             "감액": ["감액", "면책기간", "대기기간"]
         }
         NEGATION_PATTERN = r"(안함|안 함|않음|않아|안탐|안 타|비운전|해당없음|없음|상관없음)"
@@ -66,7 +97,7 @@ def extract_valid_risk_intents(user_notes: str, selected_tags: list) -> list:
                         break
     return list(extracted)
 
-# --- 3. Ollama LLM 독소조항 분석 엔진 ---
+# --- 4. Ollama LLM 독소조항 분석 엔진 ---
 @st.cache_data(show_spinner="LLM이 특약 약관의 독소조항을 정밀 분석 중입니다...")
 def extract_toxic_clauses_with_llm(user_input: str, clauses_tuple: tuple) -> list:
     if not user_input.strip() or not clauses_tuple:
@@ -107,32 +138,23 @@ def extract_toxic_clauses_with_llm(user_input: str, clauses_tuple: tuple) -> lis
     except Exception:
         return []
 
-# --- 4. 통합 평가 파이프라인 (메인 진입점) ---
+# --- 5. 통합 평가 파이프라인 (5개 영역 반영) ---
 def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: str, selected_tags: list):
-    cancer_val = user_prefs["cancer_val"]
-    vascular_val = user_prefs["vascular_val"]
-    injury_val = user_prefs["injury_val"]
-    inpatient_val = user_prefs["inpatient_val"]
-    deltas = user_prefs.get("deltas", {})
+    w_final = user_prefs["w_final"]
     claim_rate_val = user_prefs["claim_rate_val"]
     renewal_pref = user_prefs["renewal_pref"]
+    D = user_prefs.get("D", 0.0)
 
-    # 1. AHP 가중치 정규화
-    raw_w = [cancer_val, vascular_val, injury_val, inpatient_val]
-    sum_w = sum(raw_w) if sum(raw_w) > 0 else 1.0
-    w_cancer, w_vasc, w_inj, w_inp = [v / sum_w for v in raw_w]
-
-    # AgenaRisk 연동: 사용자의 상향 편차(Delta > 0)에 비례한 위험 민감도 증폭 계수
-    pos_deltas_sum = sum(max(0, v) for v in deltas.values())
-    sensitivity_multiplier = 1.0 + (pos_deltas_sum * 0.05)  # 상향 편차가 클수록 리스크 페널티 강화
+    # 편차 합계(D) 기반 AgenaRisk 민감도 증폭
+    sensitivity_multiplier = 1.0 + (D * 0.10)
 
     risk_weight = (0.20 + (claim_rate_val / 100.0) * 0.40) * min(sensitivity_multiplier, 1.3)
     risk_weight = min(risk_weight, 0.70)
     base_weight = 1.0 - risk_weight
 
-    w_amt_dyn = base_weight * (0.30 / 0.60)
-    w_breadth_dyn = base_weight * (0.20 / 0.60)
-    w_conf_dyn = base_weight * (0.10 / 0.60)
+    w_amt_dyn = base_weight * 0.55
+    w_breadth_dyn = base_weight * 0.30
+    w_conf_dyn = base_weight * 0.15
 
     validated_risk_keys = extract_valid_risk_intents(user_notes, selected_tags)
     evaluated_products = []
@@ -145,7 +167,8 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         conf_n = min(p.get("conf_n", 0.90), 1.0)
         riders = p.get("riders", [])
         total_prem = 0
-        cancer_amt, vasc_amt, inj_amt, treat_cnt = 0, 0, 0, 0
+        cancer_amt, brain_amt, heart_amt, inj_amt, inp_amt = 0, 0, 0, 0, 0
+        treat_cnt = 0
         renewable_cnt = 0
         inherent_toxic_cnt = 0
         matched_user_risks = []
@@ -173,28 +196,37 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
                 if rk in full_text:
                     matched_user_risks.append(f"약관 내 '{rk}' 관련 면책/제약 조건 포함 ({c_name})")
 
+            # 5대 기준 특약 가입금액 파싱
             if "암진단비" in c_name:
                 cancer_amt += amt
                 coverage_highlights.append(f"암진단비: {amt//10000:,}만원")
-            elif any(k in c_name for k in ["뇌혈관", "허혈성", "심혈관"]):
-                vasc_amt += amt
+            elif any(k in c_name for k in ["뇌혈관", "뇌졸중", "뇌출혈", "뇌경색"]):
+                brain_amt += amt
+                coverage_highlights.append(f"{c_name.split('(')[0]}: {amt//10000:,}만원")
+            elif any(k in c_name for k in ["허혈성", "심혈관", "심근경색", "부정맥", "심장"]):
+                heart_amt += amt
                 coverage_highlights.append(f"{c_name.split('(')[0]}: {amt//10000:,}만원")
             elif any(k in c_name for k in ["상해", "골절"]):
                 inj_amt += amt
+            elif any(k in c_name for k in ["입원", "수술", "일당", "간병"]):
+                inp_amt += amt
+
             if any(k in c_name for k in ["치료비", "수술비", "방사선", "약물", "표적", "중입자"]):
                 treat_cnt += 1
 
-        # LLM 독소조항 감지
         llm_toxic_details = []
         if user_notes.strip() and raw_clause_texts:
             llm_toxic_details = extract_toxic_clauses_with_llm(user_notes, tuple(raw_clause_texts[:35]))
 
+        # 5대 기준 w_final 효용 합산 (단위: 원)
         amt_n = (
-            w_cancer * calc_coverage_utility(cancer_amt, 50_000_000) +
-            w_vasc * calc_coverage_utility(vasc_amt, 30_000_000) +
-            w_inj * calc_coverage_utility(inj_amt, 50_000_000)
+            w_final["암"] * calc_coverage_utility(cancer_amt, 50_000_000) +
+            w_final["뇌혈관"] * calc_coverage_utility(brain_amt, 30_000_000) +
+            w_final["심장"] * calc_coverage_utility(heart_amt, 30_000_000) +
+            w_final["상해"] * calc_coverage_utility(inj_amt, 50_000_000) +
+            w_final["입원/수술"] * calc_coverage_utility(inp_amt, 20_000_000)
         )
-        breadth_n = w_inp * min(treat_cnt / 10.0, 1.0)
+        breadth_n = min(treat_cnt / 10.0, 1.0)
 
         price_penalty = 0.0
         if total_prem > 80_000:
@@ -202,7 +234,6 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
 
         base_score = (w_amt_dyn * amt_n) + (w_breadth_dyn * breadth_n) + (w_conf_dyn * conf_n) - price_penalty
 
-        # 편차에 따른 개별 페널티 스케일링
         llm_penalty = len(llm_toxic_details) * 0.20 * sensitivity_multiplier
         user_penalty = (len(matched_user_risks) * 0.20 * sensitivity_multiplier) + llm_penalty
         if renewal_pref == "비갱신" and renewable_cnt > 0:
