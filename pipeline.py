@@ -4,10 +4,9 @@ import math
 import ollama
 import streamlit as st
 
-#올라마 버전을 올리면 "여기있는 버전"을 바꿔야댐
 OLLAMA_MODEL_NAME = "qwen2.5:7b"
 
-# --- 1. 단위 맞춰주는 코드 ---
+# --- 1. 통화 파싱 및 효용 함수 ---
 def parse_currency(val) -> int:
     if not val: return 0
     if isinstance(val, (int, float)): return int(val)
@@ -114,17 +113,22 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
     vascular_val = user_prefs["vascular_val"]
     injury_val = user_prefs["injury_val"]
     inpatient_val = user_prefs["inpatient_val"]
+    deltas = user_prefs.get("deltas", {})
     claim_rate_val = user_prefs["claim_rate_val"]
     royalty = user_prefs["royalty"]
     renewal_pref = user_prefs["renewal_pref"]
 
+    # 1. AHP 가중치 정규화
     raw_w = [cancer_val, vascular_val, injury_val, inpatient_val]
     sum_w = sum(raw_w) if sum(raw_w) > 0 else 1.0
     w_cancer, w_vasc, w_inj, w_inp = [v / sum_w for v in raw_w]
 
+    # AgenaRisk 연동: 사용자의 상향 편차(Delta > 0)에 비례한 위험 민감도 증폭 계수
+    pos_deltas_sum = sum(max(0, v) for v in deltas.values())
+    sensitivity_multiplier = 1.0 + (pos_deltas_sum * 0.05)  # 상향 편차가 클수록 리스크 페널티 강화
 
-# 리스크 부분에 대해 더 민감하거나 세밀하게 조절하고 싶으면 아래 알고리즘 수정 필요
-    risk_weight = 0.20 + (claim_rate_val / 100.0) * 0.40
+    risk_weight = (0.20 + (claim_rate_val / 100.0) * 0.40) * min(sensitivity_multiplier, 1.3)
+    risk_weight = min(risk_weight, 0.70)
     base_weight = 1.0 - risk_weight
 
     w_amt_dyn = base_weight * (0.30 / 0.60)
@@ -201,8 +205,9 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
 
         base_score = (w_amt_dyn * amt_n) + (w_breadth_dyn * breadth_n) + (w_conf_dyn * conf_n) + brand_bonus - price_penalty
 
-        llm_penalty = len(llm_toxic_details) * 0.20
-        user_penalty = (len(matched_user_risks) * 0.20) + llm_penalty
+        # 편차에 따른 개별 페널티 스케일링
+        llm_penalty = len(llm_toxic_details) * 0.20 * sensitivity_multiplier
+        user_penalty = (len(matched_user_risks) * 0.20 * sensitivity_multiplier) + llm_penalty
         if renewal_pref == "비갱신" and renewable_cnt > 0:
             user_penalty += (renewable_cnt / max(len(riders), 1)) * 0.25
 

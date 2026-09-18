@@ -5,33 +5,26 @@ import streamlit as st
 import plotly.graph_objects as go
 from pipeline import run_evaluation_pipeline
 
-# 충돌 제거를 위해 2. 레이아웃 위치에서 최상위 배치함
 st.set_page_config(page_title="AI 지능형 보험 추천 시스템", layout="wide", page_icon="🛡️")
 
 # -------------------------------------------------------------
-# 1. 데이터 로드 및 기준선 산출
+# 1. 공공데이터 로드 및 기준선 산출
 # -------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 stat_path = os.path.join(BASE_DIR, "데이터 2차 정제 결과.csv")
-cat_path = os.path.join(BASE_DIR, "데이터 2차 정제 결과_대분류.csv")
 products_path = os.path.join(BASE_DIR, "products.json")
 
 @st.cache_data
 def load_public_data():
     try:
-        df_stat = pd.read_csv(stat_path, encoding="utf-8")
+        df = pd.read_csv(stat_path, encoding="utf-8")
     except:
-        df_stat = pd.read_csv(stat_path, encoding="cp949")
-    try:
-        df_cat = pd.read_csv(cat_path, encoding="utf-8")
-    except:
-        df_cat = pd.read_csv(cat_path, encoding="cp949")
+        df = pd.read_csv(stat_path, encoding="cp949")
+    
+    df["총진료부담액"] = df["환자수"] * df["1인당_평균진료금"]
+    return df
 
-    merged = pd.merge(df_stat, df_cat, on=["국민관심진료행위코드", "국민관심진료행위명"], how="left")
-    merged["총진료부담액"] = merged["환자수"] * merged["1인당_평균진료금"]
-    return merged
-
-df_merged = load_public_data()
+df_stat = load_public_data()
 
 def get_age_group(age: int) -> str:
     if age < 5: return "1_4세"
@@ -42,64 +35,100 @@ def get_age_group(age: int) -> str:
 
 def get_public_baseline(gender: str, age: int):
     age_str = get_age_group(age)
-    if gender in ["남성", "여성"]:
-        g_code = "남" if gender == "남성" else "여"
-        subset = df_merged[(df_merged["성별구분"] == g_code) & (df_merged["5세연령대"] == age_str)]
+    g_code = "남" if gender == "남성" else ("여" if gender == "여성" else None)
+    
+    if g_code:
+        subset = df_stat[(df_stat["성별구분"] == g_code) & (df_stat["5세연령대"] == age_str)]
     else:
-        subset = df_merged[df_merged["5세연령대"] == age_str]
-
+        subset = df_stat[df_stat["5세연령대"] == age_str]
+        
     if subset.empty:
-        return {"cancer": 0.25, "vascular": 0.25, "injury": 0.25, "inpatient": 0.25}
+        return {
+            "cancer": 5, "vascular": 5, "injury": 5, "inpatient": 5,
+            "recommended_renewal": "비갱신", "c_pct": 5.0, "v_pct": 10.0
+        }
 
-    cat_totals = subset.groupby("대분류")["총진료부담액"].sum()
-    cancer = cat_totals.get("암", 0)
-    vascular = cat_totals.get("순환계 질환", 0) + cat_totals.get("신경계 질환", 0)
-    injury = cat_totals.get("상해", 0)
-    disease = cat_totals.get("질병", 0)
-    total = max(cancer + vascular + injury + disease, 1)
+    tot = subset["총진료부담액"].sum()
+    
+    # 96개 세부 행위 키워드 기반 보장군 매핑
+    c_mask = subset["국민관심진료행위명"].str.contains("암|종양|위절제|대장절제|식도종양|방사선치료|조혈모세포", na=False)
+    v_mask = subset["국민관심진료행위명"].str.contains("관상동맥|대동맥|심장|부정맥|혈관|뇌|신경차단|신경파괴", na=False)
+    i_mask = subset["국민관심진료행위명"].str.contains("화상|창상봉합|십자인대|반월판|반월상|인공관절|회전근개|절골술|물리치료|재활치료", na=False)
+    inp_mask = subset["의료 서비스"].isin(["입원", "수술"])
 
-    service_totals = subset.groupby("의료 서비스")["총진료부담액"].sum()
-    inpatient_ratio = (service_totals.get("입원", 0) + service_totals.get("수술", 0)) / max(service_totals.sum(), 1)
+    c_ratio = subset[c_mask]["총진료부담액"].sum() / tot
+    v_ratio = subset[v_mask]["총진료부담액"].sum() / tot
+    i_ratio = subset[i_mask]["총진료부담액"].sum() / tot
+    inp_ratio = subset[inp_mask]["총진료부담액"].sum() / tot
+
+    # 전체 데이터 Min-Max 기반 1~10 척도 정규화
+    def scale_val(val, min_v, max_v):
+        norm = (val - min_v) / (max_v - min_v) if max_v > min_v else 0.5
+        return int(max(1, min(round(1 + norm * 9), 10)))
+
+    rec_cancer = scale_val(c_ratio, 0.003, 0.103)
+    rec_vasc = scale_val(v_ratio, 0.020, 0.172)
+    rec_inj = scale_val(i_ratio, 0.018, 0.170)
+    rec_inpatient = scale_val(inp_ratio, 0.020, 0.350)
+    rec_renewal = "비갱신" if age < 50 else "갱신"
 
     return {
-        "cancer": round(cancer / total, 3),
-        "vascular": round(vascular / total, 3),
-        "injury": round(injury / total, 3),
-        "inpatient": round(inpatient_ratio, 3)
+        "cancer": rec_cancer,
+        "vascular": rec_vasc,
+        "injury": rec_inj,
+        "inpatient": rec_inpatient,
+        "recommended_renewal": rec_renewal,
+        "c_pct": round(c_ratio * 100, 1),
+        "v_pct": round(v_ratio * 100, 1)
     }
 
 # -------------------------------------------------------------
-# 2. UI 레이아웃
+# 2. UI 레이아웃 및 편차(Delta) 산출
 # -------------------------------------------------------------
 st.title("🛡️ AHP-AgenaRisk-RAG 지능형 보험 추천 엔진")
-st.caption("공공데이터 통계 기반 자동 가이드라인 + 법률 약관 독소조항 팩트체크 추천")
+st.caption("공공데이터 통계 기준선 + 개인 위험 편차(Delta) + 약관 독소조항 팩트체크 추천")
 
 st.sidebar.header("1️⃣ 기본 정보 설정")
 gender = st.sidebar.radio("성별", ["남성", "여성", "미지정"], horizontal=True)
-
-#24는 기본 세팅 값
 age = st.sidebar.slider("나이", 0, 90, 24)
-renewal_pref = st.sidebar.radio("갱신 유무 선호", ["비갱신", "갱신", "미지정"], horizontal=True)
-
-#67은 기본 세팅값
-royalty = st.sidebar.slider("로열티 (브랜드 선호도)", 0, 100, 67)
 
 baseline = get_public_baseline(gender, age)
 
+renewal_pref = st.sidebar.radio(
+    f"갱신 유무 선호 (통계 권장: {baseline['recommended_renewal']})",
+    ["비갱신", "갱신", "미지정"],
+    index=0 if baseline["recommended_renewal"] == "비갱신" else 1,
+    horizontal=True
+)
+royalty = st.sidebar.slider("로열티 (브랜드 선호도)", 0, 100, 67)
+
 st.sidebar.markdown("---")
-st.sidebar.header("2️⃣ 세부 보장 선호도 (AHP)")
-st.sidebar.info(f"💡 {age}세 {gender} 공공데이터 기준선이 자동 적용되었습니다.")
+st.sidebar.header("2️⃣ 세부 보장 집중도 (AHP)")
+st.sidebar.info(
+    f"💡 **{age}세 {gender}** 공공 통계 기준선이 기본 적용되었습니다.\n\n"
+    f"• 진료비 비중: 암 {baseline['c_pct']}%, 뇌·심장 {baseline['v_pct']}%\n"
+    f"• 슬라이더를 움직여 개인 편차(가족력/생활위험)를 반영하세요."
+)
 
-def scale_to_10(ratio_val):
-    return int(max(1, min(round(float(ratio_val) * 10), 10)))
-
-
-#우선순위라는 말보다 다른말고 바꾸는게 나을거같음
-cancer_val = st.sidebar.slider("암 질환 보장 우선순위", 1, 10, scale_to_10(baseline["cancer"]), 1)
-vascular_val = st.sidebar.slider("뇌·심장 질환 보장 우선순위", 1, 10, scale_to_10(baseline["vascular"]), 1)
-injury_val = st.sidebar.slider("상해 및 생활 위험 우선순위", 1, 10, scale_to_10(baseline["injury"]), 1)
-inpatient_val = st.sidebar.slider("입원/수술 보장 우선순위", 1, 10, scale_to_10(baseline["inpatient"]), 1)
+cancer_val = st.sidebar.slider("암 질환 보장 집중도", 1, 10, baseline["cancer"], 1, key=f"c_{gender}_{age}")
+vascular_val = st.sidebar.slider("뇌·심장 질환 보장 집중도", 1, 10, baseline["vascular"], 1, key=f"v_{gender}_{age}")
+injury_val = st.sidebar.slider("상해 및 생활 위험 집중도", 1, 10, baseline["injury"], 1, key=f"i_{gender}_{age}")
+inpatient_val = st.sidebar.slider("입원/수술 보장 집중도", 1, 10, baseline["inpatient"], 1, key=f"inp_{gender}_{age}")
 claim_rate_val = st.sidebar.slider("목표 지급률 (면책 리스크 민감도, %)", 0, 100, 50, 5)
+
+# 통계 기준선 대비 개인 편차(Delta) 산출
+deltas = {
+    "cancer": cancer_val - baseline["cancer"],
+    "vascular": vascular_val - baseline["vascular"],
+    "injury": injury_val - baseline["injury"],
+    "inpatient": inpatient_val - baseline["inpatient"]
+}
+
+active_deltas = [f"{k.upper()} ({v:+d})" for k, v in deltas.items() if v != 0]
+if active_deltas:
+    st.sidebar.caption(f"🎯 **통계 대비 개인 보정값:** {', '.join(active_deltas)}")
+else:
+    st.sidebar.caption("🎯 현재 공공데이터 표준 기준선과 동일합니다.")
 
 st.sidebar.markdown("---")
 st.sidebar.header("3️⃣ 개인 맞춤 조건 & 독소조항 필터")
@@ -126,6 +155,8 @@ user_prefs = {
     "vascular_val": vascular_val,
     "injury_val": injury_val,
     "inpatient_val": inpatient_val,
+    "baseline": baseline,
+    "deltas": deltas,
     "claim_rate_val": claim_rate_val,
     "royalty": royalty,
     "renewal_pref": renewal_pref
@@ -157,7 +188,7 @@ if evaluated_products:
     with st.container():
         st.markdown(f"""
         #### 1. 왜 이 상품이 1위인가요?
-        * **공공데이터 부합도:** **{age}세 {gender}** 공공 의료 통계상 우선순위가 높은 주요 질환(암 {baseline['cancer']*100:.1f}%, 뇌·심장 {baseline['vascular']*100:.1f}%)에 맞추어 필수 진단비와 치료비가 빈틈없이 구성되었습니다.
+        * **공공데이터 부합 및 개인 보정:** **{age}세 {gender}** 공공 통계(암 {baseline['c_pct']}%, 뇌·심장 {baseline['v_pct']}%)에 사용자의 개인 집중도 편차가 합산되어 최적 배분되었습니다.
         * **보장 충실도 & 가성비:** 필수 보장 정규화 점수 **{best['amt_score']}점**, 신의료 특약 다양성 **{best['breadth_score']}점**을 획득했으며, 불필요한 과잉 설계로 인한 가격 감점(`price_penalty`: {best['price_penalty']}점)을 최소화했습니다.
         * **대표 주요 보장:** {', '.join(best['highlights']) if best['highlights'] else '기본 보장 구성'} 외 총 {best['rider_count']}개 특약 탑재
         """)
