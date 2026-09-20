@@ -36,7 +36,7 @@ def apply_delta_correction(w_base: dict, w_user: dict, tau: float = 0.3):
         
     return w_final, deltas, alpha, D
 
-# --- 2. 통화 파싱 및 효용 함수(과도하게 큰 금액에 대한 보장 금액을 로그함수를 통해 점수 상승폭을 억제)---
+# --- 2. 통화 파싱 및 효용 함수 ---
 def parse_currency(val) -> int:
     if not val: return 0
     if isinstance(val, (int, float)): return int(val)
@@ -138,17 +138,17 @@ def extract_toxic_clauses_with_llm(user_input: str, clauses_tuple: tuple) -> lis
     except Exception:
         return []
 
-# --- 5. 통합 평가 파이프라인 (5개 영역 반영) => 아제나리스크와 베이지안 추론 이용 ---
+# --- 5. 통합 평가 파이프라인 (5개 영역 반영 및 갱신/비갱신 양방향 평가) ---
 def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: str, selected_tags: list):
     w_final = user_prefs["w_final"]
     claim_rate_val = user_prefs["claim_rate_val"]
     renewal_pref = user_prefs["renewal_pref"]
     D = user_prefs.get("D", 0.0)
 
-    # 증거에 따른 위험 민감도 동적 갱신
+    # 편차(D)에 따른 리스크 민감도 동적 가중
     sensitivity_multiplier = 1.0 + (D * 0.10)
 
-    # 사전 위험 가중치 (목표 지급률 + 편차 증거 반영)
+    # 사전 위험 가중치
     risk_weight = (0.20 + (claim_rate_val / 100.0) * 0.40) * min(sensitivity_multiplier, 1.3)
     risk_weight = min(risk_weight, 0.70)
     base_weight = 1.0 - risk_weight
@@ -182,12 +182,16 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
             prem = parse_currency(r.get("premium", 0))
             pay_cond = str(r.get("payment_condition", "") or "")
             toxic_field = str(r.get("toxic_clauses", "") or "")
+            pay_period = str(r.get("payment_period", "") or "")
             full_text = f"{c_name} {pay_cond} {toxic_field}".strip()
+            
             if full_text:
                 raw_clause_texts.append(full_text)
 
             total_prem += prem
-            if "[갱신형]" in c_name or "갱신형" in str(r.get("payment_period", "")):
+
+            # 갱신형 감지 로직 강화 ('갱신' 키워드 매칭)
+            if "갱신" in c_name or "갱신" in pay_period:
                 renewable_cnt += 1
 
             if any(k in full_text for k in ["면책", "부담보", "제외", "감액", "미지급"]):
@@ -197,7 +201,7 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
                 if rk in full_text:
                     matched_user_risks.append(f"약관 내 '{rk}' 관련 면책/제약 조건 포함 ({c_name})")
 
-            # 5대 기준 특약 가입금액 파싱
+            # 5대 기준 특약 가입금액 분류
             if "암진단비" in c_name:
                 cancer_amt += amt
                 coverage_highlights.append(f"암진단비: {amt//10000:,}만원")
@@ -219,13 +223,13 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         if user_notes.strip() and raw_clause_texts:
             llm_toxic_details = extract_toxic_clauses_with_llm(user_notes, tuple(raw_clause_texts[:35]))
 
-        # 5대 기준 w_final 효용 합산 (단위: 원) => Weighted Scoring 적용
+        # 5대 기준 효용 합산
         amt_n = (
-            w_final["암"] * calc_coverage_utility(cancer_amt, 50_000_000) +
-            w_final["뇌혈관"] * calc_coverage_utility(brain_amt, 30_000_000) +
-            w_final["심장"] * calc_coverage_utility(heart_amt, 30_000_000) +
-            w_final["상해"] * calc_coverage_utility(inj_amt, 50_000_000) +
-            w_final["입원/수술"] * calc_coverage_utility(inp_amt, 20_000_000)
+            w_final.get("암", 0.2) * calc_coverage_utility(cancer_amt, 50_000_000) +
+            w_final.get("뇌혈관", 0.2) * calc_coverage_utility(brain_amt, 30_000_000) +
+            w_final.get("심장", 0.2) * calc_coverage_utility(heart_amt, 30_000_000) +
+            w_final.get("상해", 0.2) * calc_coverage_utility(inj_amt, 50_000_000) +
+            w_final.get("입원/수술", 0.2) * calc_coverage_utility(inp_amt, 20_000_000)
         )
         breadth_n = min(treat_cnt / 10.0, 1.0)
 
@@ -233,21 +237,31 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         if total_prem > 80_000:
             price_penalty = min(((total_prem - 80_000) / 100_000) * 0.08, 0.10)
 
-        # 최상위 평가 기준 간의 가중 합산
         base_score = (w_amt_dyn * amt_n) + (w_breadth_dyn * breadth_n) + (w_conf_dyn * conf_n) - price_penalty
 
         llm_penalty = len(llm_toxic_details) * 0.20 * sensitivity_multiplier
         user_penalty = (len(matched_user_risks) * 0.20 * sensitivity_multiplier) + llm_penalty
-        if renewal_pref == "비갱신" and renewable_cnt > 0:
-            user_penalty += (renewable_cnt / max(len(riders), 1)) * 0.25
+
+        # --- [개선] 갱신형/비갱신형/미지정 선호도 양방향 반영 로직 ---
+        total_riders = max(len(riders), 1)
+        renewable_ratio = renewable_cnt / total_riders
+
+        if renewal_pref == "비갱신":
+            # 비갱신 선호 시: 갱신형 특약 비중에 비례하여 감점
+            if renewable_cnt > 0:
+                user_penalty += renewable_ratio * 0.30
+        elif renewal_pref == "갱신":
+            # 갱신 선호 시: 비갱신형 특약 비중이 높을 경우 초기 비용 부담으로 감점
+            non_renewable_ratio = 1.0 - renewable_ratio
+            if non_renewable_ratio > 0.4:
+                user_penalty += non_renewable_ratio * 0.25
+        # "미지정" 선택 시에는 갱신 여부에 따른 추가 페널티가 없음
 
         risk_verified_n = min(0.10 + (inherent_toxic_cnt * 0.08) + user_penalty, 1.0)
         risk_naive_n = min(risk_verified_n * 1.6, 1.5)
 
         raw_s1 = base_score / base_weight
         raw_s2 = base_score - (risk_weight * risk_naive_n)
-
-        # 최종 점수 도출
         raw_s3 = base_score - (risk_weight * risk_verified_n)
 
         s1 = max(0.0, raw_s1)

@@ -112,11 +112,70 @@ st.sidebar.markdown("---")
 st.sidebar.header("2️⃣ 세부 보장 집중도 (1~10 척도)")
 st.sidebar.caption(f"💡 {age}세 {gender} 통계 기준선 기본 배치")
 
-cancer_val = st.sidebar.slider("암 질환 보장 집중도", 1, 10, slider_defaults["cancer"], 1, key=f"c_{gender}_{age}")
-brain_val = st.sidebar.slider("뇌혈관 질환 보장 집중도", 1, 10, slider_defaults["brain"], 1, key=f"b_{gender}_{age}")
-heart_val = st.sidebar.slider("심혈관 질환 보장 집중도", 1, 10, slider_defaults["heart"], 1, key=f"h_{gender}_{age}")
-injury_val = st.sidebar.slider("상해 및 생활 위험 집중도", 1, 10, slider_defaults["injury"], 1, key=f"i_{gender}_{age}")
-inpatient_val = st.sidebar.slider("입원/수술 보장 집중도", 1, 10, slider_defaults["inpatient"], 1, key=f"inp_{gender}_{age}")
+# [추가] 편차 텍스트 포맷팅 헬퍼 함수
+def format_delta_text(current_val, base_val):
+  diff = current_val - base_val
+  if diff > 0:
+    return f":green[▲ +{diff}] (통계 기준선: {base_val})"
+  elif diff < 0:
+    return f":red[▼ {diff}] (통계 기준선: {base_val})"
+  else:
+    return f":gray[● 기준선과 동일 ({base_val})]"
+
+
+# --- 아래 5개 슬라이더 영역 교체 ---
+
+cancer_val = st.sidebar.slider(
+    "암 질환 보장 집중도",
+    1,
+    10,
+    slider_defaults["cancer"],
+    1,
+    key=f"c_{gender}_{age}",
+)
+st.sidebar.caption(f"↳ {format_delta_text(cancer_val, slider_defaults['cancer'])}")
+
+brain_val = st.sidebar.slider(
+    "뇌혈관 질환 보장 집중도",
+    1,
+    10,
+    slider_defaults["brain"],
+    1,
+    key=f"b_{gender}_{age}",
+)
+st.sidebar.caption(f"↳ {format_delta_text(brain_val, slider_defaults['brain'])}")
+
+heart_val = st.sidebar.slider(
+    "심혈관 질환 보장 집중도",
+    1,
+    10,
+    slider_defaults["heart"],
+    1,
+    key=f"h_{gender}_{age}",
+)
+st.sidebar.caption(f"↳ {format_delta_text(heart_val, slider_defaults['heart'])}")
+
+injury_val = st.sidebar.slider(
+    "상해 및 생활 위험 집중도",
+    1,
+    10,
+    slider_defaults["injury"],
+    1,
+    key=f"i_{gender}_{age}",
+)
+st.sidebar.caption(f"↳ {format_delta_text(injury_val, slider_defaults['injury'])}")
+
+inpatient_val = st.sidebar.slider(
+    "입원/수술 보장 집중도",
+    1,
+    10,
+    slider_defaults["inpatient"],
+    1,
+    key=f"inp_{gender}_{age}",
+)
+st.sidebar.caption(
+    f"↳ {format_delta_text(inpatient_val, slider_defaults['inpatient'])}"
+)
 
 CRITERIA = ["암", "뇌혈관", "심장", "상해", "입원/수술"]
 slider_scores = [cancer_val, brain_val, heart_val, injury_val, inpatient_val]
