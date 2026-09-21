@@ -1,4 +1,28 @@
-
+# 1. 파이썬 가상환경 (윈도우/맥 가상환경은 절대 Git에 올리면 안 됨)
+venv/
 .venv/
-.venv*/
+env/
+ENV/
+
+# 2. 파이썬 캐시 파일
 __pycache__/
+*.py[cod]
+*$py.class
+
+# 3. 맥OS 시스템 파일
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# 4. 윈도우 시스템 파일
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 5. VS Code 설정 (OS별 파이썬 인터프리터 경로 충돌 방지)
+.vscode/
+*.code-workspace
+
+# 6. Streamlit 내부 캐시
+.streamlit/
