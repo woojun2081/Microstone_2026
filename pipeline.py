@@ -138,7 +138,7 @@ def extract_toxic_clauses_with_llm(user_input: str, clauses_tuple: tuple) -> lis
     except Exception:
         return []
 
-# --- 5. 통합 평가 파이프라인 (5개 영역 반영 및 갱신/비갱신 양방향 평가) ---
+# --- 5. 통합 평가 파이프라인 (5개 영역 반영 및 갱신/비갱신 양방향 평가 + PDF 가이드 Min-Max 알고리즘 결합) ---
 def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: str, selected_tags: list):
     w_final = user_prefs["w_final"]
     claim_rate_val = user_prefs["claim_rate_val"]
@@ -149,12 +149,17 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
     sensitivity_multiplier = 1.0 + (D * 0.10)
 
     # 사전 위험 가중치
-    # [수정 권장] 리스크 가중치가 기본 보장 점수를 완전히 잠식하지 못하도록 상한을 0.50으로 제한
     risk_weight = (0.20 + (claim_rate_val / 100.0) * 0.40) * min(sensitivity_multiplier, 1.3)
-    risk_weight = min(risk_weight, 0.50)
-    
-    # [추가 보정] base_weight가 너무 극단적으로 0에 가깝게 줄어들어 기본 점수가 증발하지 않도록 하한선(0.50) 확보
-    base_weight = max(1.0 - risk_weight, 0.50)
+
+
+
+    # <리스크 가중치가 기본 보장 점수를 완전히 잠식하지 못하도록 상한을 0.50으로 제한하였으나 보험별 점수차이 확보로 인해 값 변경 가능성 체크>
+    risk_weight = min(risk_weight, 0.65)
+    # <base_weight가 너무 극단적으로 0에 가깝게 줄어들어 기본 점수가 증발하지 않도록 하한선(0.50) 확보했으나 보험별 점수차이 확보로 인해 값 변경 가능성 체크>
+    base_weight = max(1.0 - risk_weight, 0.35)
+
+
+
 
     w_amt_dyn = base_weight * 0.55
     w_breadth_dyn = base_weight * 0.30
@@ -166,12 +171,56 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
     if isinstance(raw_products, list) and raw_products and "coverage_name" in raw_products[0]:
         raw_products = [{"product_name": "기본 분석 상품", "conf_n": 0.95, "riders": raw_products}]
 
+    # =========================================================================
+    # [PDF 가이드 1단계] 전체 상품군 집합 대상 money_value 및 coverage_years 사전 집계
+    # =========================================================================
+    all_money_values = []
+    all_coverage_years = []
+
+    for p in raw_products:
+        payment_years = int(p.get("payment_years", 20) or 20)
+        entry_age = int(p.get("entry_age", 20) or 20)
+        maturity_age = int(p.get("maturity_age", 90) or 90)
+        c_years = max(maturity_age - entry_age, 1)
+        all_coverage_years.append(c_years)
+
+        for r in p.get("riders", []):
+            amt = parse_currency(r.get("subscribed_amount", r.get("amount", 0)))
+            prem = parse_currency(r.get("premium", 0))
+            # coverage_cost = coverage_premium * 12 * payment_years
+            cov_cost = prem * 12 * payment_years
+            # money_value = coverage_amount / coverage_cost
+            if cov_cost > 0 and amt > 0:
+                all_money_values.append(amt / cov_cost)
+
+    # Min-Max 기준값 도출 (가이드 예외규칙: 단일값이거나 빈 리스트일 때 안전 처리)
+    min_money = min(all_money_values) if all_money_values else 0.0
+    max_money = max(all_money_values) if all_money_values else 1.0
+    min_years = min(all_coverage_years) if all_coverage_years else 10
+    max_years = max(all_coverage_years) if all_coverage_years else 80
+
+    def min_max_norm(val, v_min, v_max):
+        if v_max <= v_min:
+            return 0.5  # PDF 가이드 9번 규칙: max == min 시 0.5 기본값 부여
+        return (val - v_min) / (v_max - v_min)
+
+    # =========================================================================
+    # [PDF 가이드 2단계] 개별 상품 평가 및 AHP/베이지안 통합 채점
+    # =========================================================================
     for p in raw_products:
         p_name = p.get("product_name", "보험 상품")
         conf_n = min(p.get("conf_n", 0.90), 1.0)
         riders = p.get("riders", [])
         total_prem = 0
-        cancer_amt, brain_amt, heart_amt, inj_amt, inp_amt = 0, 0, 0, 0, 0
+        payment_years = int(p.get("payment_years", 20) or 20)
+        entry_age = int(p.get("entry_age", 20) or 20)
+        maturity_age = int(p.get("maturity_age", 90) or 90)
+        c_years = max(maturity_age - entry_age, 1)
+
+        # PDF 가이드 period_score 산출
+        period_score = min_max_norm(c_years, min_years, max_years)
+
+        cancer_scores, brain_scores, heart_scores, inj_scores, inp_scores = [], [], [], [], []
         treat_cnt = 0
         renewable_cnt = 0
         inherent_toxic_cnt = 0
@@ -193,6 +242,12 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
 
             total_prem += prem
 
+            # [PDF 가이드] 특약별 coverage_score = 0.6 * money_score + 0.4 * period_score
+            cov_cost = prem * 12 * payment_years
+            money_val = (amt / cov_cost) if cov_cost > 0 else 0.0
+            money_score = min_max_norm(money_val, min_money, max_money)
+            coverage_score = 0.6 * money_score + 0.4 * period_score
+
             # 갱신형 감지 로직 강화 ('갱신' 키워드 매칭)
             if "갱신" in c_name or "갱신" in pay_period:
                 renewable_cnt += 1
@@ -204,20 +259,20 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
                 if rk in full_text:
                     matched_user_risks.append(f"약관 내 '{rk}' 관련 면책/제약 조건 포함 ({c_name})")
 
-            # 5대 기준 특약 가입금액 분류
+            # 5대 기준 특약 분류 및 PDF coverage_score 수집
             if "암진단비" in c_name:
-                cancer_amt += amt
+                cancer_scores.append(coverage_score)
                 coverage_highlights.append(f"암진단비: {amt//10000:,}만원")
             elif any(k in c_name for k in ["뇌혈관", "뇌졸중", "뇌출혈", "뇌경색"]):
-                brain_amt += amt
+                brain_scores.append(coverage_score)
                 coverage_highlights.append(f"{c_name.split('(')[0]}: {amt//10000:,}만원")
             elif any(k in c_name for k in ["허혈성", "심혈관", "심근경색", "부정맥", "심장"]):
-                heart_amt += amt
+                heart_scores.append(coverage_score)
                 coverage_highlights.append(f"{c_name.split('(')[0]}: {amt//10000:,}만원")
             elif any(k in c_name for k in ["상해", "골절"]):
-                inj_amt += amt
+                inj_scores.append(coverage_score)
             elif any(k in c_name for k in ["입원", "수술", "일당", "간병"]):
-                inp_amt += amt
+                inp_scores.append(coverage_score)
 
             if any(k in c_name for k in ["치료비", "수술비", "방사선", "약물", "표적", "중입자"]):
                 treat_cnt += 1
@@ -226,14 +281,17 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         if user_notes.strip() and raw_clause_texts:
             llm_toxic_details = extract_toxic_clauses_with_llm(user_notes, tuple(raw_clause_texts[:35]))
 
-        # 5대 기준 효용 합산
+        # [PDF 가이드 결합] 5대 기준별 coverage_score 평균과 AHP w_final 가중합 산출 (insurance_score)
+        c_score_avg = lambda lst: (sum(lst) / len(lst)) if lst else 0.0
         amt_n = (
-            w_final.get("암", 0.2) * calc_coverage_utility(cancer_amt, 50_000_000) +
-            w_final.get("뇌혈관", 0.2) * calc_coverage_utility(brain_amt, 30_000_000) +
-            w_final.get("심장", 0.2) * calc_coverage_utility(heart_amt, 30_000_000) +
-            w_final.get("상해", 0.2) * calc_coverage_utility(inj_amt, 50_000_000) +
-            w_final.get("입원/수술", 0.2) * calc_coverage_utility(inp_amt, 20_000_000)
+            w_final.get("암", 0.2) * c_score_avg(cancer_scores) +
+            w_final.get("뇌혈관", 0.2) * c_score_avg(brain_scores) +
+            w_final.get("심장", 0.2) * c_score_avg(heart_scores) +
+            w_final.get("상해", 0.2) * c_score_avg(inj_scores) +
+            w_final.get("입원/수술", 0.2) * c_score_avg(inp_scores)
         )
+        # 단일 상품이거나 특약 매칭이 누락되었을 경우 기본 점수 방어
+        amt_n = max(amt_n, 0.40)
         breadth_n = min(treat_cnt / 10.0, 1.0)
 
         price_penalty = 0.0

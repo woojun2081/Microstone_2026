@@ -269,11 +269,68 @@ if evaluated_products:
     best = evaluated_products[0]
     st.success(f"## 🏆 최종 1순위 최적 추천 상품: **{best['name']}**")
     
-    m1, m2, m3, m4 = st.columns(4)
-    m1.metric("종합 적합도 점수", f"{best['score_100']} 점", delta=f"S3: {best['s3']:.3f}")
-    m2.metric("예상 월 납입 보험료", f"{best['premium']:,} 원")
-    m3.metric("보장 특약 수", f"{best['rider_count']} 개")
-    m4.metric("검출된 제약/독소조항", f"{best['toxic_count'] + len(best['llm_toxics'])} 건")
+# [UI 업그레이드] 점수 바늘 및 신호등 색상 바 게이지 생성 함수
+    def create_gauge_chart(score: float, s3_val: float):
+        # 구간별 텍스트 및 대표 색상 지정
+        if score >= 80.0:
+            badge_color = "#28a745"
+            badge_text = "🟢 안심 추천 (적합)"
+        elif score >= 50.0:
+            badge_color = "#ffc107"
+            badge_text = "🟡 유의 검토 (보통)"
+        else:
+            badge_color = "#dc3545"
+            badge_text = "🔴 가입 재고 (위험)"
+
+        fig = go.Figure(go.Indicator(
+            mode="gauge+number",
+            value=score,
+            number={"suffix": "점", "font": {"size": 26, "color": "#ffffff"}},
+            gauge={
+                "axis": {"range": [0, 100], "tickwidth": 1, "tickcolor": "#888888", "tickfont": {"size": 10}},
+                "bar": {"color": badge_color, "thickness": 0.28},
+                "bgcolor": "rgba(0,0,0,0)",
+                "borderwidth": 0,
+                "steps": [
+                    {"range": [0, 50], "color": "rgba(220, 53, 69, 0.35)"},    # 0~49: 빨강 (위험)
+                    {"range": [50, 80], "color": "rgba(255, 193, 7, 0.35)"},   # 50~79: 노랑 (유의)
+                    {"range": [80, 100], "color": "rgba(40, 167, 69, 0.35)"}   # 80~100: 초록 (적합)
+                ],
+                "threshold": {
+                    "line": {"color": "#ffffff", "width": 3},
+                    "thickness": 0.75,
+                    "value": score
+                }
+            }
+        ))
+        fig.update_layout(
+            height=145,
+            margin=dict(l=15, r=15, t=10, b=5),
+            paper_bgcolor="rgba(0,0,0,0)",
+            font={"color": "#ffffff"}
+        )
+        return fig, badge_text, badge_color
+
+    # 상단 요약 카드 배치 (1열: 신호등 점수 바, 2~4열: 핵심 지표 메트릭)
+    m1, m2, m3, m4 = st.columns([1.3, 1, 1, 1])
+    
+    with m1:
+        st.caption("🛡️ **종합 적합도 평가 게이지**")
+        fig_gauge, b_text, b_col = create_gauge_chart(best['score_100'], best['s3'])
+        st.plotly_chart(fig_gauge, use_container_width=True)
+        st.markdown(
+            f"<div style='text-align: center; margin-top: -15px; font-size: 13px; font-weight: bold; color: {b_col};'>"
+            f"{b_text} <span style='color: #888888; font-weight: normal;'>(S3: {best['s3']:.3f})</span></div>",
+            unsafe_allow_html=True
+        )
+
+    with m2:
+        st.metric("예상 월 납입 보험료", f"{best['premium']:,} 원")
+    with m3:
+        st.metric("보장 특약 수", f"{best['rider_count']} 개")
+    with m4:
+        st.metric("검출된 제약/독소조항", f"{best['toxic_count'] + len(best['llm_toxics'])} 건")
+
 
     st.markdown("### 📋 AI 추천 사유 및 약관 분석 리포트")
     with st.container():
