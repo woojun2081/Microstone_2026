@@ -322,10 +322,9 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         risk_verified_n = min(0.05 + (inherent_toxic_cnt * 0.03) + user_penalty, 1.0)
         risk_naive_n = min(risk_verified_n * 1.4, 1.2)
 
-        # [수정] 단순 뺄셈 대신 '비율 차감(Discount Ratio)' 모델 적용 -> 0점 수렴 방지
-        # [핵심 보정] 리스크가 아무리 극단적이어도 기본 보장 점수의 최소 잔존율(Floor)을 보장하여 0점 붕괴 원천 차단
-        retention_s3 = max(1.0 - (risk_weight * risk_verified_n), 0.25)
-        retention_s2 = max(1.0 - (risk_weight * risk_naive_n), 0.15)
+            # [1] 지수 감쇄 적용
+        retention_s3 = math.exp(-1.3 * risk_weight * risk_verified_n)
+        retention_s2 = math.exp(-1.3 * risk_weight * risk_naive_n)
 
         raw_s1 = base_score / max(base_weight, 0.1)
         raw_s2 = base_score * retention_s2
@@ -335,13 +334,10 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         s2 = max(0.0, raw_s2)
         s3 = max(0.0, raw_s3)
 
-        # [수정] 100점 척도 정규화 기준값 보정
-        # 분모 theoretical_max_s3가 과도하게 작아져 점수가 튀거나 0으로 죽는 현상을 막기 위해 하한선(0.30) 설정
-        theoretical_max_s3 = max(base_weight * (1.0 - (risk_weight * 0.05)), 0.30)
-        
-        # 보장 스펙이 살아있는 한 극단적 리스크 상태에서도 5.0~100.0 범위로 안정적 매핑
+        # [2] 100점 환산 기준값 (지수 모델 매핑)
+        theoretical_max_s3 = max(base_weight * 0.95, 0.20)
         calculated_100 = (s3 / theoretical_max_s3) * 100.0
-        score_100 = round(min(max(calculated_100, 5.0), 100.0), 1)
+        score_100 = round(min(max(calculated_100, 3.0), 100.0), 1)
 
         evaluated_products.append({
             "name": p_name,
