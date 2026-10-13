@@ -1,0 +1,77 @@
+{
+  "source": "DB유병력자간편보험(40대,중고등교사,연납,의료급여 수급자).png",
+  "document_type": "가입화면",
+  "contract_summary": {
+    "insurer": "DB손해보험",
+    "product_name": "실손보험",
+    "product_case": "유병력자간편실손보험",
+    "job": "중고등교사",
+    "gender": "상관없음",
+    "age": null,
+    "age_raw": "40대",
+    "payment_cycle": "연납",
+    "medical_aid": "수급자",
+    "total_premium": 33488,
+    "total_premium_raw": "연 401,850원",
+    "renewal": "매년 갱신, 3년 재가입, 최대 110세 보장"
+  },
+  "coverages": [
+    {
+      "coverage_name": "상해입원의료비(간편고지)(1년갱신)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 31879,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "상해외래의료비(간편고지)(1년갱신)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 200000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "20만원"
+      },
+      "premium": 10856,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "질병입원의료비(간편고지)(1년갱신)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 243018,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "질병외래의료비(간편고지)(1년갱신)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 200000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "20만원"
+      },
+      "premium": 137328,
+      "is_enrolled": true,
+      "coverage_category": null
+    }
+  ],
+  "error": null
+}

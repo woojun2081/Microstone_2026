@@ -9,6 +9,35 @@ from pipeline import run_evaluation_pipeline, calculate_ahp_weights, apply_delta
 st.set_page_config(page_title="AI 지능형 보험 추천 시스템", layout="wide", page_icon="🛡️")
 
 # -------------------------------------------------------------
+# [개선] 상품명 중복 제거 + 보험사 다양성 보장 랭킹 재정렬 함수
+# -------------------------------------------------------------
+def diversify_recommendations(products: list, max_per_company: int = 2) -> list:
+    company_counts = {}
+    seen_product_names = set()  # 중복 상품명 추적용 집합
+    diversified = []
+    overflow = []
+
+    for p in products:
+        p_name = p.get("name", "").strip()
+
+        # 1. 완전 중복 상품 제외 (이미 담긴 상품명은 스킵)
+        if p_name in seen_product_names:
+            continue
+        seen_product_names.add(p_name)
+
+        # 2. 보험사 키 추출 및 기본값 처리
+        comp = p.get("company", "기타")
+
+        # 3. 보험사당 최대 허용 개수 체크
+        if company_counts.get(comp, 0) < max_per_company:
+            company_counts[comp] = company_counts.get(comp, 0) + 1
+            diversified.append(p)
+        else:
+            overflow.append(p)
+
+    return diversified + overflow
+
+# -------------------------------------------------------------
 # 1. 공공데이터 로드 및 1단계 w_base 산출
 # -------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -93,7 +122,6 @@ def get_public_w_base(gender: str, age: int):
 # 2. UI 레이아웃
 # -------------------------------------------------------------
 st.title("🛡️ 통계/사용자 가중치 편차 보정 및 베이지안 네트워크 보완형 AHP 보험 추천 시스템")
-st.caption("공공데이터 기준선(w_base) + 슬라이더 쌍대비교(w_user) + 편차보정(w_final) + 약관 독소조항 팩트체크")
 
 st.sidebar.header("1️⃣ 기본 정보 설정")
 gender = st.sidebar.radio("성별", ["여성", "남성", "미지정"], horizontal=True)
@@ -112,18 +140,14 @@ st.sidebar.markdown("---")
 st.sidebar.header("2️⃣ 세부 보장 집중도 (1~10 척도)")
 st.sidebar.caption(f"💡 {age}세 {gender} 통계 기준선 기본 배치")
 
-# [추가] 편차 텍스트 포맷팅 헬퍼 함수
 def format_delta_text(current_val, base_val):
-  diff = current_val - base_val
-  if diff > 0:
-    return f":green[▲ +{diff}] (통계 기준선: {base_val})"
-  elif diff < 0:
-    return f":red[▼ {diff}] (통계 기준선: {base_val})"
-  else:
-    return f":gray[● 기준선과 동일 ({base_val})]"
-
-
-# --- 아래 5개 슬라이더 영역 교체 ---
+    diff = current_val - base_val
+    if diff > 0:
+        return f":green[▲ +{diff}] (통계 기준선: {base_val})"
+    elif diff < 0:
+        return f":red[▼ {diff}] (통계 기준선: {base_val})"
+    else:
+        return f":gray[● 기준선과 동일 ({base_val})]"
 
 cancer_val = st.sidebar.slider(
     "암 질환 보장 집중도",
@@ -211,10 +235,56 @@ if st.sidebar.button("🔍 독소조항 분석하기", use_container_width=True,
 # -------------------------------------------------------------
 raw_products = []
 if os.path.exists(products_path):
-    with open(products_path, "r", encoding="utf-8") as f:
-        raw_products = json.load(f)
+    try:
+        with open(products_path, "r", encoding="utf-8") as f:
+            raw_products = json.load(f)
+    except Exception as e:
+        st.error(f"products.json 로드 중 오류 발생: {e}")
+        raw_products = []
+
+# 직업 키워드 매핑 사전 정의
+JOB_KEYWORDS = {
+    "사무직": ["사무", "회사원", "연구원", "행정", "개발자", "프로그래머", "학생"],
+    "현장직": ["현장", "생산", "제조", "건설", "공장", "정비"],
+    "운전직": ["운전", "배달", "기사", "택시", "화물", "라이더", "이륜차"],
+    "영업/서비스": ["영업", "판매", "서비스", "상담", "외근"],
+    "위험직": ["소방", "경찰", "군인", "특수"]
+}
+
+active_text = st.session_state["active_notes"].strip()
+detected_job = None
+if active_text:
+    for standard_job, keywords in JOB_KEYWORDS.items():
+        if any(kw in active_text for kw in keywords):
+            detected_job = standard_job
+            break
+
+# 1차 필터링: 나이대 매칭 (입력 나이 기준 ±10세 이내 선별)
+age_matched = []
+for p in raw_products:
+    p_age = int(p.get("entry_age", 30) or 30)
+    if abs(p_age - age) <= 10:
+        age_matched.append(p)
+
+candidates = age_matched if len(age_matched) >= 3 else raw_products
+
+# 2차 필터링: 직업 매칭 (텍스트 입력 시 해당 직업 우선, 미입력 시 전체 대상)
+if detected_job:
+    job_matched = [
+        p for p in candidates
+        if detected_job in str(p.get("job_category", "")) or any(kw in str(p.get("product_name", "")) for kw in JOB_KEYWORDS[detected_job])
+    ]
+    if job_matched:
+        final_target_products = job_matched
+        st.info(f"💼 입력하신 내용에서 직업군 **[{detected_job}]**(으)로 분석되어 맞춤 상품군을 우선 선별했습니다.")
+    else:
+        final_target_products = candidates
+else:
+    final_target_products = candidates
 
 user_prefs = {
+    "age": age,
+    "gender": gender,
     "w_final": w_final,
     "w_base": w_base,
     "w_user": w_user,
@@ -230,108 +300,242 @@ user_prefs = {
     "deltas": delta_dict
 }
 
+# [수정] 결과를 바로 evaluated_products로 수신하여 이름 충돌 및 NameError 방지
 evaluated_products, validated_risk_keys = run_evaluation_pipeline(
-    raw_products=raw_products,
+    raw_products=final_target_products,
     user_prefs=user_prefs,
     user_notes=st.session_state["active_notes"],
     selected_tags=[]
 )
 
-# -------------------------------------------------------------
-# 4. 가중치 편차 보정 테이블 렌더링
-# -------------------------------------------------------------
-st.markdown("### 📊 3단계 5대 영역 가중치 편차 보정 결과 ($w_{final}$)")
-col_w1, col_w2 = st.columns([3, 2])
-
-with col_w1:
-    df_weights = pd.DataFrame({
-        "기준": CRITERIA,
-        "슬라이더(입력)": slider_scores,
-        "w_base (통계)": [f"{w_base[k]:.4f}" for k in CRITERIA],
-        "w_user (쌍대비교)": [f"{w_user[k]:.4f}" for k in CRITERIA],
-        "Δ (편차)": [f"{delta_dict[k]:+.4f}" for k in CRITERIA],
-        "w_final (최종반영)": [f"{w_final[k]:.4f}" for k in CRITERIA]
-    })
-    st.table(df_weights)
-
-with col_w2:
-    st.info(f"""
-    * **총 편차 합계 ($D$):** `{D:.4f}`
-    * **허용치 ($\tau$):** `0.3`
-    * **보정 계수 ($\alpha$):** `min(1, 0.3 / {D:.4f}) = {alpha:.4f}`
-    * *통계적 근거($w_{{base}}$)를 기반으로 사용자의 가중치 선호도가 허용치 내에서 안정적으로 보정 반영되었습니다.*
-    """)
+# 다양성 필터 실행
+evaluated_products = diversify_recommendations(evaluated_products, max_per_company=2)
 
 # -------------------------------------------------------------
-# 5. 추천 결과 및 독소조항 대체 리포트
+# 4. 추천 결과 및 독소조항 대체 리포트
 # -------------------------------------------------------------
 if evaluated_products:
     best = evaluated_products[0]
     st.success(f"## 🏆 최종 1순위 최적 추천 상품: **{best['name']}**")
-    
-# [UI 업그레이드] 점수 바늘 및 신호등 색상 바 게이지 생성 함수
-    def create_gauge_chart(score: float, s3_val: float):
-        # 구간별 텍스트 및 대표 색상 지정
-        if score >= 80.0:
-            badge_color = "#28a745"
-            badge_text = "🟢 안심 추천 (적합)"
-        elif score >= 50.0:
-            badge_color = "#ffc107"
-            badge_text = "🟡 유의 검토 (보통)"
-        else:
-            badge_color = "#dc3545"
-            badge_text = "🔴 가입 재고 (위험)"
 
-        fig = go.Figure(go.Indicator(
-            mode="gauge+number",
-            value=score,
-            number={"suffix": "점", "font": {"size": 26, "color": "#ffffff"}},
-            gauge={
-                "axis": {"range": [0, 100], "tickwidth": 1, "tickcolor": "#888888", "tickfont": {"size": 10}},
-                "bar": {"color": badge_color, "thickness": 0.28},
-                "bgcolor": "rgba(0,0,0,0)",
-                "borderwidth": 0,
-                "steps": [
-                    {"range": [0, 50], "color": "rgba(220, 53, 69, 0.35)"},    # 0~49: 빨강 (위험)
-                    {"range": [50, 80], "color": "rgba(255, 193, 7, 0.35)"},   # 50~79: 노랑 (유의)
-                    {"range": [80, 100], "color": "rgba(40, 167, 69, 0.35)"}   # 80~100: 초록 (적합)
-                ],
-                "threshold": {
-                    "line": {"color": "#ffffff", "width": 3},
-                    "thickness": 0.75,
-                    "value": score
-                }
-            }
+    # 1. 종합 점수 상태 및 신호등 대표 색상 판정
+    score_val = best.get("score_100", 0.0)
+    if score_val >= 80.0:
+        badge_color = "#28a745"
+        badge_text = "🟢 안심 추천 (적합)"
+    elif score_val >= 50.0:
+        badge_color = "#ffc107"
+        badge_text = "🟡 유의 검토 (보통)"
+    else:
+        badge_color = "#dc3545"
+        badge_text = "🔴 가입 재고 (위험)"
+
+    # -------------------------------------------------------------
+    # [방사형 레이더(거미줄) 차트 생성 함수]
+    # -------------------------------------------------------------
+    def create_radar_chart(cat_scores: dict, color: str):
+        categories = ["암", "뇌 질환", "심장 질환", "상해", "입원/수술"]
+        values = [cat_scores.get(c, 40.0) for c in categories]
+        
+        categories_closed = categories + [categories[0]]
+        values_closed = values + [values[0]]
+
+        fig = go.Figure()
+        fig.add_trace(go.Scatterpolar(
+            r=values_closed,
+            theta=categories_closed,
+            fill='toself',
+            fillcolor=f"rgba({int(color[1:3], 16)}, {int(color[3:5], 16)}, {int(color[5:7], 16)}, 0.25)",
+            line=dict(color=color, width=2.5),
+            marker=dict(size=6, color=color),
+            hoverinfo='theta+r'
         ))
+
         fig.update_layout(
-            height=145,
-            margin=dict(l=15, r=15, t=10, b=5),
-            paper_bgcolor="rgba(0,0,0,0)",
-            font={"color": "#ffffff"}
+            polar=dict(
+                radialaxis=dict(
+                    visible=True,
+                    range=[0, 100],
+                    tickvals=[20, 40, 60, 80, 100],
+                    ticktext=["20", "40", "60", "80", "100"],
+                    tickfont=dict(size=9, color="#888888"),
+                    gridcolor="#e2e8f0",
+                ),
+                angularaxis=dict(
+                    tickfont=dict(size=12, color="#2d3748", family="-apple-system, sans-serif"),
+                    gridcolor="#e2e8f0",
+                    rotation=90,
+                    direction="clockwise"
+                ),
+                bgcolor="rgba(0,0,0,0)"
+            ),
+            showlegend=False,
+            height=260,
+            margin=dict(l=40, r=40, t=25, b=25),
+            paper_bgcolor="rgba(0,0,0,0)"
         )
-        return fig, badge_text, badge_color
+        return fig
 
-    # 상단 요약 카드 배치 (1열: 신호등 점수 바, 2~4열: 핵심 지표 메트릭)
-    m1, m2, m3, m4 = st.columns([1.3, 1, 1, 1])
-    
-    with m1:
-        st.caption("🛡️ **종합 적합도 평가 게이지**")
-        fig_gauge, b_text, b_col = create_gauge_chart(best['score_100'], best['s3'])
-        st.plotly_chart(fig_gauge, use_container_width=True)
-        st.markdown(
-            f"<div style='text-align: center; margin-top: -15px; font-size: 13px; font-weight: bold; color: {b_col};'>"
-            f"{b_text} <span style='color: #888888; font-weight: normal;'>(S3: {best['s3']:.3f})</span></div>",
-            unsafe_allow_html=True
-        )
+    # -------------------------------------------------------------
+    # [상단 종합 카드: 텍스트 강조 + 방사형 거미줄 차트]
+    # -------------------------------------------------------------
+    st.markdown("""
+        <style>
+        .radar-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 18px 24px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            margin-bottom: 25px;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
-    with m2:
-        st.metric("예상 월 납입 보험료", f"{best['premium']:,} 원")
-    with m3:
-        st.metric("보장 특약 수", f"{best['rider_count']} 개")
-    with m4:
-        st.metric("검출된 제약/독소조항", f"{best['toxic_count'] + len(best['llm_toxics'])} 건")
+    with st.container():
+        st.markdown('<div class="radar-card">', unsafe_allow_html=True)
+        col_summary, col_radar = st.columns([1.1, 1.2])
 
+        with col_summary:
+            st.caption("🛡️ **AI 종합 적합도 및 핵심 지표**")
+            st.markdown(f"""
+                <div style="margin-top: 5px; margin-bottom: 12px;">
+                    <div style="font-size: 38px; font-weight: 800; color: {badge_color}; line-height: 1.1;">
+                        {score_val}점 <span style="font-size: 20px; color: #718096; font-weight: 600;">/ 100점</span>
+                    </div>
+                    <div style="margin-top: 6px; font-size: 15px; font-weight: 700; color: {badge_color};">
+                        {badge_text}
+                    </div>
+                    <div style="font-size: 12px; color: #a0aec0; margin-top: 2px;">
+                        (약관 감쇄 모델 S3: {best['s3']:.3f})
+                    </div>
+                </div>
+            """, unsafe_allow_html=True)
 
+            sub_m1, sub_m2 = st.columns(2)
+            with sub_m1:
+                st.metric("월 납입 보험료", f"{best['premium']:,} 원")
+            with sub_m2:
+                st.metric("보장 특약 수", f"{best['rider_count']} 개")
+
+            st.caption(f"⚠️ 독소/면책 탐지: **{best['toxic_count'] + len(best['llm_toxics'])}건** 검출됨")
+
+        with col_radar:
+            st.caption("🕸️ **5대 보장 밸런스 프로필 (방사형 능력치)**")
+            best_cat_scores = best.get("category_scores", {})
+            fig_radar = create_radar_chart(best_cat_scores, badge_color)
+            st.plotly_chart(fig_radar, use_container_width=True)
+
+        st.markdown('</div>', unsafe_allow_html=True)
+
+    # -------------------------------------------------------------
+    # [UI 컴포넌트] 항목별 신호등 일자 바 & 핀 포인트 렌더러
+    # -------------------------------------------------------------
+    def render_traffic_light_slider(label: str, score: float, description: str):
+        clamped_score = min(max(score, 0.0), 100.0)
+
+        if clamped_score >= 70:
+            pin_color = "#34a853"
+            status_label = "높음"
+        elif clamped_score >= 40:
+            pin_color = "#fbbc04"
+            status_label = "보통"
+        else:
+            pin_color = "#ea4335"
+            status_label = "낮음"
+
+        html_code = f"""
+        <div style="margin-bottom: 22px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+                <span style="font-weight: 700; font-size: 14.5px; color: #2d3748; width: 85px;">{label}</span>
+                <div style="position: relative; flex-grow: 1; margin: 0 16px; height: 32px; display: flex; align-items: center;">
+                    <span style="position: absolute; left: -16px; font-size: 11px; color: #a0aec0;">0</span>
+                    <div style="width: 100%; height: 7px; border-radius: 4px; background: linear-gradient(to right, #ea4335 0%, #ea4335 40%, #fbbc04 40%, #fbbc04 70%, #34a853 70%, #34a853 100%);"></div>
+                    <div style="position: absolute; left: {clamped_score}%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; z-index: 2;">
+                        <span style="font-size: 11.5px; font-weight: 800; color: #1a202c; background: #ffffff; padding: 0px 5px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.25); margin-bottom: 2px;">
+                            {int(clamped_score)}
+                        </span>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffffff; border: 3px solid {pin_color}; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></div>
+                    </div>
+                    <span style="position: absolute; right: -25px; font-size: 11px; color: #a0aec0;">100</span>
+                </div>
+                <span style="font-size: 13px; font-weight: 700; color: {pin_color}; width: 35px; text-align: right;">{status_label}</span>
+            </div>
+            <div style="margin-left: 85px; padding-left: 16px; font-size: 12.5px; color: #4a5568; line-height: 1.45;">
+                ↳ {description}
+            </div>
+        </div>
+        """
+        st.markdown(html_code, unsafe_allow_html=True)
+
+    # -------------------------------------------------------------
+    # [상세 보장 수준 화면] 1순위 ~ 5순위 탭 전환
+    # -------------------------------------------------------------
+    st.markdown("""
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+            <h3 style="font-size: 21px; font-weight: 800; color: #1a202c; margin-bottom: 4px;">선택한 보험의 상세 보장 수준</h3>
+            <p style="color: #718096; font-size: 13.5px; margin: 0;">각 보험 안에서 항목별로 얼마나 보장하는지 확인하세요.</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    top_n = min(len(evaluated_products), 5)
+    tab_titles = [f"{i+1}순위" for i in range(top_n)]
+    rank_tabs = st.tabs(tab_titles)
+
+    for idx, tab in enumerate(rank_tabs):
+        with tab:
+            prod = evaluated_products[idx]
+            p_name = prod.get("name", "보험 상품")
+            score_total = prod.get("score_100", 0.0)
+            cat_scores = prod.get("category_scores", {})
+            highlights = prod.get("highlights", [])
+
+            st.markdown(f"""
+                <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 22px 24px; margin-bottom: 22px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="text-align: center; margin-bottom: 22px;">
+                        <h4 style="font-size: 18px; font-weight: 700; color: #2d3748; margin-bottom: 4px;">{p_name}</h4>
+                        <div style="font-size: 22px; font-weight: 800; color: #2b6cb0;">
+                            종합 점수: {score_total}점 <span style="font-size: 15px; color: #718096; font-weight: 500;">/ 100점</span>
+                        </div>
+                    </div>
+            """, unsafe_allow_html=True)
+
+            def generate_desc(category: str, score: float) -> str:
+                key_map = {"암": "암", "뇌 질환": "뇌혈관", "심장 질환": "심장", "상해": "상해", "입원/수술": "입원/수술"}
+                user_weight = w_final.get(key_map.get(category, category), 0.20)
+                
+                matched = [h for h in highlights if (category == "암" and "암" in h) or 
+                                                     (category == "뇌 질환" and "뇌" in h) or 
+                                                     (category == "심장 질환" and "심" in h) or 
+                                                     (category == "상해" and "상해" in h) or 
+                                                     (category == "입원/수술" and any(k in h for k in ["입원", "수술"]))]
+                cov_text = f"실제 가입금액 {matched[0]}" if matched else "기본 한도 탑재"
+
+                if score >= 70:
+                    return f"<b>사용자 선호 가중치 {user_weight*100:.1f}% 반영</b>: {cov_text}으로, 전체 상품군 대비 가성비 및 보장 충실도가 충분하여 <b>높음</b>으로 평가되었습니다."
+                elif score >= 40:
+                    return f"<b>사용자 선호 가중치 {user_weight*100:.1f}% 반영</b>: {cov_text} 수준으로, 평균적인 위험 커버리지를 충족하여 <b>보통</b>으로 평가되었습니다."
+                else:
+                    return f"<b>사용자 선호 가중치 {user_weight*100:.1f}% 반영</b>: {cov_text}이나 가입 조건이 제한적이거나 타 상품군 대비 한도가 낮아 <b>낮음</b>으로 평가되었습니다."
+
+            labels = ["암", "뇌 질환", "심장 질환", "상해", "입원/수술"]
+            for label in labels:
+                sc = cat_scores.get(label, 40.0)
+                desc = generate_desc(label, sc)
+                render_traffic_light_slider(label, sc, desc)
+
+            st.markdown("""
+                <div style="display: flex; justify-content: center; gap: 30px; margin: 20px auto 0 auto; font-size: 12.5px; font-weight: 700;">
+                    <span style="color: #ea4335;">● 낮음 (0~39점)</span>
+                    <span style="color: #fbbc04;">● 보통 (40~69점)</span>
+                    <span style="color: #34a853;">● 높음 (70~100점)</span>
+                </div>
+                </div>
+            """, unsafe_allow_html=True)
+
+    # ---------------------------------------------------------------
+    # 📋 AI 추천 사유 및 약관 분석 리포트
+    # ----------------------------------------------------------------
     st.markdown("### 📋 AI 추천 사유 및 약관 분석 리포트")
     with st.container():
         st.markdown(f"""
@@ -345,7 +549,6 @@ if evaluated_products:
             if validated_risk_keys:
                 st.info(f"🔍 **사용자 입력에서 분석된 키워드:** `{', '.join(validated_risk_keys)}`")
 
-            # 1위 상품 자체에 제약이 있는 경우
             if best["llm_toxics"] or best["user_risks"]:
                 st.warning(f"⚠️ **[주의] 현재 추천 상품 약관 내 제약 사항:**\n입력하신 조건과 관련하여 아래 특약에서 면책 또는 지급 제한 가능성이 확인되었습니다:")
                 for item in best["llm_toxics"]:
@@ -355,7 +558,6 @@ if evaluated_products:
             else:
                 st.info("✅ **독소조항 안전:** 입력하신 기피 조건에 위배되는 독소조항이 1순위 추천 상품에서는 발견되지 않았습니다.")
 
-            # 하위 상품 중 독소조항으로 순위가 밀린 상품 안내 (대체 추천)
             dropped_due_to_toxic = [
                 p for p in evaluated_products[1:] 
                 if p["llm_toxics"] or p["user_risks"]
@@ -371,20 +573,3 @@ if evaluated_products:
                     st.markdown(f"> **{other['name']}** 상품은 약관상 **{', '.join(reasons)}** 등의 이유로 **보장을 받지 못할 위험**이 있습니다. 따라서 해당 위험이 없는 상품을 대신 1순위로 추천합니다.")
         else:
             st.caption("💡 사이드바 3번에 기피 조건을 적고 **[🔍 독소조항 분석하기]** 버튼을 누르면, 약관 내 면책·독소조항을 RAG-LLM으로 검증하여 대체 상품 추천 사유를 안내합니다.")
-
-    st.markdown("---")
-    tab1, tab2 = st.tabs(["📊 3단계 시나리오 점수 비교", "📑 전체 상품 종합 비교표"])
-
-    with tab1:
-        names = [p["name"] for p in evaluated_products]
-        fig = go.Figure()
-        fig.add_trace(go.Bar(name="기존 AHP (Scenario 1)", x=names, y=[p["s1"] for p in evaluated_products], marker_color="#95a5a6"))
-        fig.add_trace(go.Bar(name="AHP + 비검증 LLM (Scenario 2)", x=names, y=[p["s2"] for p in evaluated_products], marker_color="#e74c3c"))
-        fig.add_trace(go.Bar(name="AHP + RAG 제안 시스템 (Scenario 3)", x=names, y=[p["s3"] for p in evaluated_products], marker_color="#2ecc71"))
-        fig.update_layout(barmode="group", height=430, yaxis_title="추천 점수")
-        st.plotly_chart(fig, use_container_width=True)
-
-    with tab2:
-        df_rank = pd.DataFrame(evaluated_products)[["name", "score_100", "s3", "s1", "s2", "premium", "rider_count", "toxic_count"]]
-        df_rank.columns = ["상품명", "적합도(100점)", "제안시스템(S3)", "기존AHP(S1)", "비검증LLM(S2)", "월 보험료", "특약수", "독소조항 수"]
-        st.dataframe(df_rank, use_container_width=True)

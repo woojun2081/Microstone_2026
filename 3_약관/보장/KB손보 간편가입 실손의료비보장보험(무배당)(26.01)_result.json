@@ -1,0 +1,403 @@
+{
+  "source": "KB손보 간편가입 실손의료비보장보험(무배당)(26.01).pdf",
+  "total_articles": 145,
+  "candidate_articles": 32,
+  "coverage_filtered_articles": 32,
+  "extracted_coverages": 6,
+  "results": [
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 16,
+      "title": "청약의 철회",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 100,
+      "coverages": [
+        {
+          "coverage_name": "상해입원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "5천만원"
+          },
+          "payment_condition": "다만, 법령 등에 따라 의료비를 감면받거나 의료기관으로부터 의료비를 감면받은 경우(의료비를 납부하는 대가로 수수한 금액 등은 감면받은 의료비에 포함)에 감면 후 실제 본인이 부담한 의료비 기준으로 계산하며, 감면받은 의료비가 근로소득에 포함된 경우",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "회사는 피보험자가 상해로 인하여 의료기관에 입원하여 치료를 받은 경우에는 입원 의료비를 다음과 같이 하나의 상해당 보험가입금액(5천만원) 한도 내에서 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 86,
+      "coverages": [
+        {
+          "coverage_name": "상해통원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "피보험자가 상해로 인하여 의료기관에 통원하여 치료를 받은 경우에 보상(단, 처방조제 제외)",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "본인이 부담하는 일부본인부담금과 요양급여 비용 또는 의료급여 비용의 전부를 본인이 부담하는 전액본인부담금",
+          "source_quote": "피보험자가 상해로 인하여 의료기관에 통원하여 치료를 받은 경우에 보상(단, 처방조제 제외)",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병입원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "피보험자가 질병으로 인하여 의료기관에 입원하여 치료를 받은 경우에 보상",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "비급여주)(비급여병실료는 제외합니다)",
+          "source_quote": "피보험자가 질병으로 인하여 의료기관에 입원하여 치료를 받은 경우에 보상",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병통원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "피보험자가 질병으로 인하여 의료기관에 통원하여 치료를 받은 경우에 보상(단, 처방조제 제외)",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "보장대상의료비의 30% 중 큰 금액을 뺀 금액을 보상합니다.",
+          "source_quote": "피보험자가 질병으로 인하여 의료기관에 통원하여 치료를 받은 경우에 보상 (단, 처방조제 제외)",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상급병실료 차액",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 100000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "10만원"
+          },
+          "payment_condition": "다만, 1일 평균금액 10만원을 한도로 보상합니다.",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "50%",
+          "source_quote": "다만, 1일 평균금액 10만원을 한도로 상급병실료 차액",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "연간 보장한도",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 2000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "200만원"
+          },
+          "payment_condition": "연간 200만원을 초과하는 경우 그 초과금액은 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "연간 200만원을 초과하는 경우 그 초과금액은 보상합니다.",
+          "confidence": 75,
+          "level": "보통",
+          "checks": {
+            "coverage_name": false,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 7,
+      "title": "보험금의 지급절차",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 8,
+      "title": "보험금을 받는 방법의 변경",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 12,
+      "title": "상해보험계약 후 알릴 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 14,
+      "title": "사기에 의한 계약",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 16,
+      "title": "청약의 철회",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 22,
+      "title": "재가입",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 23,
+      "title": "제1회 보험료 및 회사의 보장개시",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 30,
+      "title": "계약자의 임의해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 32,
+      "title": "회사의 파산선고와 해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 38,
+      "title": "적용대상",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 39,
+      "title": "지정대리청구인의 지정",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 41,
+      "title": "지정대리청구인에 의한 보험금의 청구",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 54,
+      "title": "자동갱신 적용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "적용범위",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "대표자의 선정",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "피보험자의 추가, 감소 또는 교체",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 4,
+      "title": "계약자의 알릴의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 24,
+      "title": "고유식별정보의 처리 제한",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 38,
+      "title": "신용정보의 열람 및 정정청구 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 35,
+      "title": "응급의료기관 외의 의료기관",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "병원등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 13,
+      "title": "보건지소의 설치",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "중증질환심의위원회",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 19,
+      "title": "설명의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 20,
+      "title": "불공정영업행위의 금지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    }
+  ]
+}

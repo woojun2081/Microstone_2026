@@ -1,0 +1,215 @@
+{
+  "source": "무배당 프로미라이프 간편실손의료비보험(유병력자용)2604(만기재가입용).pdf",
+  "total_articles": 65,
+  "toxic_summary": {
+    "total_toxic_clauses": 16,
+    "affected_articles": 12,
+    "with_exception": 4,
+    "excluded_short_quote": 0,
+    "excluded_not_in_source": 35,
+    "deduped": 0,
+    "total_excluded": 35
+  },
+  "toxic_clauses": [
+    {
+      "article_number": 27,
+      "article_title": "갱신계약 제1회 보험료의 납입연체시 납입최고(독촉)와 계약의 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급제한사항",
+          "reason": "가입 후 1년간 보험금 50% 지급",
+          "severity": "높음",
+          "source_quote": "급성심근경색 가입 후 1년간 보험금 50% 지급",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "해약환급금 미지급",
+          "reason": "납입기간 중 보험계약을 해지할 경우 해약환급금이 없습니다.",
+          "severity": "높음",
+          "source_quote": "납입기간 중 보험계약을 해지할 경우 해약환급금이 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보장종목",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 고의로 피보험자를 해친 경우 보상하지 않음",
+          "reason": "고의적인 행위에 대한 면책 조항으로, 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "③ 계약자가 고의로 피보험자를 해친 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "전쟁, 외국의 무력행사 등으로 인한 경우 보상하지 않음",
+          "reason": "전쟁 및 무력행사 관련 면책 조항으로, 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "⑤ 전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동으로 인한 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "보험금의 지급절차",
+      "toxic_clauses": [
+        {
+          "clause_summary": "비급여 주사료에 대한 지급 제외",
+          "reason": "비급여 주사료는 특정 항목을 제외하고 지급되지 않음",
+          "severity": "중간",
+          "source_quote": "비급여 주사료[다만, 항암제, 항생제(항진균제 포함), 희귀의약품은 보상합니다]",
+          "exception": "항암제·항생제·희귀의약품 관련 비급여 주사료는 예외적으로 보상함",
+          "exception_quote": "다만, 항암제, 항생제(항진균제 포함), 희귀의약품은 보상합니다"
+        }
+      ]
+    },
+    {
+      "article_number": 11,
+      "article_title": "계약 전 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "고지의무 위반 시 계약 해지 가능",
+          "reason": "계약자가 중요한 사항을 고지하지 않거나 부실하게 고지할 경우 보험자가 계약을 해지할 수 있음",
+          "severity": "높음",
+          "source_quote": "보험자는 그 사실을 안 날로부터 1월내에, 계약을 체결한 날로부터 3년내에 한하여 계약을 해지할 수 있다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "질문표에 사실과 다르게 기재 시 계약 해지 가능",
+          "reason": "질문표에 사실과 다르게 기재하면 고지의무 위반으로 계약 해지 사유가 됨",
+          "severity": "높음",
+          "source_quote": "질문표에 사실과 다르게 기재하였다면 보험자는 고지의무위반을 이유로 보험계약을 해지할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 12,
+      "article_title": "상해보험계약 후 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "위험의 증가로 보험금을 삭감하여 지급함",
+          "reason": "계약자가 통지 의무를 이행하지 않을 경우 보험금이 삭감됨",
+          "severity": "높음",
+          "source_quote": "위 󰊱의 통지에 따라 위험의 증가로 보험료를 더 내야 할 경우 회사가 청구한 추가보험료(정산금액을 포함합니다)를 계약자가 납입하지 않았을 때, 회사는 위험이 증가되기 전에 적용된 보험요율(이하 “변경전 요율”이라 합니다)의 위험이 증가된 후에 적용해야 할 보험요율(이하 “변경후 요율”이라 합니다)에 대한 비율에 따라 보험금을 삭감하여 지급합니다.",
+          "exception": "위험 증가와 관계없이 발생한 보험금 지급사유는 원래대로 지급함",
+          "exception_quote": "다만, 증가된 위험과 관계없이 발생한 보험금 지급사유에 관해서는 원래대로 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 13,
+      "article_title": "알릴 의무 위반의 효과",
+      "toxic_clauses": [
+        {
+          "clause_summary": "알릴 의무 위반 시 계약 해지 가능",
+          "reason": "계약자가 알릴 의무를 위반한 경우 회사가 계약을 해지할 수 있음",
+          "severity": "중간",
+          "source_quote": "이 그 사실을 안 날부터 1개월 이내에 이 계약을 해지할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 18,
+      "article_title": "계약의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약에서 정한 피보험자의 나이에 미달되거나 초과되었을 경우 계약 무효",
+          "reason": "계약자가 피보험자의 나이에 따라 계약이 무효가 될 수 있음",
+          "severity": "높음",
+          "source_quote": "계약을 체결할 때 계약에서 정한 피보험자의 나이에 미달되거나 초과되었을 경우에는 계약을 무효로 하며, 이미 납입한 보험료를 돌려 드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 20,
+      "article_title": "보험나이 등",
+      "toxic_clauses": [
+        {
+          "clause_summary": "이미 납입한 보험료는 돌려드리지 않습니다.",
+          "reason": "계약자가 계약을 해지하더라도 이미 납입한 보험료를 반환받지 못함",
+          "severity": "높음",
+          "source_quote": "이미 납입한 보험료는 돌려드리지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 23,
+      "article_title": "자동갱신 적용",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 갱신계약의 제1회 보험료를 갱신일까지 납입하지 않은 경우 계약 해지",
+          "reason": "계약자가 보험료를 납입하지 않으면 계약이 해지되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "계약자가 갱신계약의 제1회 보험료를 갱신일까지 납입하지 않은 때에는 회사는 30. (보험료 납입이 연체되는 경우 납입최고(독촉)와 계약의 해지)에 따라 계약자에게 최고(독촉)하고 이 납입최고(독촉)기간안에 갱신계약 보험료가 납입되지 않은 경우 납입 제8관 보험료의 납입 최고(독촉)기간이 끝나는 날의 다음날 갱신계약은 해지됩니다.",
+          "exception": "납입최고(독촉) 기간 안에 발생한 사고에 대하여 회사는 약정한 보험금을 지급함",
+          "exception_quote": "다만, 납입최고(독촉) 기간 안에 발생한 사고에 대하여 회사는 약정한 보험금을 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 36,
+      "article_title": "회사의 파산선고와 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약대출 제한",
+          "reason": "계약 해지 또는 효력 상실 시 보험계약대출이 제한될 수 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "회사는 이 제한될 수도 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 37,
+      "article_title": "위법계약의 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "이자를 상환하지 않은 경우 회사는 지급금에서 보험계약대출의 원금과 이자를 차감할 수 있음",
+          "reason": "계약자가 이자를 상환하지 않을 경우 지급금이 줄어들어 불리함",
+          "severity": "중간",
+          "source_quote": "이자를 상환하지 않은 경우 회사는 그 지급금에서 보험계약대출의 원금과 이자를 차감할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "회사는 이 보험에 대하여 계약자에게 배당금을 지급하지 않음",
+          "reason": "계약자가 배당금을 받을 수 없으므로 불리함",
+          "severity": "높음",
+          "source_quote": "회사는 이 보험에 대하여 계약자에게 배당금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 49,
+      "article_title": "개인정보보호",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자 등에게 책임이 있는 사유로 보험금 지급이 지연된 경우 이자는 지급되지 않을 수 있음",
+          "reason": "계약자가 보험금 지급 지연에 대한 책임이 있을 경우 이자가 지급되지 않아 계약자에게 불리함",
+          "severity": "낮음",
+          "source_quote": "계약자 등에게 책임이 있는 사유로 보험금 지급이 지연된 경우에는 그 해당 기간에 대한 이자는 지급되지 않을 수 있습니다.",
+          "exception": "계약자 등이 분쟁조정을 신청했다는 사유만으로 이자지급을 거절하지 않음",
+          "exception_quote": "다만, 회사는 계약자 등이 분쟁조정을 신청했다는 사유만으로 이자지급을 거절하지 않습니다."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "source": "DB실손보험(30대,건설 단순 종사원,연납,의료급여 비수급자).png",
+  "document_type": "가입화면",
+  "contract_summary": {
+    "insurer": "DB손해보험",
+    "product_name": "실손보험",
+    "product_case": "실손의료비보험",
+    "job": "건설 단순 종사원",
+    "gender": "상관없음",
+    "age": null,
+    "age_raw": "30대",
+    "payment_cycle": "연납",
+    "medical_aid": "비수급자",
+    "total_premium": 10528,
+    "total_premium_raw": "연 126,340원",
+    "renewal": "매년 갱신, 5년 재가입, 최대 100세 보장"
+  },
+  "coverages": [
+    {
+      "coverage_name": "(기본형)상해급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 22930,
+      "is_enrolled": true,
+      "coverage_category": "기본형"
+    },
+    {
+      "coverage_name": "(기본형)질병급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 45262,
+      "is_enrolled": true,
+      "coverage_category": "기본형"
+    },
+    {
+      "coverage_name": "(특약형1,중증)상해비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 298,
+      "is_enrolled": true,
+      "coverage_name_raw": "(특약형1,종종)상해비급여의료비(갱신형)",
+      "coverage_category": "특약형1,중증"
+    },
+    {
+      "coverage_name": "(특약형1,중증)질병비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 2275,
+      "is_enrolled": true,
+      "coverage_name_raw": "(특약형1,종종)질병비급여의료비(갱신형)",
+      "coverage_category": "특약형1,중증"
+    },
+    {
+      "coverage_name": "(특약형1,중증)3대비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 3500000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "350만원"
+      },
+      "premium": 585,
+      "is_enrolled": true,
+      "coverage_name_raw": "(특약형1,종종)3대비급여의료비(갱신형)",
+      "coverage_category": "특약형1,중증"
+    },
+    {
+      "coverage_name": "(특약형2,비중증)상해비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 14592,
+      "is_enrolled": true,
+      "coverage_category": "특약형2,비중증"
+    },
+    {
+      "coverage_name": "(특약형2,비중증)질병비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 25703,
+      "is_enrolled": true,
+      "coverage_category": "특약형2,비중증"
+    },
+    {
+      "coverage_name": "(특약형2,비중증)비급여자기공명영상진단(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 2000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "2백만원"
+      },
+      "premium": 14701,
+      "is_enrolled": true,
+      "coverage_name_raw": "(특약형2,비중증)비급여자가공명영상진단(갱신형)",
+      "coverage_category": "특약형2,비중증"
+    }
+  ],
+  "error": null
+}

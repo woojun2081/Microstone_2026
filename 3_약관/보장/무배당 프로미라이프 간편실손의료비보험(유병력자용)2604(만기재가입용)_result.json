@@ -1,0 +1,240 @@
+{
+  "source": "무배당 프로미라이프 간편실손의료비보험(유병력자용)2604(만기재가입용).pdf",
+  "total_articles": 65,
+  "candidate_articles": 16,
+  "coverage_filtered_articles": 16,
+  "extracted_coverages": 4,
+  "results": [
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 100,
+      "coverages": [
+        {
+          "coverage_name": "상해입원(간편고지)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "5천만원"
+          },
+          "payment_condition": "다만, 법령 등에 따라 의료비를 감면받거나 의료기관으로부터 의료비를 감면받은 경우에는 감면 후 실제 본인이 부담한 의료비 기준으로 계산하며, 감면받은 의료비가 근로소득에 포함된 경우,「국가유공자 등 예우 및 지원에 관한 법률」및 「독립유공자 예우에 관한 법률」에 따라 의료비를 감면받은 경우에는 감면 전 의료비로 급여 및 비급여 의료비를 계산합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "10만원과 보상대상의료비의 30%",
+          "source_quote": "다만, 보험가입금액은 5천만원으로 합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해통원(간편고지)",
+          "amount": {
+            "per_time": 200000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": {
+              "value": 180,
+              "unit": "회"
+            },
+            "is_shared_limit": false,
+            "raw": "20만원"
+          },
+          "payment_condition": "다만, 계약일 계약해당일부터 1년간 방문 180회를 한도로 합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "2만원과 보상대상의료비의 30%",
+          "source_quote": "방문 1회당 ‘「국민건강보험법」에서 정한 요양급여 또는 「의료급여법」에서 정한 의료급여 중 본인부담금’과 ‘비급여주1)’를 합한 금액",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병입원(간편고지)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "5천만원"
+          },
+          "payment_condition": "다만, 법령 등에 따라 의료비를 감면받거나 의료기관으로부터 의료비를 감면받은 경우에는 감면 후 실제 본인이 부담한 의료비 기준으로 계산하며, 감면받은 의료비가 근로소득에 포함된 경우,「국가유공자 등 예우 및 지원에 관한 법률」및 「독립유공자 예우에 관한 법률」에 따라 의료비를 감면받은 경우에는 감면 전 의료비로 급여 및 비급여 의료비를 계산합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "10만원과 보상대상의료비의 30%",
+          "source_quote": "다만, 보험가입금액은 5천만원으로 합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병통원(간편고지)",
+          "amount": {
+            "per_time": 200000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": {
+              "value": 180,
+              "unit": "회"
+            },
+            "is_shared_limit": false,
+            "raw": "20만원"
+          },
+          "payment_condition": "다만, 계약일 계약해당일부터 1년간 방문 180회를 한도로 합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "2만원과 보상대상의료비의 30%",
+          "source_quote": "방문 1회당 ‘「국민건강보험법」에서 정한 요양급여 또는 「의료급여법」에서 정한 의료급여 중 본인부담금’과 ‘비급여주1)’를 합한 금액",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 7,
+      "title": "보험금의 지급절차",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 12,
+      "title": "상해보험계약 후 알릴 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 14,
+      "title": "사기에 의한 계약",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 21,
+      "title": "계약의 소멸",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 22,
+      "title": "보험기간 및 자동갱신",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 23,
+      "title": "자동갱신 적용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 26,
+      "title": "제1회 보험료 및 회사의 보장개시",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 19,
+      "title": "계약내용의 변경 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 33,
+      "title": "보험료의 계산",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 35,
+      "title": "중대사유로 인한 해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,5349 @@
+{
+  "source": "공무원 약관(걸을수록THE좋은건강보험).pdf",
+  "total_articles": 2456,
+  "toxic_summary": {
+    "total_toxic_clauses": 429,
+    "affected_articles": 317,
+    "with_exception": 32,
+    "excluded_short_quote": 27,
+    "excluded_not_in_source": 848,
+    "deduped": 376,
+    "total_excluded": 1251
+  },
+  "toxic_clauses": [
+    {
+      "article_number": 4,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "후유장해보험금 차감 지급",
+          "reason": "이미 지급받은 후유장해보험금을 차감하여 지급함",
+          "severity": "중간",
+          "source_quote": "보험금에서 이미 지급받은 후유장해보험금을 차감하여 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "장해분류표의 최저 지급률 미달 시 지급하지 않음",
+          "reason": "장해정도에 따라 지급액을 결정하나 최저 지급률에 미달하면 지급하지 않음",
+          "severity": "중간",
+          "source_quote": "다만, 장해분류표의 각 장해분류별 최저 지급률 장해정도에 이르지 않는 후유장해에 대하여는 후유장해보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "장해지급률 결정 기준에 대한 제한",
+          "reason": "장해상태가 악화된 경우에도 지급률 결정에 제한이 있음",
+          "severity": "중간",
+          "source_quote": "장해지급률이 결정되었으나 그 이후 보장받을 수 있는 기간(계약의 효력이 없어진 경우에는 보험기간이 10년 이상인 계약은 상해 발생일로부터 2년 이내로 하고, 보험기간이 10년 미만인 계약은 상해 발생일로부터 1년 이내)에 장해상태가 더 악화된 때에는 그 악화된 장해상태를 기준으로 장해지급률을 결정합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않으며, 보험료 납입면제도 적용하지 않음",
+          "reason": "보험금 지급사유가 발생했음에도 불구하고 회사에 지체 없이 사실을 알려야 하는 의무가 있음",
+          "severity": "높음",
+          "source_quote": "보험금을 지급하지 않으며, 26-1.(보험료 납입면제) 및 26-2.(보험료 납입면제)에서 정한 보험료 납입면제도 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "보험금의 청구",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자가 고의로 자신을 해친 경우 보험금 지급 제외",
+          "reason": "피보험자가 고의로 해친 경우 보험금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "피보험자가 고의로 자신을 해친 경우.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 13,
+      "article_title": "대표자의 지정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 2명 이상인 경우 계약전 알릴의무, 보험료 납입의무 등 보험계약에 따른 계약자의 의무를 연대로 합니다.",
+          "reason": "계약자가 2명 이상일 경우 의무가 연대책임으로 강화되어 불리함.",
+          "severity": "중간",
+          "source_quote": "계약자가 2명 이상인 경우 계약전 알릴의무, 보험료 납입의무 등 보험계약에 따른 계약자의 의무를 연대로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 19,
+      "article_title": "청약의 철회",
+      "toxic_clauses": [
+        {
+          "clause_summary": "청약한 날로부터 30일을 초과한 계약은 청약을 철회할 수 없다.",
+          "reason": "계약자가 청약 철회할 수 있는 기간을 제한함",
+          "severity": "높음",
+          "source_quote": "위 󰊱에도 불구하고, 청약한 날로부터 30일을 초과한 계약은 청약을 철회할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 21,
+      "article_title": "계약의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약의 경우 특정 조건에 해당하면 계약을 무효로 함",
+          "reason": "계약자가 특정 조건에 해당할 경우 계약이 무효가 되어 보험료를 반환받지 못할 수 있음",
+          "severity": "높음",
+          "source_quote": "보험계약의 경우 보험종목, 보험기간, 보험료 납입기간, 피보험자, 보험가입금액의 다음 중 한 가지에 해당하는 경우에는 계약을 무효로 하며 이미 납입한 보험료를 돌 증액은 변경할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 23,
+      "article_title": "보험나이 등",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험가입금액 감액 시 해약환급금 지급 조건",
+          "reason": "계약자가 보험가입금액을 감액할 경우, 감액된 부분은 해지된 것으로 간주되어 해약환급금이 줄어들 수 있음",
+          "severity": "중간",
+          "source_quote": "회사가 지급하여야 할 해약환급금이 있을 때에는 35.(해약환급금) 󰊱에 따른 해약환급금을 계약자에게 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 24,
+      "article_title": "계약의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 보험금 지급사유 발생 전에 피보험자가 서면의 원인이 생긴 경우 계약 소멸",
+          "reason": "계약자가 보험금 지급사유 발생 전에 피보험자가 서면의 원인이 생긴 경우 계약이 소멸되어 불리함",
+          "severity": "높음",
+          "source_quote": "보험금 지급사유가 발생하기 전에 피보험자가 서면의 원인이 생긴 때로부터 이 계약은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 26,
+      "article_title": "제2회 이후 보험료의 납입",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자, 피보험자 또는 보험수익자의 고의로 인해 피보험자가 사망한 경우 계약자는 보험료를 납입하여야 함",
+          "reason": "계약자가 고의로 피보험자를 사망하게 한 경우에도 보험료 납입 의무가 발생하여 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "계약자, 피보험자 또는 보험수익자의 고의로 인해 피보험자가 사망한 경우 계약자는 제2회 이후의 보험료를 납입기일까지 납입하여야 하며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 28,
+      "article_title": "보험료의 납입이 연체되는 경우 납입최고(독촉)와 계약의 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 납입이 연체될 경우 계약 해지",
+          "reason": "계약자가 보험료를 납입하지 않을 경우 계약이 해지될 수 있음",
+          "severity": "높음",
+          "source_quote": "납입최고(독촉)기간이 끝나는 날까지 보험료를 납입하지 않을 경우 납입최고",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 35,
+      "article_title": "해약환급금",
+      "toxic_clauses": [
+        {
+          "clause_summary": "해약환급금 미지급형B 계약의 경우 해약환급금이 없고, 보험료 납입기간 중 원리금 합계액을 빼고 지급함",
+          "reason": "해약환급금이 없거나 지급이 제한되어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "계약이 해지될 경우 해약환급금이 없고, 보험료 납입기간이 완료된 이후",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "최저보증이율이 0.2%로 설정됨",
+          "reason": "최저보증이율이 낮아 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "최저보증이율은 0.2%로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 36,
+      "article_title": "공시이율의 적용 및 공시",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약대출의 원금과 이자를 지급금에서 차감",
+          "reason": "보험금, 해약환급금 지급 시 대출금이 차감되어 지급액이 줄어듦",
+          "severity": "높음",
+          "source_quote": "지급금에서 보험계약대출의 원금과 이자를 차감할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 39,
+      "article_title": "배당금의 지급",
+      "toxic_clauses": [
+        {
+          "clause_summary": "갱신계약 보험료 미납 시 배당금 지급하지 않음",
+          "reason": "계약자가 갱신계약 보험료를 납입하지 않으면 배당금을 지급받지 못함",
+          "severity": "높음",
+          "source_quote": "회사는 이 보험에 대하여 계약자에게 배당금을 지급하지 않습니다.",
+          "exception": "납입최고(독촉)기간 안에 발생한 사고에 대해서는 보험금을 지급함",
+          "exception_quote": "다만, 납입최고(독촉)기간 안에 발생한 사고에 대하여 회사는 약정한 보험금을 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 49,
+      "article_title": "회사의 손해배상책임",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약자 및 보험료납부자가 법인인 보험계약의 경우에는 보호되지 않습니다.",
+          "reason": "법인 계약자는 예금자 보호제도의 혜택을 받지 못함.",
+          "severity": "중간",
+          "source_quote": "다만, 보험계약자 및 보험료납부자가 법인인 보험계약의 경우에는 보호되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 해약환급금 지급하지 않음",
+          "reason": "특별약관이 소멸되는 경우 해약환급금을 지급하지 않아 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "위 󰊱에 따라 특별약관이 소멸되는 경우에 회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "후유장해보험금 지급 시 차감 조건",
+          "reason": "동일 부위에 가중된 후유장해는 이미 지급받은 보험금을 차감하여 지급함",
+          "severity": "중간",
+          "source_quote": "그러나 그 후유장해가 이미 후유장해보험금을 지급받은 동일한 부위에 가중된 때에는 최종 장해상태에 해당하는 후유장해보험금에서 이미 지급받은 후유장해보험금을 차감하여 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "후유장해보험금 지급 사유 제한",
+          "reason": "보장개시 이전의 원인에 의한 후유장해는 지급 사유에 해당되지 않음",
+          "severity": "중간",
+          "source_quote": "보장개시 이전의 원인에 의한 후유장해 또는 그 이전에 발생한 후유장해는 위의 후유장해보험금 지급사유에 해당되지 않는 후유장해로 봅니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "특정 수술 및 치료에 대해 보험금 지급을 면책함",
+          "severity": "높음",
+          "source_quote": "위 󰊱의 수술에서 아래에 정한 사항은 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 건강검진, 예방접종, 인공유산 포함",
+          "reason": "상해1-5종수술비Ⅱ 보장에 대해 특정 사유로 보험금 지급이 제한됨",
+          "severity": "높음",
+          "source_quote": "건강검진, 예방접종, 인공유산",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "시력교정술은 보상하지 않음",
+          "reason": "시력교정술에 대해 보상하지 않음으로써 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "다. 안경, 콘택트렌즈 등을 대체하기 위한 시력교정술(국민건강보험 요양급여 대상 수술방법 또는 치료재료가 사용되지 않은 부분은 시력교정술로 봅니다)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 납입면제 적용하지 않음",
+          "reason": "특정 가입 유형에 대해 보험료 납입면제가 적용되지 않음",
+          "severity": "중간",
+          "source_quote": "갱신형에 한하여 보통약관 26-1.(보험료 납입면제)는 적용하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금 지급사유 합의 불가",
+          "reason": "보험수익자와 회사 간의 합의가 이루어지지 않으면 지급되지 않음",
+          "severity": "중간",
+          "source_quote": "보험수익자와 회사가 1.(보험금의 지급사유)의 보험금의 지급사유에 대해 합의하지 못",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "외모개선 목적의 치료를 위한 수술은 보상하지 않음",
+          "reason": "외모개선 목적의 수술에 대한 보상이 제한됨",
+          "severity": "높음",
+          "source_quote": "아닌 외모개선 목적의 치료를 위한 수술",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "위생관리, 미모를 위한 성형수술은 보상하지 않음",
+          "reason": "위생관리 및 미모를 위한 성형수술에 대한 보상이 제한됨",
+          "severity": "높음",
+          "source_quote": "위생관리, 미모를 위한 성형수술",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“수술”의 정의와 장소",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 중대한 특정상해수술비 지급 후 손해보장 해당되지 않음",
+          "reason": "특정상해수술비를 지급받은 경우 이후 손해에 대한 보장이 사라진다.",
+          "severity": "중간",
+          "source_quote": "보험금의 지급사유) 󰊱의 중대한 특정상해수술비를 지급한 경우에 그 손해보장 해당되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "관혈수술과 비관혈수술에 대한 지급금액이 경과기간에 따라 다르게 설정됨",
+          "reason": "보험계약일로부터 1년 미만일 경우 지급금액이 낮아짐",
+          "severity": "중간",
+          "source_quote": "관혈수술시 가입금액의 50% → A 사고 관혈수술 4.15일 : 지급, 비관혈수술 4.30일 : 부지급 보험계약일로부터 1년 미만 비관혈수술시 가입금액의 25%",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "관혈수술과 비관혈수술에 대한 지급금액이 경과기간에 따라 다르게 설정됨",
+          "reason": "보험계약일로부터 1년 이상일 경우 지급금액이 높아짐",
+          "severity": "중간",
+          "source_quote": "관혈수술시 가입금액의 100% 보험계약일로부터 1년 이상 비관혈수술시 가입금액의 50%",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "특정 치료 및 수술에 대해 보험금 지급을 제한함",
+          "severity": "높음",
+          "source_quote": "① 건강검진, 예방접종, 인공유산",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "비급여 대상 외모개선 목적의 치료에 대한 면책",
+          "reason": "외모개선 목적의 수술에 대해 보험금 지급을 제한함",
+          "severity": "높음",
+          "source_quote": "③ 아래에 열거된 국민건강보험 비급여 대상으로 신체의 필수 기능개선 목적이 아닌 외모개선 목적의 치료를 위한 수술",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험증권에 기재된 피보험자가 보험기간 중에 사망할 경우 특별약관 소멸",
+          "reason": "피보험자의 사망 시 특별약관이 소멸되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "보험증권에 기재된 피보험자가 보험기간 중에 사망할 경우에 이 특별약관은 소멸",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "치아골절(파절)로 인한 손해는 보장하지 않음",
+          "reason": "치아골절(파절)이 원인이 되어 발생한 손해는 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "치아골절(파절)이 원인이 되어 발생한 손해는 보장하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "갱신형에 한하여 보통약관 26-2.(보험료 납입면제)는 적용하지 않음",
+          "reason": "갱신형 가입 시 보험료 납입면제 혜택을 받을 수 없음",
+          "severity": "중간",
+          "source_quote": "(세만기-고급형(납면적용B형))으로 가입한 경우, 갱신형에 한하여 보통약관 26-2.(보험료 납입면제)는 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "선천적 기형 및 이에 연유한 병상에 대한 보장 제외",
+          "reason": "계약자가 선천적 기형으로 인한 병상에 대해 보험금을 지급받지 못함",
+          "severity": "높음",
+          "source_quote": "② 선천적 기형 및 이에 연유한 병상",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "미용을 위한 성형수술은 보장하지 않음",
+          "reason": "미용 목적의 수술에 대해 보험금 지급을 배제함",
+          "severity": "높음",
+          "source_quote": "다만, 미용을 위한 성형수술을 받은 경우에는 보장하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "피보험자가 사고를 일으키고 도주한 경우 보장하지 않음",
+          "reason": "사고 후 도주 시 보험금 지급을 배제함",
+          "severity": "높음",
+          "source_quote": "① 피보험자가 사고를 일으키고 도주하였을 때",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "신체상해가 발생한 경우 1개월을 초과하여 의사의 치료를 요하는 경우에만 보장함",
+          "reason": "신체상해 발생 시 보장 조건이 제한적임",
+          "severity": "중간",
+          "source_quote": "위 󰊱에도 불구하고 위 󰊱에 정한 ①의 살인, ②의 상해와 폭행 및 ⑤의 폭력 등으로 피보험자의 신체에 피해가 발생한 경우에는 1개월을 초과하여 의사의 치료를 요하는 신체상해를 입은 때에만 보장합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "비급여 대상의 특정 수술에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "라. 외모개선 목적의 다리정맥류 수술 (예 : 절개술, 배농술, 단순 봉합술 등)",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "비급여 대상의 특정 수술에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "⑤ 선천적 기형 및 이에 근거한 병상",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "상해특정치료비 지급사유에서 특정 수술 제외",
+          "reason": "특정 수술(미용성형, 피임, 검사 및 진단 목적의 수술 등)은 보상하지 않음",
+          "severity": "높음",
+          "source_quote": "위 󰊲의 수술에서 아래에 정한 사항은 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "상해특정치료비(창상봉합술)는 연간 3회한도로 보장",
+          "reason": "보장 횟수가 연간 3회로 제한되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "상해특정치료비(창상봉합술)는 연간 3회한도로 보장합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보험금의 청구",
+      "toxic_clauses": [
+        {
+          "clause_summary": "창상봉합술 치료비는 연간 3회한도로 보장",
+          "reason": "보험금 지급 횟수에 제한이 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "창상봉합술 치료비는 연간 3회한도로 보장합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특정 가입 유형에 대해 보험료 납입면제 적용 제외",
+          "reason": "세만기-고급형(납면적용B형) 가입자에게 보험료 납입면제가 적용되지 않으므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "갱신형에 한하여 보통약관 26-2.(보험료 납입면제)는 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“급여 창상봉합술”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "급여 창상봉합술 당시의 건강보험 행위 급여·비급여 목록 및 급여 상대가치점수의 개정으로 급여치료 판정이 변경되더라도 치료 해당 여부를 다시 판단하지 않음",
+          "reason": "계약자가 치료를 받았음에도 불구하고 급여 판정이 변경되면 보장이 이루어지지 않을 수 있음",
+          "severity": "높음",
+          "source_quote": "이 특약에서 보장하는 치료 해당 여부를 다시 판단하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "선천적 기형 및 이에 연유한 병상은 보장하지 않음",
+          "reason": "계약자가 선천적 기형으로 인한 병상에 대해 보험금을 지급받지 못함",
+          "severity": "높음",
+          "source_quote": "② 선천적 기형 및 이에 연유한 병상 (비갱신형/갱신형) 특별약관",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험금의 청구",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금은 연간 1회에 한하여 지급합니다.",
+          "reason": "보험금 지급 횟수가 연간 1회로 제한되어 있어 계약자에게 불리함.",
+          "severity": "중간",
+          "source_quote": "도 보험금은 연간 1회에 한하여 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험금의 청구",
+      "toxic_clauses": [
+        {
+          "clause_summary": "수술비 지급 조건",
+          "reason": "수술비 지급이 길이 측정이 가능한 경우로 제한됨",
+          "severity": "중간",
+          "source_quote": "단, 길이측정이 불가한 피부이식수술등의 경우 수술cm는 최장직경으로 합니다.",
+          "exception": "3cm 이상의 경우에 한해 수술비 지급",
+          "exception_quote": "(단, 3cm이상의 경우에 한함)"
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피임 목적의 수술은 보험금 지급에서 제외됨",
+          "reason": "피임 목적의 수술은 보험금 지급 사유에서 제외됨",
+          "severity": "높음",
+          "source_quote": "⑤ 피임(避妊) 목적의 수술",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "검사 및 진단을 위한 수술은 보험금 지급에서 제외됨",
+          "reason": "검사 및 진단을 위한 수술은 보험금 지급 사유에서 제외됨",
+          "severity": "높음",
+          "source_quote": "⑥ 검사 및 진단을 위한 수술(생검(生檢), 복강경검사(腹腔鏡檢査) 등)",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "사고 전 상태로의 회복을 위한 수술은 보험금 지급에서 포함됨",
+          "reason": "일부 미용성형 수술은 예외적으로 보상됨",
+          "severity": "중간",
+          "source_quote": "④ 위생관리, 미모를 위한 성형수술(다만, 사고 전 상태로의 회복을 위한 수술은 포함합니다)",
+          "exception": "사고 전 상태로의 회복을 위한 수술은 예외적으로 보상함",
+          "exception_quote": "다만, 사고 전 상태로의 회복을 위한 수술은 포함합니다"
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자가 고의로 자신을 해친 경우 보험금을 지급하지 않음",
+          "reason": "고의적인 행위에 대해 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "① 피보험자가 고의로 자신을 해친 경우.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험수익자가 고의로 피보험자를 해친 경우 보험금을 지급하지 않음",
+          "reason": "보험수익자의 고의적인 행위에 대해 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "② 보험수익자가 고의로 피보험자를 해친 경우.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "입원당 지급일수는 180일로 한정됨",
+          "reason": "입원일수에 대한 지급 한도가 설정되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "입원당 180일을 한도로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 고의로 피보험자를 해친 경우 보험금 지급하지 않음",
+          "reason": "계약자가 고의로 피보험자를 해친 경우에는 보험금을 지급하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "③ 계약자가 고의로 피보험자를 해친 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "180일 초과 입원 시 보험금 지급하지 않음",
+          "reason": "입원 기간이 180일을 초과할 경우 보험금 지급이 제한됨",
+          "severity": "중간",
+          "source_quote": "10월 28일부터 180일한도 초과로 보험금을 지급하지 않음",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "간병인 사용시간이 8시간 이상을 충족하지 않으면 보험금을 지급하지 않음",
+          "reason": "간병인 사용시간이 기준에 미치지 못할 경우 보험금 지급이 제한됨",
+          "severity": "높음",
+          "source_quote": "간병인 사용시간이 7시간으로 8시간 이상을 충족하지 않음 → 보험금을 지급하지 않음",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "간병인 사용시간이 8시간 미만일 경우 보험금 지급이 제한됨",
+          "reason": "간병인 사용시간이 8시간 미만인 경우 보험금 지급이 되지 않음",
+          "severity": "높음",
+          "source_quote": "8시간미만으로 사용한 경우에는 그러하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "보험금 등 청구시 구비서류",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험수익자는 사고증명서를 제출해야 하며, 특정 서류가 없을 경우 대체 서류를 요구할 수 있음",
+          "reason": "보험금 청구 시 필요한 서류가 많고, 제출하지 못할 경우 대체 서류를 요구하는 조건이 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "보험수익자는 다음의 서류를 제출하고 보험금을 청구하여야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "사용하지 않은 일수에 대해서는 보험금을 지급하지 않음",
+          "reason": "간병인을 실제 사용하지 않은 경우 보험금 지급이 제한됨",
+          "severity": "중간",
+          "source_quote": "사용하지 않은 일수에 대해서는 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "간호ㆍ간병통합서비스 제공 시 보험금 지급 제외",
+          "reason": "간호ㆍ간병통합서비스를 제공받는 경우에는 간병인사용상해입원일당을 지급하지 않음",
+          "severity": "중간",
+          "source_quote": "의료법 제4조의2(간호ㆍ간병통합서비스 제공 등)에서 정하는 간호ㆍ간병통합서비스를 제공받는 경우에는 1.(보험금의 지급사유)의 간병인사용상해입원일당(요양병원제외)(체증형)(1일당8시간이상)(1일이상180일한도)은 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 피보험자가 사망할 경우 소멸됨",
+          "reason": "피보험자의 사망 시 특별약관이 소멸되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "보험증권에 기재된 피보험자가 보험기간 중에 사망할 경우에 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 규정",
+          "reason": "특정 사고로 인한 손해는 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "보통약관 5.(보험금을 지급하지 않는 사유)에서 정한 사고로 생긴 손해는 보장하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "간병인사용상해입원일당 지급 제외",
+          "reason": "간호․간병통합서비스 제공 시 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "간병인사용상해입원일당(요양병원)(체 ① 청구서 (회사 양식) 증형)(1일이상180일한도)은 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "법령 개정에 따른 특별약관 내용의 변경",
+      "toxic_clauses": [
+        {
+          "clause_summary": "법령의 개정에 따라 '상급종합병원' 제도가 폐지되는 경우 보장 내용 변경",
+          "reason": "상급종합병원 제도가 폐지되면 보장받지 못함",
+          "severity": "높음",
+          "source_quote": "① 법령의 개정에 따라 “상급종합병원”제도가 폐지되는 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "법령 개정으로 보험계약자에게 불리한 내용이 있는 경우 보장 내용 변경",
+          "reason": "보험계약자에게 불리한 내용이 발생할 수 있음",
+          "severity": "중간",
+          "source_quote": "③ ① 및 ② 이외의 법령의 개정에 따라 보험회사의 건전한 경영을 해칠 수가 있거나 보험계약자에게 불리한 내용이 있는 등의 사유로 금융위원회의 명령이 있는 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자가 정당한 이유 없이 입원기간 중 의사의 지시를 따르지 않은 경우 보험금 지급을 하지 않음",
+          "reason": "피보험자가 의사의 지시를 따르지 않으면 보험금의 전부 또는 일부를 지급하지 않기 때문에 계약자에게 불리함",
+          "severity": "낮음",
+          "source_quote": "피보험자가 정당한 이유 없이 입원기간 중 의사의 지시를 따르지 않은 때에는 회사는 1.(보험금의 지급사유)의 상급종합병원 2~3인실 상해입원일당(1일이상30일한도)의 전부 또는 일부를 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“상해 골밀도검사(급여)”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "수술비 차감 지급",
+          "reason": "이미 지급한 수술비를 차감하고 지급함으로써 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "회사가 이미 낮은 지급금액에 해당하는 수술비를 먼저 지급한 때에는 높은 지급금액에 해당하는 수술비에서 이미 지급한 수술비를 차감하고 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유",
+          "reason": "보험금 지급사유가 발생한 경우에도 특정 사유로 인해 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "외모개선 목적의 치료를 위한 수술은 보상하지 않음",
+          "reason": "외모개선 목적의 수술에 대한 면책 조항으로, 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "아래에 열거된 국민건강보험 비급여 대상으로 신체의 필수 기능개선 목적이 아닌 외모개선 목적의 치료를 위한 수술",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "외모개선 목적의 다리정맥류 수술은 보상하지 않음",
+          "reason": "외모개선 목적의 수술에 대한 면책 조항으로, 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "외모개선 목적의 다리정맥류 수술",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“종합병원 전신마취치료(6시간이상)(급여)”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "법령의 개정에 따라 보험회사의 건전한 경영을 해칠 수가 상 있거나 보험계약자에게 불리한 내용이 있는 등의 사유로 금융위원회의 명령이 해",
+          "reason": "법령 개정에 따라 계약자에게 불리한 내용이 발생할 수 있음",
+          "severity": "중간",
+          "source_quote": "위 ① 및 ② 이외의 법령의 개정에 따라 보험회사의 건전한 경영을 해칠 수가 상 있거나 보험계약자에게 불리한 내용이 있는 등의 사유로 금융위원회의 명령이 해",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 내용 변경 시 보장내용 및 보험가입금액 등이 변경될 수 있음",
+          "reason": "계약자가 원하지 않는 경우에도 회사가 일방적으로 변경할 수 있음",
+          "severity": "중간",
+          "source_quote": "위 󰊲에도 불구하고 계약자가 특별약관내용 변경을 원하지 않는 경우 회사는 계",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특별약관 내용 변경 시 납입보험료가 변경될 수 있음",
+          "reason": "계약자가 추가로 납입해야 할 금액이 발생할 수 있음",
+          "severity": "중간",
+          "source_quote": "위 󰊲에 따라 특별약관내용을 변경하는 경우에는 납입보험료가 변경될 수 있으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "간병인 사용 시 8시간 미만 사용 시 보상하지 않음",
+          "reason": "간병인을 8시간 미만으로 사용한 경우 보상하지 않음",
+          "severity": "중간",
+          "source_quote": "8시간미만으로 사용한 경우에는 그 16일 오전9시이전 17일 오전9시이전 18일 오전9시이전 러하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "위생관리, 미모를 위한 성형수술은 보장하지 않음",
+          "reason": "계약자가 미용 목적의 성형수술에 대해 보장을 받지 못함",
+          "severity": "높음",
+          "source_quote": "① 위생관리, 미모를 위한 성형수술(단, 사고전 상태로의 회복을 위한 수술은 보장합니다.)",
+          "exception": "사고전 상태로의 회복을 위한 수술은 예외적으로 보장함",
+          "exception_quote": "단, 사고전 상태로의 회복을 위한 수술은 보장합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "화상치료비 지급 후 보장책임 소멸",
+          "reason": "화상치료비 지급 후 해당 보장에 대한 회사의 책임이 소멸되어 추가 보장이 이루어지지 않음",
+          "severity": "높음",
+          "source_quote": "회사가 2-3. (보험금의 지급사유(화상치료비(중대한화상및부식진단)))에서 정한 세부보장 “화상치료비(중대한화상및부식진단)”를 지급한 경우 “화상치료비(중대한화상및부식진단)” 세부보장에 대한 회사의 보장책임은 소멸하며, 회사는 소멸되는 부분에 대한 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "장해상태가 더 악화된 경우 장해지급률 결정",
+          "reason": "장해상태가 악화되면 새로운 기준으로 지급률이 결정되어 계약자에게 불리할 수 있음",
+          "severity": "중간",
+          "source_quote": "장해상태가 더 악화된 때에는 그 악화된 장해상태를 기준으로 장해지급 상률을 결정합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "장해판정시기가 별도로 정한 경우에는 그에 따름",
+          "reason": "장해지급률 결정 시 계약자가 예상하지 못한 기준에 따라 결정될 수 있음",
+          "severity": "중간",
+          "source_quote": "다만, 장해분류표(【별표1】장해분류표 참조. 이하 같습니다)에 장해판정시기를 별도로 정한 경우에는 그에 따릅니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 고의로 피보험자를 해친 경우 보험금 지급 제외",
+          "reason": "계약자가 고의로 피보험자를 해친 경우에는 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "⑫ 계약자가 고의로 피보험자를 해친 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "성병에 대한 면책",
+          "reason": "성병에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "③ 성병 금은 지급하지 않으며, 보통약관 15.(계약 후 알릴의무)는 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "종합병원 질병입원일당 지급일수는 1회 입원당 180일 한도로 제한됨",
+          "reason": "입원일당 지급이 180일로 제한되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "1회 입원당 180일을 한도로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "정신적 기능장해 및 선천성 뇌질환에 대한 보험금 지급 면책",
+          "reason": "피보험자의 치매를 제외한 정신적 기능장해 및 선천성 뇌질환에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "피보험자의 치매를 제외한 정신적 기능장해, 선천성 뇌질환 및 심신상실",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "임신, 출산 관련 보험금 지급 면책",
+          "reason": "피보험자의 임신, 출산에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "피보험자의 임신, 출산(제왕절개를 포함합니다), 산후기.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특정 질병 및 상황에 대한 보험금 지급 면책",
+          "reason": "특정 질병 및 상황에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "질병을 원인으로 하지 않는 신체검사, 예방접종, 인공유산, 불임시술, 제왕절개수술",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "정신적 및 신체적 상태에 대한 보험금 지급 면책",
+          "reason": "피로, 권태, 심신허약 등을 치료하기 위한 안정치료에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "피로, 권태, 심신허약 등을 치료하기 위한 안정치료",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "법령 개정에 따른 보험금 지급 면책",
+          "reason": "법령 개정으로 인해 보험금 지급이 제한될 수 있음",
+          "severity": "중간",
+          "source_quote": "법령의 개정에 따라 보험회사의 건전한 경영을 해칠 수가 있거나 보험계약자에게 불리한 내용이 있는 등의 사유로 금융위원회의 명령이 있는 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "특정 상황에서 보험금 지급이 면책됨",
+          "severity": "높음",
+          "source_quote": "회사는 다음 중 어느 한 가지의 경우에 의하여 보험금 지급사유가 발생한 때에는 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약자가 고의로 피보험자를 해친 경우 면책",
+          "reason": "계약자가 고의로 피보험자를 해친 경우 보험금 지급이 면책됨",
+          "severity": "높음",
+          "source_quote": "계약자가 고의로 피보험자를 해친 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험수익자가 고의로 피보험자를 해친 경우 면책",
+          "reason": "보험수익자가 고의로 피보험자를 해친 경우 보험금 지급이 면책됨",
+          "severity": "높음",
+          "source_quote": "보험수익자가 고의로 피보험자를 해친 경우.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "임신, 출산 및 산후기에 대한 면책",
+          "reason": "임신, 출산 및 산후기와 관련된 경우 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "피보험자의 임신, 출산(제왕절개를 포함합니다), 산후기. 그러나 회사가 보장하",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "알코올중독 및 약물 남용에 대한 면책",
+          "reason": "알코올중독, 습관성 약품 또는 환각제의 복용 및 사용에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "알코올중독, 습관성 약품 또는 환각제의 복용 및 사용",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "전쟁 및 내란에 대한 면책",
+          "reason": "전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "신체검사 및 예방접종에 대한 면책",
+          "reason": "질병을 원인으로 하지 않는 신체검사, 예방접종, 인공유산, 불임시술, 제왕절개에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "질병을 원인으로 하지 않는 신체검사, 예방접종, 인공유산, 불임시술, 제왕절개",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "고의적 자해에 대한 면책",
+          "reason": "피보험자가 고의로 자신을 해친 경우 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "피보험자가 고의로 자신을 해친 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험수익자가 고의로 피보험자를 해친 경우의 면책",
+          "reason": "보험수익자가 고의로 피보험자를 해친 경우 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "보험수익자가 고의로 피보험자를 해친 경우",
+          "exception": "보험수익자가 보험금의 일부 보험수익자인 경우에는 다른 보험수익자에 대한 보험금은 지급함",
+          "exception_quote": "다만, 그 보험수익자가 보험금의 일부 보험수익자인 경우에는 다른 보험수익자에 대한 보험금은 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "정신 및 행동장애에 대한 보장 제외",
+          "reason": "정신 및 행동장애에 대한 수술비는 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "① 정신 및 행동장애(F04~F99)",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "치과질환에 대한 보장 제외",
+          "reason": "치아우식증, 치아 및 치주질환 등의 치과질환은 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "⑥ 치아우식증, 치아 및 치주질환 등의 치과질환(K00~K08)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "관혈적 수술에 대한 제한",
+          "reason": "관혈적 수술이 아닌 경우 보장이 제한됨",
+          "severity": "중간",
+          "source_quote": "피보험자가 임신, 출산, 산후기로 수술한 경우(O00~ O99)(단, 제왕절개만출 관혈수술 : 병변 부위를 육안으로 직접 보면서 수술적 조작을 하기 위해 피 술(帝王切開娩出術)은 보상합니다.)",
+          "exception": "제왕절개만출 관혈수술은 보상함",
+          "exception_quote": "단, 제왕절개만출 관혈수술 : 병변 부위를 육안으로 직접 보면서 수술적 조작을 하기 위해 피 술(帝王切開娩出術)은 보상합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "회사는 아래 목적의 치료를 위한 질병수술비에 대하여는 보장하지 않습니다.",
+          "reason": "특정 치료 목적의 질병수술비를 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "회사는 아래 목적의 치료를 위한 질병수술비에 대하여는 보장하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "특정 수술 및 치료에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "회사는 아래의 사유를 원인으로 하여 생긴 질병수술비는 보장하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "선천기형 및 변형 관련 수술비 지급 제외",
+          "reason": "선천기형 및 변형 관련 수술비는 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "선천기형, 변형 및 염색체이상(Q00-Q99)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "외모개선 목적의 수술에 대한 면책 조항",
+          "reason": "외모개선 목적의 수술에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "라. 외모개선 목적의 다리정맥류 수술",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“수술”의 정의와 장소",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특정 수술(흡인)은 보장에서 제외됨",
+          "reason": "수술의 종류에 따라 보장이 제한됨",
+          "severity": "중간",
+          "source_quote": "위 󰊱의 수술에서 아래에 정한 사항은 제외합니다. ① 흡인(吸引)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 특정 조건을 충족하지 않으면 무효가 됨",
+          "reason": "피보험자가 특정 조건을 충족하지 않으면 보험계약이 무효가 되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 해약환급금 지급하지 않음",
+          "reason": "특별약관이 소멸되는 경우 해약환급금을 지급하지 않음으로써 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관에서 보장하지 않는 수술의 종류",
+          "reason": "특정 수술(다래끼 및 콩다래끼로 인한 레이저 수술, 선천성질병으로 인한 레이저 수술)은 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "다만, 다래끼 및 콩다래끼로 인한 레이저(Laser) 수술, 선천성질병으로 인한 레이저(Laser) 수술인 경우는 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "정신 및 행동장애에 대한 보장 제외",
+          "reason": "정신 및 행동장애에 대한 질병수술비는 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "정신 및 행동장애(F04~F99) 해(동일질병당1회지급)(비갱신형/갱신형) 특별약관",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "여성생식기 장애 관련 보장 제외",
+          "reason": "여성생식기의 비염증성 장애로 인한 습관성 유산, 불임 및 인공수정 관련 합병증은 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "여성생식기의 비염증성 장애로 인한 습관성 유산, 불임 및 인공수정관련 합병증(N96~N98)이 보장개시일부터 2년이내에 발생한 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“주요폐질환”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "만기환급금 및 중도인출금 지급 제외",
+          "reason": "계약자가 만기환급금 및 중도인출금을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "통약관에서 정한 9.(만기환급금의 지급)의 만기환급금 및 37.(중도인출금)의 중도인출금은 지급하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험료 납입면제 적용 제외",
+          "reason": "갱신형 가입 시 보험료 납입면제를 받을 수 없음",
+          "severity": "중간",
+          "source_quote": "가입한 경우, 갱신형에 한하여 보통약관 26-1.(보험료 납입면제)는 적용하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험수익자가 고의로 피보험자를 해친 경우 보험금 지급하지 않음",
+          "reason": "보험수익자가 고의로 피보험자를 해친 경우에는 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "② 보험수익자가 고의로 피보험자를 해친 경우. 다만, 그 보험수익자가 보험금의 일부 보험수익자인 경우에는 다른 보험수익자에 대한 보험금은 지급합니다.",
+          "exception": "보험수익자가 일부 보험수익자인 경우 다른 보험수익자에 대한 보험금 지급",
+          "exception_quote": "다만, 그 보험수익자가 보험금의 일부 보험수익자인 경우에는 다른 보험수익자에 대한 보험금은 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "비관혈적 악성신생물 근치수술 제외",
+          "reason": "관혈적 악성신생물 근치수술만 보상하고 비관혈적 근치수술은 제외됨",
+          "severity": "높음",
+          "source_quote": "5종 이 특별약관 보험가입금액의 100% 1000만원 비관혈적 근치수술 제외",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "5,000Rad 이상의 조사를 하는 경우로 한정",
+          "reason": "악성신생물 근치 방사선 조사는 특정 조건(5,000Rad 이상)에서만 보상됨",
+          "severity": "중간",
+          "source_quote": "단, 5,000Rad 이상의 조사를 하는 경우로 의 수술에 대해서만 질병1-5종수술비를 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "비급여 유방 수술에 대한 보상 제한",
+          "reason": "비급여 유방 수술 중 유방암 환자의 유방재건술 외에는 보상하지 않음",
+          "severity": "높음",
+          "source_quote": "유방확대(다만, 유방암 환자의 유방재건술은 보상합니다)",
+          "exception": "유방암 환자의 유방재건술은 예외적으로 보상함",
+          "exception_quote": "다만, 유방암 환자의 유방재건술은 보상합니다"
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전쟁, 외국의 무력행사 등으로 인한 보험금 지급하지 않음",
+          "reason": "전쟁, 외국의 무력행사 등으로 인한 경우 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "④ 전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "피보험자가 임신, 출산, 산후기로 수술한 경우 보험금 지급하지 않음",
+          "reason": "임신, 출산, 산후기로 수술한 경우 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "③ 피보험자가 임신, 출산, 산후기로 수술한 경우(O00~ O99)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암 진단 시 특별약관 무효",
+          "reason": "피보험자가 암(유사암 제외)으로 진단받으면 특별약관이 무효가 되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "“암(유사암 제외)”로 진단확정되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 연체로 해지된 계약의 부활은 암 진단에 한정됨",
+          "reason": "계약자가 보험료를 연체하면 해지된 계약을 부활할 수 있으나, 부활 후 보장은 암(유사암 제외)으로 제한됨",
+          "severity": "중간",
+          "source_quote": "부활(효력회복)되는 계약의 보장개시는 보통약관 29.(보험료의 납입을 연체하여 해지 (책임개시일) 이후에 암(유사암제외)으로 진단확정된 경우 최초 1회에 한하여 이 해된 계약의 부활(효력회복))을 따릅니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 해약환급금 지급하지 않음",
+          "reason": "특별약관이 소멸되는 경우 해약환급금을 지급하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "위 󰊱 에 따라 이 특별약관이 소멸되는 경우에 회사는 해약환급금을 지급하지 않",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전암상태는 보장하지 않음",
+          "reason": "전암상태는 보장 대상에서 제외되어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "다만, 전암(前癌)상태(암으로 변하기 이 질 전 상태, premalignant condition or condition with malignant potential)는 병 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "기타피부암 및 갑상선암 제외",
+          "reason": "기타피부암 및 갑상선암은 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "“기타피부암” 및 󰊴에서 정한 “갑상선암”을 제외한 질병을 말합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“수술”의 정의와 장소",
+      "toxic_clauses": [
+        {
+          "clause_summary": "수술의 정의에서 항암방사선치료와 항암약물치료는 포함되지 않음",
+          "reason": "계약자가 암 치료를 받더라도 수술로 인정되지 않아 보상받지 못할 수 있음",
+          "severity": "높음",
+          "source_quote": "위 󰊱의 “수술”에 “항암방사선치료” 와 “항암약물치료”는 포함되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "기타 수술의 정의에 해당하지 않는 시술이 제외됨",
+          "reason": "계약자가 필요로 하는 시술이 보상에서 제외될 수 있음",
+          "severity": "중간",
+          "source_quote": "⑦ 기타 수술의 정의에 해당하지 않는 시술",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 무효 조항",
+          "reason": "피보험자가 보장개시일 이전에 암으로 진단확정된 경우 보장이 무효가 됨",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 암(유사암제외)에 대한 보장개시일(책임 개시일)의 전일 이전에 암(유사암제외)으로 진단확정되어 있는 경우에는 이 특별약관 1. (보험금의 지급사유) 질은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "부활(효력회복) 시 암(유사암 제외)에 대한 보장개시일이 90일로 제한됨",
+          "reason": "부활된 계약의 보장개시일이 90일로 제한되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "단, 부활(효력회복)시 암(유사암 제외)에 대한 90일이 지난날의 다음날을 말합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "최초계약일로부터 90일 미만의 수술에 대한 지급금액 제한",
+          "reason": "90일 미만의 수술에 대해서는 지급금액이 5%로 제한됨",
+          "severity": "중간",
+          "source_quote": "보험계약일로부터 90일미만 체증형 지급금액의 5%",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금이 지급되지 않습니다.",
+          "reason": "특정 질병에 대해 보험금 지급이 면책됨",
+          "severity": "높음",
+          "source_quote": "보험금이 지급되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전암상태는 보장에서 제외됨",
+          "reason": "전암상태는 보장하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "다만, 전암(前癌)상태(암으로 변하기 이전 상태, premalignant condition or condition with malignant potential)는 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "“경계성종양”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "경계성종양의 진단확정은 특정 검사에 의해야 함",
+          "reason": "특정 검사에 의한 진단확정이 없으면 보상이 제한됨",
+          "severity": "높음",
+          "source_quote": "“경계성종양”의 진단확정은 병리 또는 진단검사의학의 전문의사 자격증을 가진 자에 의하여 내려져야 하며, 이 진단은 조직(fixed tissue)검사, 미세바늘흡인검사(fine needle aspiration biopsy) 또는 혈액(hemic system)검사에 대한 현미경 소견을 기초로 하여야 합니다.",
+          "exception": "갑상선암의 경우 미세바늘흡인검사로 진단 가능",
+          "exception_quote": "단, “갑상선암”의 경우 미세바늘흡인검사(fine needle aspiration)"
+        }
+      ]
+    },
+    {
+      "article_number": 10,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관에서는 만기환급금 및 중도인출금을 지급하지 않음",
+          "reason": "계약자에게 불리한 지급 제외 조건",
+          "severity": "높음",
+          "source_quote": "이 특별약관에서는 보통약관에서 정한 9.(만기환급금의 지급)의 만기환급금 및 37.(중도인출금)의 중도인출금은 지급하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관이 무효가 되는 조건",
+          "reason": "피보험자가 보험계약일 이전에 암으로 진단받은 경우 보장이 무효가 되어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 암(유사암제외)에 대한 보장개시일(책임 특별약관 개시일)의 전일 이전에 암(유사암제외)으로 진단확정되어 있는 경우에는 이 특별약관 용은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전암 상태는 보장에서 제외됨",
+          "reason": "전암 상태에 대한 보장이 없으므로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "다만, 전암(前癌)상태(암으로 변하기 이전 상태, premalignant condition or condition with malignant potential)는 비갱신형 및 보험계약일로부터 그 날을 포함하여 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암(유사암제외) 항암약물치료비는 지급되지 않음",
+          "reason": "특정 암 진단 후 항암약물치료비 지급이 제한됨",
+          "severity": "높음",
+          "source_quote": "제자리암 항암약물치료비, 경계성종양 항암약물치료비, 기타피부암 항암약물치료비, 갑상선암 항암약물치료비는 지급되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "“항암약물치료”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "항암약물치료에 대한 보험금 지급 제외",
+          "reason": "항암약물치료에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "인출금은 지급하지 않으며, 보통약관 5.(보험금을 지급하지 않는 사유) 󰊲 및 15.(계약이 특별약관에서 “항암약물치료”라 함은 내과 전문의 자격증을 가진 자가 피보험 후 알릴 의무)는 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특정 암 치료에 대한 보험료 납입면제 적용 제외",
+          "reason": "특정 암 치료에 대해 보험료 납입면제가 적용되지 않음",
+          "severity": "중간",
+          "source_quote": "1종, 7종(세만기-고급형(납면적용A형))으로 자의 제자리암, 경계성종양, 기타피부암, 갑상선암 또는 암(유사암제외)의 직접적인 치료 가입한 경우, 갱신형에 한하여 보통약관 26-1.(보험료 납입면제)는 적용하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 피보험자가 암으로 진단확정된 경우 무효",
+          "reason": "피보험자가 암으로 진단받기 이전에 계약이 무효가 되므로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 암(유사암제외)에 대한 보장개시일(책임 개시일)의 전일 이전에 암(유사암제외)으로 진단확정되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 9,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 조건",
+          "reason": "특별약관이 소멸되면 보험금 지급이 중단됨",
+          "severity": "높음",
+          "source_quote": "회사가 1.(보험금의 지급사유) 󰊱에서 정한 항암약물치료비(단, 제자리암 항암약물치료비, 경계성종양 항암약물치료비, 기타피부암 항암약물치료비, 갑상선암 항암약물치료비는 제외합니다)를 지급한 경우에 그 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": "제자리암, 경계성종양, 기타피부암, 갑상선암 관련 항암약물치료비는 예외적으로 지급하지 않음",
+          "exception_quote": "단, 제자리암 항암약물치료비, 경계성종양 항암약물치료비, 기타피부암 항암약물치료비, 갑상선암 항암약물치료비는 제외합니다"
+        }
+      ]
+    },
+    {
+      "article_number": 9,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 지급되는 금액이 제한됨",
+          "reason": "특별약관 소멸 시 지급되는 금액이 계약자에게 불리하게 제한됨",
+          "severity": "중간",
+          "source_quote": "손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 10,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약일로부터 피보험자가 사망할 경우 특별약관 소멸",
+          "reason": "피보험자의 사망 시 특별약관이 소멸되어 보장이 종료됨",
+          "severity": "높음",
+          "source_quote": "보험계약일로부터 이 특별약관 󰊱 보험증권에 기재된 피보험자가 보험기간 중에 사망할 경우에 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암의 진단확정은 전문의사 자격증을 가진 자에 의하여 내려져야 함",
+          "reason": "진단을 위한 조건이 엄격하여 계약자가 보상을 받기 어려울 수 있음",
+          "severity": "높음",
+          "source_quote": "“암”의 진단확정은 병리 또는 진단검사의학의 전문의사 자격증을 가진 자에 의하여 내려져야 하며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "표적항암약물허가치료비는 허가된 효능효과 범위 내에서만 보장",
+          "reason": "허가된 효능효과 범위 외 사용은 제한적 조건을 충족해야 보장됨",
+          "severity": "높음",
+          "source_quote": "표적항암약물허가치료비는 표적항암제가 식품의약품 안 립전처에서 허가된 효능효과 범위 내에서 사용된 경우에 한하여 보장합니다.",
+          "exception": "식품의약품안전처에서 허가된 효능효과 범위 외 사용이지만 특정 조건을 충족하면 보장함",
+          "exception_quote": "다만, 식품의약품안전처에서 허가된 효능효과 범위 외 사용이지만 암질환심의위원회를 거쳐 건강보험심사평가원(향후 제도 변경 시에는 동 기관과 동일한 기능을 수행하는 기관)이 승인한 요법(다만, 해당 의약품의 사용을 신청 또는 신고한 요양기관에 한합니다)으로 표적항암제가 사용된 경우에는 보장합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전암 상태는 보장에서 제외됨",
+          "reason": "전암 상태에 해당하는 질병은 보장하지 않음",
+          "severity": "높음",
+          "source_quote": "다만, 전암(前癌)상태(암으로 변하기 이전 상태, premalignant condition or condition with malignant potential)에 해당하는 질병은 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "부활(효력회복) 시 보장개시일은 90일 후로 제한됨",
+          "reason": "계약자가 즉시 보장을 받지 못하게 됨",
+          "severity": "중간",
+          "source_quote": "부활(효력회복)일로부터 그날을 포함하여 90일이 지난날의 다음날입니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "식품의약품안전처에서 허가된 효능효과 범위 외 사용은 보장하지 않음",
+          "reason": "계약자가 허가된 효능효과 범위 외의 사용에 대해 보장을 받지 못할 수 있음",
+          "severity": "높음",
+          "source_quote": "품의약품 안전처에서 허가된 효능효과 범위 내에서 사용된 경우에 한하여 보장합니다. 다만, 식품의약품안전처에서 허가된 효능효과 범위 외 사용이지만 암질환심의위원회를 거쳐 건강보험심사평가원(향후 제도 변경 시에는 동 기관과 동일한 기능을 수행하는 기관)이 승인한 요법(다만, 해당 의약품의 사용을 신청 또는 신고한 요양기관에 한합니다)으로 표적항암제가 사용된 경우에는 보장합니다.",
+          "exception": "허가된 효능효과 범위 외 사용이 암질환심의위원회 승인을 받으면 보장함",
+          "exception_quote": "다만, 식품의약품안전처에서 허가된 효능효과 범위 외 사용이지만 암질환심의위원회를 거쳐 건강보험심사평가원(향후 제도 변경 시에는 동 기관과 동일한 기능을 수행하는 기관)이 승인한 요법(다만, 해당 의약품의 사용을 신청 또는 신고한 요양기관에 한합니다)으로 표적항암제가 사용된 경우에는 보장합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전암상태는 보상에서 제외됨",
+          "reason": "전암상태는 보험금 지급의 대상에서 제외되어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "다만, 전암(前癌)상태(암으로 변하기 이전 상태, 임premalignant condition or condition with malignant potential)는 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "“표적항암제” 및 “표적항암약물허가치료”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암의 진단이 가능하지 않을 때 문서화된 기록 또는 증거가 필요함",
+          "reason": "진단이 불가능할 경우 계약자가 증명할 책임이 있어 불리함",
+          "severity": "중간",
+          "source_quote": "위 󰊵에 따른 “암”의 진단이 가능하지 않을 때에는 피보험자가 “암” 로 진단 또는 치료를 받고 있음을 증명할 만한 문서화된 기록 또는 증거가 있어야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 납입면제 적용 제외",
+          "reason": "갱신형에 한하여 보험료 납입면제가 적용되지 않음",
+          "severity": "높음",
+          "source_quote": "9종, 10종(세만기-고급형(납면적용B형))으로 가입한 경우, 갱신형에 한하여 보통약관 26-2.(보험료 납입면제)는 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "“암의 직접적인 치료”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암의 직접적인 치료에는 의학적으로 안전성과 유효성이 입증되지 않은 치료는 포함되지 않음",
+          "reason": "계약자가 선택할 수 있는 치료 옵션이 제한됨",
+          "severity": "높음",
+          "source_quote": "① 식이요법, 명상요법 등 암의 제거 또는 암의 증식 억제를 위하여 의학적으로 안전성과 유효성이 입증되지 않은 치료",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "암이나 암 치료로 인하여 발생한 후유증 또는 합병증의 치료는 포함되지 않음",
+          "reason": "계약자가 후유증이나 합병증 치료에 대한 보장을 받지 못함",
+          "severity": "높음",
+          "source_quote": "③ 암이나 암 치료로 인하여 발생한 후유증 또는 합병증의 치료",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "입원기간에 대한 지급일수 한도",
+          "reason": "입원당 지급일수가 180일로 제한되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "지급일수는 1회 입원당 180일을 한도로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 11,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암입원일당 지급일수 제한",
+          "reason": "동일 질병으로 인한 입원의 경우 지급일수가 365일을 초과하면 지급이 중단됨",
+          "severity": "중간",
+          "source_quote": "이 특별약관의 최초계약 가입일부터 지급된 암입원일당Ⅱ(요양병원)(1일이상90일한도)의 누적 지급일수(이하 “누적 지급일수”라 합니다)가 365일을 초과시에는, 365일을 초과한 날 이후부터",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 피보험자가 특정 조건을 충족하지 못할 경우 무효가 됨",
+          "reason": "피보험자가 '제자리암' 진단이 불가능할 경우 특별약관이 무효가 되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 암(기타피부암 및 갑상선암 제외)에 대한 용 예시 - 피보험자가 조직검사 등 병리학적 검사를 받을 여유없이 급속한 병증 악화 보장개시일(책임개시일)의 전일 이전에 암(기타피부암 및 갑상선암 제외)으로 진단확정 손로 사망한 경우 되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 피보험자가 11대특정암으로 진단확정된 경우 무효",
+          "reason": "피보험자가 특정암으로 진단받기 전에 계약이 무효가 되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 11대특정암에 대한 보장개시일(책임개시 약일)의 전일 이전에 11대특정암으로 진단확정되어 있는 경우에는 이 특별약관은 무효",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "동일한 질병에 대한 입원 시 특별약관 소멸",
+          "reason": "동일한 질병으로 2회 이상 입원 시 특별약관이 소멸됨",
+          "severity": "중간",
+          "source_quote": "동일한 질병의 치료를 목적으로 2회 이상 2~3인실에 입원한 경우(동일한 질병의 그 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "고의로 피보험자를 해친 경우 보험금 지급 제외",
+          "reason": "보험수익자 또는 계약자가 고의로 피보험자를 해친 경우 보험금이 지급되지 않으므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "⑪ 보험수익자가 고의로 피보험자를 해친 경우. 다만, 그 보험수익자가 보험금의 일부 보험수익자인 경우에는 다른 보험수익자에 대한 보험금은 지급합니다.",
+          "exception": "일부 보험수익자에 대한 보험금은 지급함",
+          "exception_quote": "다만, 그 보험수익자가 보험금의 일부 보험수익자인 경우에는 다른 보험수익자에 대한 보험금은 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "정신적 기능장해, 선천성 뇌질환, 심신상실 등 특정 질병에 대해 보험금 지급을 면책함.",
+          "severity": "높음",
+          "source_quote": "① 피보험자의 치매를 제외한 정신적 기능장해, 선천성 뇌질환 및 심신상실",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "임신, 출산, 산후기 등 특정 상황에 대해 보험금 지급을 면책함.",
+          "severity": "높음",
+          "source_quote": "② 피보험자의 임신, 출산(제왕절개를 포함합니다), 산후기.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "전쟁, 내란, 폭동 등 특정 상황에 대해 보험금 지급을 면책함.",
+          "severity": "높음",
+          "source_quote": "⑤ 전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "신체검사, 예방접종, 인공유산 등 특정 의료행위에 대해 보험금 지급을 면책함.",
+          "severity": "높음",
+          "source_quote": "⑥ 질병을 원인으로 하지 않는 신체검사, 예방접종, 인공유산, 불임시술, 제왕절개",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "피로, 권태, 심신허약 등을 치료하기 위한 안정치료에 대해 보험금 지급을 면책함.",
+          "severity": "높음",
+          "source_quote": "⑦ 피로, 권태, 심신허약 등을 치료하기 위한 안정치료",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "미용 목적의 성형수술에 대해 보험금 지급을 면책함.",
+          "severity": "높음",
+          "source_quote": "⑧ 위생관리, 미모를 위한 성형수술",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "고의로 자신을 해친 경우에 대해 보험금 지급을 면책함.",
+          "severity": "높음",
+          "source_quote": "⑩ 피보험자가 고의로 자신을 해친 경우.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유에 대한 조항",
+          "reason": "보험수익자가 고의로 피보험자를 해친 경우에 대해 보험금 지급을 면책함.",
+          "severity": "높음",
+          "source_quote": "⑪ 보험수익자가 고의로 피보험자를 해친 경우.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "고액치료비암으로 진단확정된 경우에만 보장",
+          "reason": "고액치료비암으로 진단받지 못하면 보험금 지급이 제한됨",
+          "severity": "높음",
+          "source_quote": "진단 확정된 경우에 한합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“갑상선암”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "중증갑상선암진단비 보장 소멸 조건",
+          "reason": "중증갑상선암진단비 지급 후 특별약관이 소멸되며, 해약환급금이 지급되지 않음.",
+          "severity": "높음",
+          "source_quote": "회사가 1.(보험금의 지급사유)에서 정한 중증갑상선암진단비를 지급한 경우에 그 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "중증갑상선암 진단 조건",
+          "reason": "중증갑상선암으로 진단받기 위해서는 원발암이어야 하며, 전이암은 보장되지 않음.",
+          "severity": "중간",
+          "source_quote": "즉, 중증갑상선암으로 중증갑상선암진단비에서 보장을 받으려면 중증갑상선암은 전이암이 아닌 원발암이어야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“갑상선암”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "갑상선암의 진단확정은 전문의사 자격증을 가진 자에 의하여 내려져야 함",
+          "reason": "진단을 받기 위해 특정 자격을 요구하여 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "“갑상선암”의 진단확정은 병리 또는 진단검사의학의 전문의사 자격증을 가진 자에 의하여 내려져야 하며",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "진단이 가능하지 않을 때 문서화된 기록 또는 증거가 필요함",
+          "reason": "진단이 불가능한 경우 추가적인 증명 요구로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "그러나 상기에 의한 진단이 가능하지 않을 때에는 피보험자가 “갑상선암”으로 진단 또는 치료를 받고 있음을 증명할 만한 문서화된 기록 또는 증거가 있어야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "조직검사를 받을 여유없이 급속한 병증 악화 시 특정 조건을 충족해야 함",
+          "reason": "급속한 병증 악화 시에도 특정 조건을 충족해야 하여 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "식품의약품안전처 허가 외 「효능효과」, 「암질환심의위원회를 거쳐 건강보험심사평가원이 승인한 요법(다만, 해당 의약품의 사용을 신청 또는 신고 상한 요양기관에 한함)」 확인",
+          "exception": "해당 의약품의 사용을 신청 또는 신고 상한 요양기관에 한함",
+          "exception_quote": "다만, 해당 의약품의 사용을 신청 또는 신고 상한 요양기관에 한함"
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“갑상선암호르몬치료제” 및 “갑상선암호르몬약물허가치료”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "수술의 정의에서 제외되는 사항",
+          "reason": "특정 수술이 보장되지 않음",
+          "severity": "높음",
+          "source_quote": "위 󰊱의 “수술”에서 아래에 정한 사항은 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특정항암호르몬치료제의 안전성과 유효성 인정 범위가 변경된 경우에는 변경된 범위 적용 후 최초로 도래하는 처방일자를 기준으로 함",
+          "reason": "계약자가 치료를 받는 의약품의 안전성과 유효성 인정 범위가 변경되면 보장 기준이 달라짐",
+          "severity": "중간",
+          "source_quote": "다만, 4.(특정항암호르몬치료제 및 특정항암호르몬약물허가치료의 정의) 󰊳에서 정한 “안전성과 유효성 인정 범위”가 변경(추가 또는 삭제)된 경우에는 변경된 “안전성과 유효성 인정 범위” 적용 후 최초로 도래하는 처방일자를 기준으로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "180일 미만 보험가입금액의 25% 지급",
+          "reason": "부활(효력회복) 시 지급금액이 제한됨",
+          "severity": "중간",
+          "source_quote": "보험계약일로부터 이 특별약관 180일미만 보험가입금액의 25%",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 9,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "비급여 표적항암약물허가치료를 받지 않은 경우 보장하지 않음",
+          "reason": "비급여 표적항암약물허가치료를 받지 않은 경우에는 보장하지 않음",
+          "severity": "중간",
+          "source_quote": "약물이 투여되지 않은 경우에는 보장하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "기타피부암 및 갑상선암은 보장에서 제외됨",
+          "reason": "기타피부암 및 갑상선암은 보장하지 않음으로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "이 특별약관에 있어서 “암(기타피부암 및 갑상선암 제외)”이라 함은 󰊱에서 정한 립 “암”에서 󰊳에서 정한 “기타피부암” 및 󰊴에서 정한 “갑상선암”을 제외한 질병을 약 말합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "비급여 표적항암약물허가치료를 받지 않은 경우 보장하지 않음",
+          "reason": "비급여 표적항암약물허가치료를 받지 않은 경우에는 보험금 지급이 없으므로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "보험금 지급사유 중 “비급여 표적항암약물허가치료를 받은 경우”는 비급여에 해당되는 “표적항암제”를 처방 받고 약물이 투여되었을 때를 말하며, 약물이 투여되지 않은 경우에는 보장하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "부활(효력회복) 시 암에 대한 보장개시일이 90일 후로 제한됨",
+          "reason": "부활(효력회복) 시 보장개시일이 지연되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "부활(효력회복)시 암(기타피부암 및 갑상선암 제외)에 대한 보장개시일(책임개시일)은 부활(효력회복)일로부터 그날을 포함하여 90일이 지난날의 다음날입니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 9,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 보험가입금액 지급 후 보장책임 소멸",
+          "reason": "보험금 지급 후 해당 보장에 대한 책임이 소멸되며 해약환급금도 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "회사는 소멸되는 부분에 대한 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 10,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 피보험자가 사망하거나 특정 암 진단이 이루어지지 않으면 소멸됨",
+          "reason": "특정 조건이 충족되지 않으면 특별약관이 소멸되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "보험기간 중 다음에 해당하는 경우 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 11,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "갱신시점에서 잔여보험기간이 2년 미만일 경우 지급금액 제한",
+          "reason": "갱신형 계약의 경우 잔여보험기간이 짧으면 지급금액이 줄어듦",
+          "severity": "중간",
+          "source_quote": "위 󰊱에도 불구하고 갱신시점에서 [잔여보험기간-2년]이 위 󰊱의 보험기간 미만일",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급하지 않음",
+          "reason": "보험금 지급 사유에 대해 합의하지 않으면 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "금은 지급하지 않으며, 보통약관 5.(보험금을 지급하지 않는 사유) 󰊲 및 15.(계약 후 알릴 의무)는 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험료 납입면제 적용하지 않음",
+          "reason": "특정 조건에서 보험료 납입면제를 적용하지 않음",
+          "severity": "중간",
+          "source_quote": "갱신형에 한하여 보통약관 26-1.(보험료 납입면제)는 적용하지 않으며 못할 때는 보험수익자와 회사가 함께 제3자를 정하고 그 제3자의 의견에 따를 수 있",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 조건",
+          "reason": "보험계약일로부터 피보험자가 사망할 경우 특별약관이 소멸됨",
+          "severity": "높음",
+          "source_quote": "보험계약일로부터 이 특별약관 󰊱 보험증권에 기재된 피보험자가 보험기간 중에 사망할 경우에 이 특별약관은 소멸",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“뇌혈관질환”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약일로부터 1년미만인 경우 진단확정이 있는 것으로 보지 않음",
+          "reason": "보험계약일로부터 1년이 지나지 않은 경우 진단확정이 인정되지 않아 보험금 지급이 제한됨",
+          "severity": "높음",
+          "source_quote": "보험계약일로부터 1년미만 이 특별약관 보험가입금액의 50%",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "체증형 지급금액은 수술회차에 따라 보험가입금액을 기준으로 매 회당 30%씩 체증함",
+          "reason": "수술회차에 따라 지급금액이 체증되며, 1회차 수술 시에는 100% 지급 후 이후 회차부터는 30%씩 체증되어 지급됨",
+          "severity": "중간",
+          "source_quote": "“체증형 지급금액”은 위 󰊱에서 정한 체증형 뇌혈관질환수술비(30%체증형) 지급사유에 해당된 때, 수술회차에 따라 보험가입금액을 기준으로 매 회당 30%씩 체증한 금액을 말합니다.",
+          "exception": "1회차 수술 시에는 보험가입금액의 100%를 적용하며, 2회차 수술부터 5회차 수술까지는 30%씩 체증됨",
+          "exception_quote": "(단, 1회차 수술 시에는 보험가입금액의 100%를 적용하며, 2회차 수술부터 5회차 수술까지는 30%씩 체증됩니다. 6회차 이상의 수술은 5회차 수술 시의 체증형 지급금액과 동일하게 적용합니다.)"
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“뇌동맥류(비파열성)”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "선천성(비파열성) 대뇌동맥류는 보상하지 않음",
+          "reason": "계약자가 선천성 대뇌동맥류에 대해 보상을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "이 때, “선천성(비파열성) 대뇌동맥류 (Q28.3)”는 보상하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“뇌혈관질환”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특정 조건에서만 진단확정으로 인정",
+          "reason": "피보험자가 사망한 경우 특정 조건을 충족해야만 진단확정으로 인정되므로, 계약자가 불리할 수 있음",
+          "severity": "중간",
+          "source_quote": "그러나 피보험자가 사망하여 상기 검사방법을 진단의 기초로 할 수 없는 경우 다음 각 호의 어느 하나에 해당하는 경우에는 진단확정이 있는 것으로 볼 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약일로부터 1년이상일 경우 지급금액이 100%로 지급됨",
+          "reason": "1년 미만일 경우 지급금액이 줄어들어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "보험계약일로부터 1년이상 이 특별약관 보험가입금액의 100%",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 조건",
+          "reason": "급성심근경색증 진단비 지급 시 특별약관이 소멸되며, 해약환급금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "보험계약일로부터 1년이상 이 특별약관 보험가입금액의 100% 󰊲 위 󰊱에 따라 특별약관이 소멸되는 경우에 회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“수술”의 정의와 장소",
+      "toxic_clauses": [
+        {
+          "clause_summary": "허혈심장질환수술비 지급 조건",
+          "reason": "보험계약일로부터 1년 미만의 경우 지급금액이 50%로 제한됨",
+          "severity": "중간",
+          "source_quote": "보험계약일로부터 1년미만 이 특별약관 보험가입금액의 50% 는 것을 말합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "최초계약일로부터 1년 미만일 경우 지급금액이 50%로 제한됨",
+          "reason": "계약자가 보험금 지급을 받을 때 지급금액이 제한됨",
+          "severity": "높음",
+          "source_quote": "최초계약일로부터 1년 미만, 체증형 지급금액의 50% 지급",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "최초계약일로부터 1년 이상 경과해야 지급금액이 100%로 증가함",
+          "reason": "계약자가 보험금 지급을 받을 때 지급금액이 1년 경과 후에만 증가함",
+          "severity": "중간",
+          "source_quote": "최초계약일로부터 1년 이상 경과, 체증형 지급금액의 100% 지급",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "허혈심장질환통원비Ⅱ의 지급횟수 제한",
+          "reason": "통원 치료의 지급횟수가 연간 30일로 제한됨",
+          "severity": "중간",
+          "source_quote": "허혈심장질환통원비Ⅱ의 지급횟수는 통원 1일당 1회에 한하며, 연간 30일을 한도는 의사의 소견에 따라 허혈심장질환을 통원치료의 주된 목적으로 하는 경우에만 별로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 해약환급금 지급하지 않음",
+          "reason": "특별약관이 소멸되는 경우 계약자가 해약환급금을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "위 󰊱에 따라 이 특별약관이 소멸되는 경우에 회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "일시적이거나 회복이 가능한 재생불량성 빈혈은 보장에서 제외됨",
+          "reason": "재생불량성 빈혈의 경우 일시적이거나 회복 가능한 경우에는 보장이 되지 않음",
+          "severity": "중간",
+          "source_quote": "단, 일시적이거나 회복이 가능한 재생불량성 빈혈은 보장에서 제외됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 조건",
+          "reason": "만성당뇨합병증진단비 지급 시 특별약관이 소멸되며, 해약환급금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "구분 경과기간 지급금액 질 그 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다. 보험계약일로부터 1년미만 이 특별약관 보험가입금액의 50% 󰊲 위 󰊱에 따라 특별약관이 소멸되는 경우에 회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관에서 정하지 않은 사항은 보통약관을 따르도록 규정",
+          "reason": "특별약관에 명시되지 않은 사항에 대해 보통약관이 적용되므로 계약자에게 불리할 수 있음",
+          "severity": "중간",
+          "source_quote": "이 특별약관에 정하지 않은 사항은 보통약관을 따릅니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“만성당뇨합병증”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 납입면제는 적용하지 않음",
+          "reason": "계약자가 보험료 납입면제를 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "26-2.(보험료 납입면제)는 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "진단은 특정 의료기관의 의사에 의해야 함",
+          "reason": "진단을 받을 수 있는 의료기관이 제한됨",
+          "severity": "중간",
+          "source_quote": "이 진단은 반드시 피보험자가 당뇨병의 병력과 함께 다음과 같은 기준에 의하여 합병증 진단을 받아야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관이 말기폐질환진단비 지급 시 소멸됨",
+          "reason": "회사가 지급한 경우 특별약관이 소멸되어 보장받지 못함",
+          "severity": "높음",
+          "source_quote": "회사가 1.(보험금의 지급사유)에서 정한 말기폐질환진단비를 지급한 경우에 그 손 및 해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관이 만성호흡기질환 지급 시 소멸",
+          "reason": "만성호흡기질환 지급 시 특별약관이 소멸되며 해약환급금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "회사가 1.(보험금의 지급사유)에서 정한 만성호흡기질환을 지급한 경우에 그 손해 보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다. 만성호흡기질환단비 보험계약일로부터 1년미만 이 특별약관 보험가입금액의 50% 󰊲 위 󰊱에 따라 특별약관이 소멸되는 경우에 회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 조건",
+          "reason": "만성간질환단비 지급 시 특별약관이 소멸되며 해약환급금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "회사가 1.(보험금의 지급사유)에서 정한 만성간질환단비를 지급한 경우에 그 손해 보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“대상포진눈병”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "만기환급금 및 중도인출금 지급하지 않음",
+          "reason": "계약자가 만기환급금 및 중도인출금을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "상 통약관에서 정한 9.(만기환급금의 지급)의 만기환급금 및 37.(중도인출금)의 중도인출 해금은 지급하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "대상포진눈병진단비 지급 후 특별약관 소멸",
+          "reason": "보험금 지급 후 특별약관이 소멸되어 해약환급금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "회사가 1.(보험금의 지급사유)에서 정한 대상포진눈병진단비를 지급한 경우에 그 질손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": "특별약관 소멸 시 해약환급금 지급하지 않음",
+          "exception_quote": "위 󰊱에 따라 특별약관이 소멸되는 경우에는 회사는 해약환급금을 지급하지 않습니다."
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 조건",
+          "reason": "보험계약일로부터 1년 미만 시 보험가입금액의 50% 지급 후 특별약관 소멸",
+          "severity": "높음",
+          "source_quote": "보험계약일로부터 1년미만 이 특별약관 보험가입금액의 50% 󰊱 회사가 1.(보험금의 지급사유)에서 정한 뇌전증진단비를 지급한 경우에 그 손해보(1회한) 장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 무효 조건",
+          "reason": "피보험자가 보장개시일 이전에 요로결석으로 진단받은 경우 특별약관이 무효가 됨",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 보장개시일(책임개시일)의 전일 이전에 요로결석으로 진단확정되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납입한",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "관상동맥우회수술비 지급 후 특별약관 소멸",
+          "reason": "관상동맥우회수술비 지급 시 특별약관이 소멸되어 보장받을 수 있는 권리가 사라짐",
+          "severity": "높음",
+          "source_quote": "회사가 1.(보험금의 지급사유)에서 정한 관상동맥우회수술비를 지급한 경우에 그 회사는 보험증권에 기재된 피보험자가 「이 특별약관의 보험기간」 중에 질병으로 진단 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 15,
+      "article_title": "계약 후 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특정 수술에 대한 보장 제외",
+          "reason": "체내용 심박조율장치 매입술(삽입,교환) 및 카테터를 이용한 수술은 보장에서 제외됨",
+          "severity": "높음",
+          "source_quote": "단, 다음과 같은 수술은 보장에서 제외합니다. 103 체내용 심박조율장치 매입술(삽입,교환)(갱신형) ① 카테터를 이용하여 수술하는 경우 특별약관 예) 경피적(피부를 통한) 판막성형술(percutaneous balloon valvuoplasty) ② 개흉술 또는 개심술을 동반하지 않는 수술",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "개흉술 또는 개심술을 동반한 수술은 보장에서 제외",
+          "reason": "계약자가 받을 수 있는 보장이 제한됨",
+          "severity": "높음",
+          "source_quote": "단, 개흉술 또는 개심술을 동반한 수술은 보장에서 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "비 보험금을 지급한 때에는 개흉심장판막수술에 대한 회사의 보장책임은 소멸",
+          "reason": "계약자가 보험금을 지급받지 못할 경우 보장책임이 소멸됨",
+          "severity": "높음",
+          "source_quote": "비 보험금을 지급한 때에는 개흉심장판막수술에 대한 회사의 보장책임은 소멸하며, 회사는 소멸되는 부분에 대한 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "대동맥류인조혈관치환수술은 보장하지 않음",
+          "reason": "대동맥류인조혈관치환수술에 대한 보장이 제외됨",
+          "severity": "높음",
+          "source_quote": "대동맥류인조혈관치환수술에서 보장하지 않는 수술",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "카테터를 이용한 수술은 보장에서 제외됨",
+          "reason": "카테터를 이용한 수술에 대한 보장이 제외됨",
+          "severity": "높음",
+          "source_quote": "단, 카테터를 이용한 수술은 보장에서 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "상해의 직접결과로 인한 수술의 경우 보험금을 지급하지 않음",
+          "reason": "상해로 인한 수술에 대해 보험금 지급이 원칙적으로 제외됨",
+          "severity": "높음",
+          "source_quote": "상해의 직접결과로 인한 수술의 경우에는 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "미용성형 목적의 수술은 지급하지 않음",
+          "reason": "계약자가 미용성형 목적의 수술을 받았을 경우 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "미용성형 목적의 수술 금은 지급하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "관혈수술시 가입금액의 50% 지급",
+          "reason": "관혈수술에 대한 지급금액이 가입금액의 50%로 제한됨",
+          "severity": "중간",
+          "source_quote": "관혈수술시 가입금액의 50%",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "선천기형, 변형 및 염색체이상으로 인한 보장 제외",
+          "reason": "선천적 질병에 대해 보험금 지급을 면책함",
+          "severity": "중간",
+          "source_quote": "② 선천기형, 변형 및 염색체이상(Q00-Q99)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“척추질병”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "비관혈수술에 대한 지급 제외",
+          "reason": "비관혈수술은 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "비관혈수술 4.30일 : 부지급",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전쟁, 외국의 무력행사 등으로 인한 보험금 지급 제외",
+          "reason": "전쟁 및 무력행사로 인한 면책",
+          "severity": "높음",
+          "source_quote": "전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동 립",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "부활(효력회복) 시 급성간염에 대한 보장개시일은 부활일로 제한됨",
+          "reason": "부활된 계약의 보장개시일이 일반적인 보장개시일과 다르게 설정되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "단, 부활(효력회복)시 급성간염(A,B,C형)에 대한 보장개시일(책임개시일)은 부활(효력회복)일입니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 보험가입금액의 50% 지급 조건",
+          "reason": "보험계약일로부터 1년 미만일 경우 지급금액이 50%로 제한됨",
+          "severity": "중간",
+          "source_quote": "자궁내막증진단비 보험계약일로부터 1년미만 이 특별약관 보험가입금액의 50%",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특별약관에서 만기환급금 및 중도인출금 지급하지 않음",
+          "reason": "특별약관에서 만기환급금 및 중도인출금을 지급하지 않음",
+          "severity": "중간",
+          "source_quote": "보통약관 5.(보험금을 지급하지 않는 사유) 󰊲 및 15.(계약",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 보장책임 소멸",
+          "reason": "피보험자가 '통합전이암'으로 진단 또는 치료를 받고 있음을 증명하지 못할 경우 보장책임이 소멸됨",
+          "severity": "높음",
+          "source_quote": "회사는 소멸되는 세부보장에 대한 해약환급급을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "“암(유사암제외)의 직접적인 치료”에는 다음 각 호의 사항은 포함되지 않습니다.",
+          "reason": "특정 치료를 제외하여 보장 범위를 축소합니다.",
+          "severity": "높음",
+          "source_quote": "“암(유사암제외)의 직접적인 치료”에는 다음 각 호의 사항은 포함되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "법령 개정에 따른 특별약관 내용의 변경",
+      "toxic_clauses": [
+        {
+          "clause_summary": "법령 개정에 따라 '종합병원' 제도가 폐지되는 경우 보장이 무효로 됨",
+          "reason": "법령 개정으로 인해 계약자가 보장받을 수 있는 내용이 무효가 될 수 있음",
+          "severity": "높음",
+          "source_quote": "법령의 개정에 따라 “종합병원”제도가 폐지되는 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 10,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관이 법령 개정에 따라 무효가 될 수 있음",
+          "reason": "법령 개정에 따라 보장이 무효가 되면 계약자가 보장받지 못함",
+          "severity": "높음",
+          "source_quote": "법령의 개정에 따라 “상급종합병원”제도의 변경으로 7.(“상급종합병원”의 정의) 되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암의 진단확정 시점은 상기 검사에 의한 결과보고 시점으로 함",
+          "reason": "진단확정 시점이 검사 결과에 의존하여 계약자에게 불리할 수 있음",
+          "severity": "중간",
+          "source_quote": "이 경우 “암”의 진단확정 시점은 상기 검사에 의한 결과보고 시점으로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전암상태는 보장에서 제외됨",
+          "reason": "전암상태에 대한 보장이 없으므로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "다만, 전암(前癌)상태(암으로 변하기 이 구분 보장개시일(책임개시일) 전 상태, premalignant condition or condition with malignant potential)는 책 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "기타피부암 및 갑상선암은 보장에서 제외됨",
+          "reason": "기타피부암 및 갑상선암에 대한 보장이 없으므로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "이 특별약관에 있어서 “암(기타피부암 및 갑상선암 제외)”이라 함은 󰊱에서 정한 보험계약일로부터 그 날을 포함하여 90일이 지난날의 다음날",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암의 직접적인 치료에 포함되지 않는 사항 명시",
+          "reason": "계약자가 기대하는 치료가 보장되지 않을 수 있음",
+          "severity": "중간",
+          "source_quote": "“암의 직접적인 치료”에는 다음 각 호의 사항은 포함되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관이 뇌동맥류진단비 지급 시 소멸됨",
+          "reason": "보험금 지급 후 특별약관이 소멸되어 보장받지 못함",
+          "severity": "높음",
+          "source_quote": "회사가 1.(보험금의 지급사유)에서 정한 뇌동맥류진단비(비파열성)를 지급한 경우에 그 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "갱신형 계약의 경우 지급액 차감",
+          "reason": "이미 지급된 계약자적립액 및 미경과보험료를 차감하여 지급함으로써 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "우에는 이미 지급된 계약자적립액 및 미경과보험료를 차감하여 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 10,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 납입면제 적용 제외",
+          "reason": "특정 가입 유형에 대해 보험료 납입면제가 적용되지 않음",
+          "severity": "중간",
+          "source_quote": "1종, 7종(세만기-고급형(납면적용A형))으로 가입한 경우, 갱신형에 한하여 보통약관 26-1.(보험료 납입면제)는 적용하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "“항암약물치료”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 무효",
+          "reason": "피보험자가 보장개시일 이전에 암으로 진단받은 경우 특별약관이 무효가 됨",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 “암(유사암 제외), 기타피부암 또는 갑상선암”에 대한 보장개시일(책임개시일)의 전일 이전에 “암(유사암제외), 기타피부암 또는 갑상선암”으로 진단확정되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "“하이클래스 항암약물치료”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "하이클래스 항암약물치료에 포함되지 않는 사항",
+          "reason": "계약자가 보장받지 못하는 항목이 명시되어 있어 불리함",
+          "severity": "높음",
+          "source_quote": "“하이클래스 항암약물치료”에는 다음 각 호의 사항은 포함되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급대상기간이 10년으로 제한됨",
+          "reason": "보험금 지급대상기간이 진단일로부터 10년으로 제한되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "보험금 지급대상은 2024년1월1일로부터 10년입니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "“종합병원”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관내용 변경 시 납입보험료가 변경될 수 있음",
+          "reason": "계약자가 동의하지 않더라도 납입보험료가 변경될 수 있음",
+          "severity": "낮음",
+          "source_quote": "특별약관내용을 변경하는 경우에는 납입보험료가 변경될 수 있으며,",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관이 소멸되는 경우 보험료 납입면제 적용 제외",
+          "reason": "피보험자가 특정 질환으로 진단받고 보험금 지급 대상기간이 경과하면 특별약관이 소멸됨",
+          "severity": "높음",
+          "source_quote": "피보험자가 보험기간 중 1.(보험금의 지급사유) 󰊱의 “순환계질환(3-5종)”으로 최초 진단확정을 받고 “보험금 지급 대상기간”이 경과한 경우에는 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 보장책임 소멸",
+          "reason": "피보험자가 통합암(유사암제외)의 진단이 가능하지 않을 경우 보장책임이 소멸됨",
+          "severity": "높음",
+          "source_quote": "회사는 소멸되는 “통합암(유사암제외)”으로 진단 또는 치료를 받고 있음을 증명할 만한 문서화된 세부보장에 대한 해약환급급을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특별약관 소멸 시 해약환급금 지급하지 않음",
+          "reason": "특별약관의 보장책임이 소멸되면 해약환급금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "회사는 “보험료 및 해약환급금 산출방법서”에서 정하는 이 특별약관의 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 피보험자가 통합암으로 진단받은 경우 무효",
+          "reason": "피보험자가 특정 질병으로 진단받으면 특별약관이 무효가 되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 보장개시일(책임개시일)의 전일 이전에 “통합암(유사암제외)”으로 진단확정되어 있는 경우에는 이 특별약관은 무효로 하며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "연간 총 지급액 한도",
+          "reason": "연간 총 지급액이 2천만원으로 제한되어 있어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "󰊴 󰊱에서 정한 “비급여암주요치료(전액본인부담포함)”의 연간 총 지급액은 2천만원을 한도로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특정암 및 기타피부암, 갑상선암 제외",
+          "reason": "특정암 및 기타피부암, 갑상선암에 대한 치료는 보상에서 제외되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "비급여(전액본인부담포함) 다빈치로봇암수술 수술당 500만원 (특정암제외)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 15,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "비급여 약제 사용 시 허가사항 이내 사용 근거 및 소견",
+          "reason": "비급여 약제 사용에 대한 제한 조건",
+          "severity": "중간",
+          "source_quote": "비급여 약제 사용시 허가사항(효능효과) 이내 사용근거 및 소견",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특정암 및 기타피부암, 갑상선암 제외",
+          "reason": "특정암 및 기타피부암, 갑상선암에 대한 치료는 보장되지 않아 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "비급여(전액본인부담포함) 다빈치로봇암수술 수술당 750만원 (특정암제외)",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보장개시일 제한",
+          "reason": "보험계약일로부터 90일이 지나야 보장이 시작되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "비갱신형 및 보험계약일로부터 그 날을 포함하여 90일이 지난날의 다음날",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "초과분 지급하지 않음",
+          "reason": "연간 지급액 한도를 초과하는 경우 초과분에 대해 지급하지 않아 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "연간 총 지급액이 한도를 초과하는 경우에는 초과분에 해당하는 금액은 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "“다빈치로봇 암수술”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "호르몬 관련 치료제는 '표적항암제'의 범위에서 제외됨",
+          "reason": "호르몬 관련 치료제는 보상에서 제외되어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "다만, 호르몬 관련 치료제는 “표적항암제”의 범위에서 제외됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 10,
+      "article_title": "“특정면역항암제” 및 “특정면역항암약물허가치료”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "호르몬 관련 치료제는 '특정면역항암제'의 범위에서 제외됨",
+          "reason": "호르몬 관련 치료제는 보장되지 않음",
+          "severity": "높음",
+          "source_quote": "다만, 호르몬 관련 치료제는 “특정면역항암제”의 범위에서 제외됩니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특정면역항암제의 사용은 요양기관의 신청 또는 신고에 한함",
+          "reason": "보험금 청구 시 특정 요양기관의 신청 또는 신고가 필요함",
+          "severity": "중간",
+          "source_quote": "다만, 해당 의약품의 사용을 신청 또는 신고한 요양기관에 한함",
+          "exception": "해당 의약품의 사용은 특정 요양기관의 신청 또는 신고가 필요함",
+          "exception_quote": "다만, 해당 의약품의 사용을 신청 또는 신고한 요양기관에 한함"
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "연간 총 지급액 한도 설정",
+          "reason": "연간 총 지급액이 8천만원으로 제한되어 있어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "󰊴 󰊱에서 정한 “비급여암주요치료(전액본인부담포함)”의 연간 총 지급액은 8천만원을 한도로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특정암 제외",
+          "reason": "특정암에 대한 보장이 제외되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "비급여(전액본인부담포함) 다빈치로봇암수술 수술당 1,000만원 (특정암제외)",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "기타피부암 및 갑상선암 제외",
+          "reason": "기타피부암 및 갑상선암에 대한 보장이 제외되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "비급여(전액본인부담포함) 항암양성자방사선치료 연간1회한 3,000만원 (기타피부암 및 갑상선암제외)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "“다빈치로봇 암수술”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "의약품 사용 신청 요양기관에 한함",
+          "reason": "의약품 사용이 특정 요양기관에 한정되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "다만, 해당의약품의 사용을 신청 또는 신고한 요양기관에 한합니다",
+          "exception": "해당 의약품의 사용을 신청 또는 신고한 요양기관에 한정됨",
+          "exception_quote": "다만, 해당의약품의 사용을 신청 또는 신고한 요양기관에 한합니다"
+        }
+      ]
+    },
+    {
+      "article_number": 12,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 피보험자가 특정 암으로 진단받은 경우 무효",
+          "reason": "특정 암 진단 시 특별약관이 무효가 되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 비급여암주요치료(전액본인부담포함) 대한 보장개시일(책임개시일)의 전일 이전에 “암(특정암제외)”, “특정암”, “암(기타피부암 및 갑상선암제외)”, “기타피부암 및 갑상선암”으로 진단확정되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 보장책임 소멸 시 해약환급금 지급 안함",
+          "reason": "특별약관의 보장책임이 소멸되는 경우 해약환급금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "위 󰊲에 따라 이 특별약관의 보장책임이 소멸되는 경우에 회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 보장책임 소멸",
+          "reason": "특정 질환에 대한 보장책임이 소멸되며, 해약환급금 지급이 없음을 명시함",
+          "severity": "높음",
+          "source_quote": "급한 경우에 각각 세부보장에 대한 회사의 보장책임은 소멸하며, 회사는 소멸되는 약",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“2대양성신생물”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "회사의 보장책임이 소멸하며, 해약환급금을 지급하지 않음",
+          "reason": "회사가 특정 조건에서 보장책임을 소멸시키고 해약환급금을 지급하지 않음으로써 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "회사의 보장책임은 소멸하며, 회사는 소멸되는 세부보장에 대한 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "“항암방사선치료”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "항암방사선치료에 대한 보험금 지급 제외",
+          "reason": "항암방사선치료에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "금은 지급하지 않으며, 보통약관 5.(보험금을 지급하지 않는 사유) 󰊲 및 15.(계약이 특별약관에서 “항암방사선치료”라 함은 방사선종양학과 전문의 자격증을 가진 자 후 알릴 의무)는 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자의 임신, 출산, 산후기 관련 보험금 지급 제외",
+          "reason": "임신, 출산, 산후기에는 보험금 지급이 제한됨",
+          "severity": "중간",
+          "source_quote": "④ 피보험자의 임신, 출산(제왕절개를 포함합니다), 산후기.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "전쟁, 외국의 무력행사 등으로 인한 보험금 지급 제외",
+          "reason": "전쟁 및 무력행사 관련 사건에 대해 보험금 지급이 제외됨",
+          "severity": "중간",
+          "source_quote": "⑤ 전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동 상",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "급성신우신염으로 손해보장의 원인이 생긴 때로부터 특별약관 소멸",
+          "reason": "특별약관이 소멸되면 보험금 지급이 중단됨",
+          "severity": "높음",
+          "source_quote": "회사는 보험증권에 기재된 피보험자가 「이 특별약관의 보험기간」 중 급성신우신염으로 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특별약관 소멸 시 해약환급금 지급하지 않음",
+          "reason": "특별약관 소멸 시 해약환급금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "위 󰊱에 따라 특별약관이 소멸되는 경우에는 회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“특정자가면역질환”의 정의 및 진단",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특정자가면역질환에 대한 진단확정은 특정 조건을 충족해야 함",
+          "reason": "진단을 위한 특정 의료기관 및 자격증 소지자의 의사에 의한 진단이 요구됨",
+          "severity": "중간",
+          "source_quote": "이 진단은 병력과 함께 영상검사(초음파, CT, MRI 등), 내시경검사, 근전도검사, 혈액검사, 조직검사 및 류마티스 인자 또는 항CCP 항체검사 소견 등을 기초로 하여야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "조직검사 등 병리학적 검사를 받을 여유없이 급속한 병증 악화로 사망한 경우에도 보장하지 않음",
+          "reason": "계약자가 병리학적 검사를 받을 수 없는 상황에서도 보험금 지급이 제한됨",
+          "severity": "중간",
+          "source_quote": "피보험자가 조직검사 등 병리학적 검사를 받을 여유없이 급속한 병증 악화로 사망한 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 해지 시 보험료 납입지원금 지급 중단",
+          "reason": "특별약관이 해지되면 보험료 납입지원금을 더 이상 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "위 2.(보험금의 지급사유)에도 불구하고 이 특별약관이 해지되는 경우 더 이상 보험료납입지원금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“뇌혈관질환(뇌졸중제외)”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "이 특별약관은 고급형 계약에 한하여 적용합니다.",
+          "reason": "고급형 계약이 아닌 경우 보장이 적용되지 않음",
+          "severity": "높음",
+          "source_quote": "이 특별약관은 고급형 계약에 한하여 적용합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관 내용의 변경",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 내용을 변경할 수 없음",
+          "reason": "보험금 지급사유가 발생한 경우 특별약관 내용을 변경할 수 없으므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "단, 2.(보험금의 지급사유)에서 정한 보험금 지급사유가 발생한 경우에는 1. (특별약관의 보험기간) 상 이 특별약관의 내용을 변경할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 보험료납입지원금 지급 중단",
+          "reason": "특별약관이 소멸되면 보험료납입지원금을 더 이상 지급하지 않음",
+          "severity": "중간",
+          "source_quote": "위 2.(보험금의 지급사유)에도 불구하고 6.(특별약관의 소멸) 󰊱에 따라 특별약관이 소멸되는 경우 더 이상 보험료납입지원금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관 내용의 변경",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급사유 발생 시 특별약관 내용 변경 불가",
+          "reason": "보험금 지급사유가 발생한 경우에는 특별약관의 내용을 변경할 수 없으므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "단, 2.(보험금의 지급사유)에서 정한 보험금 지급사유가 발생한 경우에는 2. (보험금의 지급사유) 이 특별약관의 내용을 변경할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 보험료납입지원금 지급 중단",
+          "reason": "특별약관이 소멸되면 보험료납입지원금을 더 이상 지급하지 않음",
+          "severity": "중간",
+          "source_quote": "위 2.(보험금의 지급사유)에도 불구하고 10.(특별약관의 소멸) 󰊱에 따라 특별약관이 소멸되는 경우 더 이상 보험료납입지원금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 10,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 지급일수 연간 20일 한도",
+          "reason": "특별약관의 지급일수가 연간 20일로 제한되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "위 󰊱의 각 세부보장의 지급일수는 연간 20일을 한도로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "“혈전용해치료”의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "항응고제 및 경구용약제는 혈전용해제에서 제외됨",
+          "reason": "특정 약물이 보상에서 제외되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "항응고제(헤파린 등) 및 경구용약제(Plavix, Aspirin 등)는 제외됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "허위 또는 부당 등록사실이 확인되는 경우 해당 보험금을 지급하지 않음",
+          "reason": "계약자가 보험금을 지급받지 못할 수 있는 조건이 명시되어 있음",
+          "severity": "높음",
+          "source_quote": "보험수익자와 회사가 1.(보험금의 지급사유)에 따라 중증질환자 암(16대특정암, 특별약관 소액 및 유사암제외)산정특례대상으로 등록되었으나, 허위 또는 부당 등록사실이 확인되는 경우 해당 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "허위 또는 부당 등록사실이 확인되는 경우 해당 보험금을 지급하지 않음",
+          "reason": "계약자가 허위 또는 부당 등록을 할 경우 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "허위 또는 부당 등록사실이 확인되는 경우 해당 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "등록기준 미충족 시 재등록 불가",
+          "reason": "계약자가 등록기준을 충족하지 못할 경우 재등록이 불가능함",
+          "severity": "중간",
+          "source_quote": "등록기준 미충족 시에는 등록기준 예외적용 기준을 충족하는 경우에만 재등록 가능합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관이 무효가 되는 조건",
+          "reason": "피보험자가 보험계약일로부터 보장개시일 이전에 특정암으로 진단 확정되면 특별약관이 무효가 되어 보험금 지급이 불가능함",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 보장개시일(책임개시일)의 전일 이전에 「16대특정암」으로 진단 확정되는 경우에는 이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "중증질환자 소액 및 유사암 산정특례대상 진단비는 암이 소액 및 유사암으로 전이되면 지급되지 않음",
+          "reason": "암이 전이된 경우 진단비 지급이 제외되어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "특례대상 진단비에서 보장을 받은 후 암이 소액 및 유사암으로 전이되었다면 중증질환자 소액 및 유사암 산정특례대상 진단비는 지급되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "중증질환자 암 산정특례 재등록은 보험금 지급사유에 해당되지 않음",
+          "reason": "재등록이 보험금 지급사유에 포함되지 않아 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "중증질환자 소액 및 유사암 산정특례대상 재등록은 1.(보험금의 지급사유)에서 정한 보험금 지급사유에 해당되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“주요심·뇌·5대혈관및양성뇌종양”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "1년 미만의 뇌혈관질환 수술시 보험가입금액의 50% 지급",
+          "reason": "1년 미만의 경우 지급금액이 절반으로 줄어들어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "뇌혈관질환 수술시 1년미만 보험가입금액의 50%",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급사유 판정에 드는 의료비용은 회사가 전액 부담",
+          "reason": "보험금 지급사유 판정에 필요한 의료비용을 회사가 부담하나, 이는 계약자에게 추가적인 비용 부담을 초래할 수 있음",
+          "severity": "중간",
+          "source_quote": "보험금 지급사유 판정에 드는 의료비용은 회사가 전액 부담합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험금의 청구",
+      "toxic_clauses": [
+        {
+          "clause_summary": "사고증명서는 의료법 제3조에서 규정한 의료기관에서 발급해야 함",
+          "reason": "특정 의료기관에서만 발급된 사고증명서만 인정되므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "위 󰊱.②의 사고증명서는 의료법 제3조(의료기관)에서 규정한 국내의 병원이나 의원 또는 국외의 의료관련법에서 정한 의료기관에서 발급한 것이어야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "진단확정이 없을 경우 계약자적립액 및 미경과보험료 차감 지급",
+          "reason": "보험금 지급 시 계약자적립액 및 미경과보험료를 차감하여 지급하는 조건이 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "다만, 6.(특별약관의 소멸) 󰊴에서 정한 계약자적립액 및 미경과보험료를 지급한 경우에는 이미 지급된 계약자적립액 및 미경과보험료를 차감하여 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "허혈심장질환(급성심근경색증 제외) 1년 미만 보험가입금액의 50% 지급",
+          "reason": "1년 미만의 보험가입금액에 대해 50%만 지급되므로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "허혈심장질환(급성심근경색증제외) 1년미만 보험가입금액의 50%",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "1년 이상 보험가입금액의 100% 지급",
+          "reason": "1년 이상 가입 시에만 100% 지급되므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "1년이상 보험가입금액의 100%",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보장의 범위",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자적립액 및 미경과보험료 차감 지급",
+          "reason": "이미 지급된 계약자적립액 및 미경과보험료를 차감하여 지급함으로써 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "정한 계약자적립액 및 미경과보험료를 지급한 경우에는 이미 지급된 계약자적립액 및 미경과보험료를 차감하여 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“급성심근경색증”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 보장책임 소멸 시 해약환급금 지급하지 않음",
+          "reason": "계약자가 보장책임 소멸 시 해약환급금을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "위 󰊲에 따라 이 특별약관의 보장책임이 소멸되는 경우에 회사는 해약환급금을 별 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 조건",
+          "reason": "최종 손해보장의 원인이 생긴 때로부터 특별약관이 소멸되어 계약자가 보장을 받을 수 없음",
+          "severity": "중간",
+          "source_quote": "위 󰊱에 따라 세부보장에 대한 회사의 보장책임이 모두 소멸된 경우에는 최종 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급 후 보장책임 소멸",
+          "reason": "보험금이 지급된 세부보장에 대한 회사의 보장책임이 소멸됨",
+          "severity": "중간",
+          "source_quote": "보험금이 지급된 대상 세부보장에 대한 회사의 보장책임은 소멸",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 피보험자가 암으로 진단받은 경우 무효",
+          "reason": "피보험자가 암으로 진단받으면 특별약관이 무효가 되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 보장개시일(책임개시일)의 전일 이전에 “암(유사암 제외)”로 진단확정되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 유의사항 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“기타피부암” 및 “갑상선암”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "최종입원의 퇴원일로부터 180일이 경과한 입원은 새로운 입원으로 봅니다.",
+          "reason": "180일 경과 후의 입원은 보장받지 못하게 됨.",
+          "severity": "중간",
+          "source_quote": "질병입원일당(1일이상30일한도)이 지급된 최종입원의 퇴원일로부터 180일이 경과하여 개시한 입원은 새로운 입원으로 봅니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "임신 및 출산에 대한 제한",
+          "reason": "피보험자의 임신, 출산에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "② 피보험자의 임신, 출산(제왕절개를 포함합니다), 산후기. 그러나 회사가 보장하는 보험금 지급사유로 인한 경우에는 보험금을 지급합니다.",
+          "exception": "임신 및 출산이 회사가 보장하는 보험금 지급사유로 인한 경우에는 보상함",
+          "exception_quote": "그러나 회사가 보장하는 보험금 지급사유로 인한 경우에는 보험금을 지급합니다."
+        },
+        {
+          "clause_summary": "알코올중독 및 약물 사용에 대한 면책",
+          "reason": "피보험자의 알코올중독, 습관성 약품 또는 환각제의 복용 및 사용에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "④ 알코올중독, 습관성 약품 또는 환각제의 복용 및 사용",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "신체검사 및 예방접종에 대한 면책",
+          "reason": "질병을 원인으로 하지 않는 신체검사, 예방접종 등에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "⑥ 질병을 원인으로 하지 않는 신체검사, 예방접종, 인공유산, 불임시술, 제왕절개수술",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "고의적 자해에 대한 면책",
+          "reason": "피보험자가 고의로 자신을 해친 경우 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "⑩ 피보험자가 고의로 자신을 해친 경우. 다만, 피보험자가 심신상실 등으로 자유로운 의사결정을 할 수 없는 상태에서 자신을 해친 경우에는 보험금을 지급합니다.",
+          "exception": "심신상실 등으로 자유로운 의사결정이 불가능했음이 증명되면 보상함",
+          "exception_quote": "다만, 피보험자가 심신상실 등으로 자유로운 의사결정을 할 수 없는 상태에서 자신을 해친 경우에는 보험금을 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전쟁, 외국의 무력행사 등으로 인한 보험금 지급 제외",
+          "reason": "전쟁 등으로 인한 보험금 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동 손",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "간병인의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험수익자가 고의로 피보험자를 해친 경우 보험금 지급하지 않음",
+          "reason": "보험수익자의 고의적인 행위에 대해 보험금 지급을 면책함",
+          "severity": "높음",
+          "source_quote": "② 보험수익자가 고의로 피보험자를 해친 경우. 다만, 그 보험수익자가 보험금의 서비스에 상응하는 비용을 지불하는 것이 확인된 자에 한합니다.",
+          "exception": "보험수익자가 비용을 지불한 경우에만 보상함",
+          "exception_quote": "다만, 그 보험수익자가 보험금의 서비스에 상응하는 비용을 지불하는 것이 확인된 자에 한합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "정당한 이유없이 의사의 지시를 따르지 않은 경우 보험금 지급을 전부 또는 일부 지급하지 않을 수 있음",
+          "reason": "계약자가 의사의 지시를 따르지 않은 경우 보험금 지급이 제한됨",
+          "severity": "낮음",
+          "source_quote": "피보험자가 정당한 이유없이 입원기간 중 의사의 지시를 따르지 않은 때에는 회사는 1.(보험금의 지급사유)의 간병인사용 질병입원지원비(요양병원)의 전부 또는 일부를 지급하지 않을 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자의 임신, 출산 관련 보험금 지급하지 않음",
+          "reason": "피보험자의 임신, 출산으로 인한 경우 보험금이 지급되지 않음",
+          "severity": "중간",
+          "source_quote": "④ 피보험자의 임신, 출산(제왕절개를 포함합니다), 산후기. 그러나 회사가 보장하는 보험금 지급사유로 인한 경우에는 보험금을 지급합니다.",
+          "exception": "회사가 보장하는 보험금 지급사유로 인한 경우에는 지급함",
+          "exception_quote": "그러나 회사가 보장하는 보험금 지급사유로 인한 경우에는 보험금을 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "5,000Rad 이상의 조사를 하는 경우",
+          "reason": "악성신생물 근치 방사선 조사의 경우 특정 조건을 만족해야만 지급됨",
+          "severity": "중간",
+          "source_quote": "악성신생물 근치 방사선 조사(단, 5,000Rad 이상의 조사를 하는 경우로 한료목적이 다른 독립적인 수술을 받은 경우에는 각각의 질병수술비를 지급합니다.",
+          "exception": "5,000Rad 이상의 조사를 하는 경우에만 지급됨",
+          "exception_quote": "(단, 5,000Rad 이상의 조사를 하는 경우로 한료목적이 다른 독립적인 수술을 받은 경우에는 각각의 질병수술비를 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자적립액 및 미경과보험료 차감 지급",
+          "reason": "보험금 지급 시 이미 지급된 계약자적립액 및 미경과보험료를 차감하여 지급함으로써 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "다만, 6.(특별약관의 소멸) 󰊳에서 정한 계약자적립액 및 미경과보험료를 지급한 경우에는 이미 지급된 계약자적립액 및 미경과보험료를 차감하여 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급을 하지 않는 사유에 대한 조항",
+          "reason": "알코올중독, 약물 복용 등으로 인한 보험금 지급 제외",
+          "severity": "높음",
+          "source_quote": "④ 알코올중독, 습관성 약품 또는 환각제의 복용 및 사용 및",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금 지급을 하지 않는 사유에 대한 조항",
+          "reason": "전쟁, 내란 등으로 인한 보험금 지급 제외",
+          "severity": "높음",
+          "source_quote": "⑤ 전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동 해",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "정신적 및 신체적 질환에 대한 면책 조항",
+          "reason": "알코올중독, 약물복용 등으로 인한 면책",
+          "severity": "높음",
+          "source_quote": "④ 알코올중독, 습관성 약품 또는 환각제의 복용 및 사용 상",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 고의로 피보험자를 해친 경우 보험금 지급 제외",
+          "reason": "계약자가 고의로 피보험자를 해친 경우 보험금 지급이 제한됨",
+          "severity": "높음",
+          "source_quote": "⑫ 계약자가 고의로 피보험자를 해친 경우 해",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "성병 관련 보험금 지급 제외",
+          "reason": "피보험자가 성병을 가진 경우 보험금 지급이 이루어지지 않음",
+          "severity": "높음",
+          "source_quote": "③ 성병을 하는 자로서 의료법 제3조(의료기관)에 소속되어 급여를 받는 자 또는 사업자",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "입원당 지급일수는 180일 한도로 제한됨",
+          "reason": "입원일수에 대한 지급 한도가 설정되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "피보험자가 보장개시일(책임개시일) 이후 입원하여 치료를 받던 중 보험기간이 만",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피로 및 심신허약 치료에 대한 면책",
+          "reason": "피로 및 심신허약 치료에 대한 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "⑦ 피로, 권태, 심신허약 등을 치료하기 위한 안정치료 등을 제공하는 것을 말하며, 의료법 제4조의2(간호·간병통합서비스 제공 등)에서",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "미용을 위한 성형수술에 대한 면책",
+          "reason": "미용을 위한 성형수술에 대한 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "⑧ 위생관리, 미모를 위한 성형수술 정하는 간호·간병통합서비스는 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "간병인의 정의",
+      "toxic_clauses": [
+        {
+          "clause_summary": "간병인 사용 일수 제한",
+          "reason": "간병인 사용에 대한 지급일수가 1회 입원당 180일로 제한되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "간병인사용 질병입원일당(요양병원제외)(장기요양(1-5등급,인지지원등급))(1일당8시간이상)(1일이상180일한도)의 지급일수는 1회 입원당 180일 한도 내에서",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "180일 한도 초과 시 보험금 지급하지 않음",
+          "reason": "최종 간병인 사용일부터 180일이 경과한 입원에 대해 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "→ 10월28일부터 180일한도 초과로 보험금을 지급하지 않음 해",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "입원기간 중 의사의 지시를 따르지 않으면 보험금 지급하지 않음",
+          "reason": "피보험자가 의사의 지시를 따르지 않은 경우 보험금 지급이 제한됨",
+          "severity": "낮음",
+          "source_quote": "피보험자가 정당한 이유 없이 입원기간 중 의사의 지시를 따르지 않은 때에는 회",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "동일한 질병으로 2회 이상 입원 시 일부 보험금 지급하지 않음",
+          "reason": "동일한 질병의 치료를 목적으로 2회 이상 입원한 경우 보험금 지급이 제한됨",
+          "severity": "중간",
+          "source_quote": "동일한 질병의 치료를 목적으로 2회 이상 입원한 경우(동일한 질병의 치료를 직 사는 간병인사용 질병입원일당(요양병원)(장기요양(1-5등급,인지지원등급))(1일이",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 9,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "간병인 사용 시 지급일수는 1회 입원당 180일 한도 내에서 산정됨",
+          "reason": "간병인 사용에 대한 지급일수가 제한되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "위 󰊱의 간병인사용질병입원일당(요양병원제외)(1일당8시간이상)(1일이상180일한도)의 지급일수는 1회 입원당 180일 한도 내에서 산정합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "간호·간병통합서비스사용 질병입원일당 지급하지 않음",
+          "reason": "특정 조건을 충족하지 않으면 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "사는 간호·간병통합서비스사용 질병입원일당(1일이상180일한도)의 전부 또는 일부를 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "입원당 지급일수 180일 한도로 제한",
+          "reason": "입원 기간에 대한 지급 한도가 설정되어 있음",
+          "severity": "중간",
+          "source_quote": "󰊲 󰊱의 간호·간병통합서비스사용 질병입원일당(1일이상180일한도)의 지급일수는 1회 입원당 180일 한도 내에서 산정합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "간병인사용질병입원일당 지급 제한",
+          "reason": "동일한 질병에 대해 180일 이상 입원 시 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "간병인사용질병입원일당(요양,정신및한방병원제외)(1일당8시간이상)(181일이 해상)의 전부 또는 일부를 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "최종 간병인사용일부터 180일 경과 후 입원은 새로운 입원으로 간주",
+          "reason": "간병인사용일로부터 180일이 경과한 후의 입원은 보상하지 않음",
+          "severity": "중간",
+          "source_quote": "간병인사용일부터 180일이 경과하여 개시한 입원은 새로운 입원으로 봅니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "간병인 사용 관련 면책",
+          "reason": "간병인 사용이 특정 조건을 충족하지 않을 경우 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "1일당 8시간 미만으로 간병인을 사용한 날에 대해서는 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 해약환급금 지급하지 않음",
+          "reason": "특별약관이 소멸되면 해약환급금을 지급하지 않음으로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "위 󰊱 내지 󰊲에 따라 특별약관이 소멸되는 경우에 회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "부활(효력회복)되는 계약의 보장개시는 보통약관을 따름",
+          "reason": "부활된 계약의 보장개시가 보통약관에 의존하여 계약자에게 불리할 수 있음",
+          "severity": "중간",
+          "source_quote": "부활(효력회복)되는 계약의 보장개시는 보통약관 29.(보험료의 납입을 연체하여 해지된 계약의 부활(효력회복))를 따릅니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 피보험자가 특정 질병으로 진단받은 경우 무효",
+          "reason": "특정 질병으로 진단받으면 특별약관이 무효가 되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 보장개시일(책임개시일)의 전일 이전에 “경도 이상지질혈증(고지혈증포함)” 또는 “중등도이상 이상지질혈증(고지혈증포함)”으로 진단확정되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "부활(효력회복) 시 경도 이상지질혈증에 대한 보장개시일 제한",
+          "reason": "부활(효력회복)일로부터 1년이 지난 날의 다음날부터 보장개시됨",
+          "severity": "중간",
+          "source_quote": "부활(효력회복)시 경도 이상지질혈증(고지혈증포함)에 대한 보장개시일(책임개시일)은 부활(효력회복)일로부터 그 날을 포함하여 1년이 지난날의 다음날입니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "후두암 진단 시 보험금 미지급",
+          "reason": "후두암이 보장제외 질병으로 분류되어 보험금 지급사유에 해당되지 않음",
+          "severity": "높음",
+          "source_quote": "① 2025.2.1. 진단확정된 후두암(C32)(원발암)의 경우, 보장제외 질병으로 보험금 지급사유에 해당되지 않아 보험금 미지급",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암의 진단확정 시점은 특정 검사 결과보고 시점으로 한정됨",
+          "reason": "진단확정 시점이 특정 검사 결과에 의존하여 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "이 경우 “암”의 진단확정 시점은 상기 검사에 의한 결과보고 시점으로 합",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보장개시일은 보험계약일로부터 90일이 지난 날의 다음 날로 설정됨",
+          "reason": "계약자가 보험금을 지급받기 위해서는 90일을 기다려야 하므로 불리함",
+          "severity": "중간",
+          "source_quote": "비갱신형 및 갱신형(최초계약)의 경우 90일이 지난날의 다음날",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암주요치료비Ⅱ는 연간 1회에 한하여 지급하며 최대 10회 지급",
+          "reason": "지급 횟수와 한도가 제한되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "암주요치료비Ⅱ(유사암 제외)(연간1회한)(10년지급대상) 지급예시",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 9,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "부활(효력회복) 시 '암(유사암제외)'에 대한 보험료 납입면제는 적용하지 않음",
+          "reason": "부활 시 암 관련 보험료 납입면제가 적용되지 않아 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "단, 부활(효력회복)시 “암(유사암제외)”에 대한 26-2.(보험료 납입면제)는 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "부활(효력회복)되는 계약의 보장개시는 90일 후로 제한됨",
+          "reason": "부활 후 보장개시일이 90일로 제한되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "보장개시일(책임개시일)은 부활(효력회복)일로부터 그날을 포함하여 90일이 지난날의 다음날입니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 11,
+      "article_title": "특별약관의 제2회 이후 보험료의 납입",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 제2회 이후 보험료의 납입은 보통약관 26을 따름",
+          "reason": "계약자가 특별약관의 보험료 납입 조건을 보통약관에 의존해야 하므로 불리함",
+          "severity": "중간",
+          "source_quote": "이 특별약관의 제2회 이후 보험료의 납입은 보통약관 26.(제2회 이후 보험료의 납입)을 따릅니다.",
+          "exception": "차회 이후의 특별약관 보장보험료 납입이 면제됨",
+          "exception_quote": "단, 1.(보험금의 지급사유) 󰊱의 “암(유사암제외)”으로 최초 진단확정 구분 지급금액을 받은 경우에는 차회 이후의 이 특별약관의 보장보험료 납입을 면제하여 드립니다."
+        }
+      ]
+    },
+    {
+      "article_number": 12,
+      "article_title": "특별약관의 해약환급금",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 해약환급금은 보통약관을 따르며 특정 암 진단 후 해지 시 지급금액이 제한됨",
+          "reason": "특정 암 진단 후 해지 시 해약환급금이 제한되며, 계약자에게 불리한 조건이 적용됨",
+          "severity": "중간",
+          "source_quote": "단, 1.(보험금의 구분 지급금액 지급사유) 󰊱의 “기타피부암” 또는 “갑상선암”으로 최초 진단확정을 받고 “보험금 지급 대상기간” 이내에 해지하는 경우에는 “보험료 및 해약환급금 산출방법서”에서 정하는 경과기간 지급금액 바에 따라 회사가 그 때까지 적립한 계약자적립액 및 미경과보험료를 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“폐렴”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 납입면제 적용 제외",
+          "reason": "특정 가입 유형에 대해 보험료 납입면제가 적용되지 않음",
+          "severity": "중간",
+          "source_quote": "또한 1종, 7종(세만기-고급형(납면적용A형))으로 가입한 경우, 갱신형에 한하여 보통약관 26-1.(보험료 납입면제)는 적용하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 11,
+      "article_title": "법령 개정에 따른 특별약관 내용의 변경",
+      "toxic_clauses": [
+        {
+          "clause_summary": "상급종합병원 치료 기준 변경에 따른 보장 내용 변경",
+          "reason": "법령 개정에 따라 상급종합병원 제도가 폐지되거나 변경될 경우 보장 내용이 변경될 수 있음",
+          "severity": "중간",
+          "source_quote": "법령의 개정에 따라 “상급종합병원”제도가 폐지되는 경우",
+          "exception": "해당 의약품의 사용을 신청 또는 신고한 요양기관에 한해 보장함",
+          "exception_quote": "다만, 해당 의약품의 사용을 신청 또는 신고한 요양기관에 한함"
+        }
+      ]
+    },
+    {
+      "article_number": 11,
+      "article_title": "법령 개정에 따른 특별약관 내용의 변경",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특정 의약품 사용 조건 제한",
+          "reason": "특정 의약품의 사용이 신청 또는 신고된 요양기관에 한정됨",
+          "severity": "중간",
+          "source_quote": "험심사평가원이 승인한 요법(다만, 해당 의약품의 사용을 신청 또는 신고 상한 요양기관에 한함)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "연간 총 지급액이 한도를 초과하는 경우 초과분 지급하지 않음",
+          "reason": "계약자가 받을 수 있는 보험금의 총액에 제한을 두어 불리함",
+          "severity": "중간",
+          "source_quote": "다만, 연간 총 지급액이 한도를 초과하는 경우에는 초과분에 해당하는 금액은 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전암상태는 보상에서 제외됨",
+          "reason": "전암상태에 대한 보장이 없으므로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "다만, 전암(前癌)상태(암으로 변하기 이 해 전 상태, premalignant condition or condition with malignant potential)는 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "기타피부암 및 갑상선암은 보상에서 제외됨",
+          "reason": "기타피부암 및 갑상선암에 대한 보장이 없으므로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "이 특별약관에 있어서 “암(유사암제외)”이라 함은 󰊱에서 정한 “암”에서 󰊳에서 정 배한 “기타피부암” 및 󰊴에서 정한 “갑상선암”을 제외한 질병을 말합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 16,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "연간 총 지급액 한도가 있음",
+          "reason": "계약자가 치료비의 전액을 지급받지 못하게 됨",
+          "severity": "중간",
+          "source_quote": "전체 연간 총 지급액은 2천만원을 한도로 하며, 연간 총 지급액이 한도를 초과하는 경우에는 초과분에 해당하는 금액은 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "안전성과 유효성 인정 범위 변경 시 최초 처방일자 기준 변경",
+          "reason": "안전성과 유효성 인정 범위가 변경되면 보장 기준이 불리하게 변경됨",
+          "severity": "중간",
+          "source_quote": "다만, 9. (특정항암호르몬치료제 및 특정항암호르몬약물허가치료의 정의) 󰊳에서 정한 “안전성과 유효성 인정 범위”가 변경(추가 또는 삭제)된 경우에는 변경된 “안전성과 유효성 인정 범위” 적용 후 최초로 도래하는 처방일자를 기준으로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“암” 등의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "암의 진단확정은 특정 전문의사 자격증을 가진 자에 의해야 함",
+          "reason": "진단을 위한 의사의 자격 요건이 제한적이며, 이로 인해 진단이 어려울 수 있음",
+          "severity": "중간",
+          "source_quote": "“암”의 진단확정은 병리 또는 진단검사의학의 전문의사 자격증을 가진 자에 의하 비여 내려져야 하며",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "전암 상태는 암 진단에서 제외됨",
+          "reason": "전암 상태에 대한 진단이 불가능하여 보장이 제한됨",
+          "severity": "중간",
+          "source_quote": "이 경우 “암”의 진단확정 시점은 상기 검사에 의한 결과보고 시점으로 합 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 17,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "연간 총 지급액 한도 설정",
+          "reason": "연간 총 지급액이 4천만원을 초과하는 경우 초과분에 해당하는 금액은 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "경우의 전체 연간 총 지급액은 4천만원을 한도로 하며, 연간 총 지급액이 한도를 초과하는 경우에는 초과분에 해당하는 금액은 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 고혈압으로 진단된 경우 무효",
+          "reason": "고혈압 진단 시 특별약관이 무효가 되어 보장을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 보장개시일(책임개시일)의 전일 이전에 227 고혈압치료비지원(원발성)(경도)(비갱신형/갱신형) “중등도이상 고혈압(원발성)”으로 진단확정되어 있는 경우에는 이 특별약관은 무효로",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "부활(효력회복) 시 고혈압 치료비 지원에 대한 제한",
+          "reason": "부활일로부터 1년 이내에만 고혈압 치료비 지원이 가능하여 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "부활(효력회복)일로부터 그 날을 포함하여 1년 에 한하여 고혈압치료비지원(원발성)(경도)을 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 무효",
+          "reason": "특별약관이 특정 질병으로 진단된 경우 무효가 되어 보험료가 환급됨.",
+          "severity": "높음",
+          "source_quote": "피보험자가 이 특별약관의 보험계약일로부터 보장개시일(책임개시일)의 전일 이전에 “경도 고혈압(원발성)” 또는 “중등도이상 고혈압(원발성)”으로 진단확정되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "당뇨병(당화혈색소9.0%이상)에 해당되는 경우 보상하지 않음",
+          "reason": "피보험자가 당뇨병(당화혈색소9.0%이상) 진단 시 보험금 지급 대상기간에도 불구하고 보상하지 않음",
+          "severity": "높음",
+          "source_quote": "피보험자가 보험금 지급 대상기간 중 “당뇨병(당화혈색소9.0%이상)”에 해당 되는 경우에는 1.(보험금의 지급사유)에도 불구하고 보상하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 무효",
+      "toxic_clauses": [
+        {
+          "clause_summary": "당뇨병 진단 확정 시 특별약관 무효",
+          "reason": "당뇨병 진단이 확정되면 특별약관이 무효가 되어 보험금 지급이 이루어지지 않음",
+          "severity": "높음",
+          "source_quote": "진단확정되어 있는 경우에는 이 특별약관은 무효로 하며, 이미 납입한 보험료를 돌려 드립니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 15,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 해약환급금 지급하지 않음",
+          "reason": "특별약관 소멸 시 계약자가 해약환급금을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "이 특별약관이 소멸되는 경우에 회사는 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 15,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "석고붕대 또는 섬유유리붕대 치료법 제외",
+          "reason": "특정 치료법에 대한 보장을 제외하여 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "위 󰊱에도 불구하고 석고붕대 또는 섬유유리붕대(Fiberglass Cast)를 고정할 부분 별의 일측면 또는 양측면에 착용시키는 치료법은 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 16,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "신깁스치료비 보험금은 보험가입금액 한도로 지급",
+          "reason": "하나의 상해 또는 질병으로 인한 신깁스치료비 보험금이 보험가입금액을 한도로 제한되므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "회사가 지급하여야 할 하나의 상해 또는 질병으로 인한 신깁스치료비 보험금은 보험가입금액을 한도로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관은 보험금 지급사유 발생 시 소멸됨",
+          "reason": "보험금 지급사유 발생 후 특별약관이 소멸되어 보장이 종료됨",
+          "severity": "높음",
+          "source_quote": "보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "응급환자에 대한 보상 한도",
+          "reason": "응급환자 진료에 대해 연간 12회로 제한됨",
+          "severity": "중간",
+          "source_quote": "회사는 보험증권에 기재된 피보험자가 이 특별약관의 보험기간 중에 질병 또는 상해로 인하여 “응급환자”로 응급실에 내원하여 진료를 받은 경우 연간 12회한도로 내원 1회당 이 특별약관의 보험가입금액을 지급하여 드립니다.",
+          "exception": "응급실 도 4.의 정의에 해당하는 경우 보상함",
+          "exception_quote": "(단, 응급실 도 4. (“응급환자”의 정의)"
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관의 갱신 시 보험료 납입면제 적용 제외",
+          "reason": "특별약관 갱신 시 보험료 납입면제가 적용되지 않아 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "금은 지급하지 않습니다. 또한 1종, 7종(세만기-고급형(납면적용A형))으로 가입한 경 병 우, 갱신형에 한하여 보통약관 26-1.(보험료 납입면제)는 적용하지 않으며 9종, 10종 이 특별약관을 갱신형으로 가입한 경우에는 『제도성 특별약관 [8.갱신형 계약 자동갱 (세만기-고급형(납면적용B형))으로 가입한 경우, 갱신형에 한하여 보통약관 26-2.(보 신 특별약관]』에 따라 갱신됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "허위 또는 부당 판정사실이 확인되는 경우 보험금을 지급하지 않음",
+          "reason": "보험수익자가 허위 또는 부당한 판정을 받을 경우 보험금 지급이 제한됨",
+          "severity": "높음",
+          "source_quote": "보험수익자와 회사가 1.(보험금의 지급사유)에 따라 국민건강보험공단 등급판정위원회에 의해 장기요양등급을 판정 받았으나, 허위 또는 부당 판정사실이 확인되는 경우 보험 장기요양상태 판정기준이 현행 1-5등급에서 신체장애등급과 정신장애등급으 해당 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전쟁, 외국의 무력행사 등으로 인한 보험금 지급하지 않음",
+          "reason": "전쟁, 외국의 무력행사 등으로 인한 경우에는 보험금을 지급하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "⑤ 전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동 약내용 변경 시점 이후 잔여보험기간의 보장을 위한 재원인 계약자적립액 및 미",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "알코올 중독, 습관성 약품 또는 환각제의 복용 및 사용으로 인한 보험금 지급하지 않음",
+          "reason": "알코올 중독, 습관성 약품 또는 환각제의 복용 및 사용으로 인한 경우에는 보험금을 지급하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "󰊷 회사는 계약체결시 계약자에게 위 󰊲에 따라 계약이 변경되는 경우와 관련된 위",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관이 법령의 개정 또는 폐지로 소멸될 수 있음",
+          "reason": "법령 변경 시 특별약관이 소멸되며 해약환급금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "법령의 개정 또는 폐지 등으로 “장기요양상태 판정기준”이 변경되는 경우 한 경우에 그 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": "법령 변경으로 특별약관이 소멸되면 해약환급금 지급하지 않음",
+          "exception_quote": "위 󰊱에 따라 특별약관이 소멸되는 경우에 회사는 해약환급금을 지급하지 않습니다."
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "허위 또는 부당 판정사실이 확인되는 경우 보험금 지급하지 않음",
+          "reason": "계약자가 허위 또는 부당 판정사실을 방지할 수 없으므로 불리함",
+          "severity": "중간",
+          "source_quote": "해당 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험수익자가 고의로 피보험자를 해친 경우 보험금 지급하지 않음",
+          "reason": "보험수익자가 고의로 피보험자를 해친 경우 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "보험수익자가 고의로 피보험자를 해친 경우. 다만, 그 보험수익자가 보험금의",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "장기간병요양진단비 지급 후 허위 또는 부당 판정 시 특별약관 소멸",
+          "reason": "허위 또는 부당 판정이 확인되면 보험금 지급이 이루어지지 않음",
+          "severity": "높음",
+          "source_quote": "회사가 1.(보험금의 지급사유)에서 정한 장기간병요양진단비(1등급)를 지급한 경 보험수익자와 회사가 1.(보험금의 지급사유)에 따라 국민건강보험공단 등급판정위원회에 의해 장기요양등급을 판정 받았으나, 허위 또는 부당 판정사실이 확인되는 경우 우에 그 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "법령 등의 개정에 따른 계약내용의 변경",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자가 고의로 자신을 해친 경우 보험금 지급하지 않음",
+          "reason": "피보험자가 고의로 해친 경우 보험금 지급이 제한됨",
+          "severity": "중간",
+          "source_quote": "피보험자가 고의로 자신을 해친 경우. 다만, 피보험자가 심신상실 등으로 자유로운 의사결정을 할 수 없는 상태에서 자신을 해친 경우에는 보험금을 지급합니다.",
+          "exception": "심신상실 상태에서 자신을 해친 경우에는 보험금을 지급함",
+          "exception_quote": "다만, 피보험자가 심신상실 등으로 자유로운 의사결정을 할 수 없는 상태에서 자신을 해친 경우에는 보험금을 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 조건",
+          "reason": "허위 또는 부당 판정사실이 확인되면 보험금 지급이 없고 해약환급금도 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "보험수익자와 회사가 1.(보험금의 지급사유)에 따라 국민건강보험공단 등급판정위원 󰊱 회사가 1.(보험금의 지급사유)에서 정한 장기간병요양진단비(1-4등급)를 지급한 회에 의해 장기요양등급을 판정 받았으나, 허위 또는 부당 판정사실이 확인되는 경우 경우에 그 손해보장의 원인이 생긴 때로부터 이 특별약관은 소멸됩니다. 해당 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 계약내용 변경을 원하지 않으면 계약 효력 상실",
+          "reason": "계약자가 변경을 원하지 않으면 계약이 더 이상 효력을 가지지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "해당 계약은 더 이상 효력을 가지지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "신장적출수술에 대한 보장책임 소멸",
+          "reason": "신장적출수술이 이루어진 경우 보장책임이 소멸되며, 해약환급금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "회사는 소멸되는 쪽 신장의 일부 또는 양쪽의 신장 전부를 완전하게 제거하는 수술을 말합니다. 세부보장에 대한 해약환급금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“경증이상치매상태”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "정신질환으로 인한 인지기능의 장애는 보험금 지급 제외",
+          "reason": "정신질환으로 인한 인지기능의 장애는 보험금 지급 사유에서 제외됨",
+          "severity": "높음",
+          "source_quote": "① 정신분열증이나 우울증과 같은 정신질환으로 인한 인지기능의 장애",
+          "exception": "정신질환으로 인한 인지기능의 장애가 CDR척도에서 동등한 정도로 판정되면 예외적으로 보상함",
+          "exception_quote": "(단, 국내 의학계에서 인정되는 검사방법 ① 정신분열증이나 우울증과 같은 정신질환으로 인한 인지기능의 장애으로 이와 동등한 정도로 판정되는 경우를 포함합니다)"
+        },
+        {
+          "clause_summary": "의사의 처방 없이 약물 투여로 인한 인지기능의 장애는 보험금 지급 제외",
+          "reason": "의사의 처방 없이 약물 투여로 인한 인지기능의 장애는 보험금 지급 사유에서 제외됨",
+          "severity": "높음",
+          "source_quote": "② 의사의 처방에 의하지 않은 약물의 투여로 인한 인지기능의 장애",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "알코올 중독 및 약물 사용으로 인한 인지기능의 장애는 보험금 지급 제외",
+          "reason": "알코올 중독 및 약물 사용으로 인한 인지기능의 장애는 보험금 지급 사유에서 제외됨",
+          "severity": "높음",
+          "source_quote": "③ 알코올 중독, 습관성 약품 또는 환각제의 복용 및 사용",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "특별약관의 갱신",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 갱신 조건",
+          "reason": "피보험자가 장래에 더 이상의 호전을 기대할 수 없는 상태인 경우, 진단일부터 90일이 경과하기 전이라도 갱신이 이루어짐.",
+          "severity": "중간",
+          "source_quote": "그 진단일부터 90일이 경과하기 전이라도 “중증치매상태”로 최종 진단",
+          "exception": "국내 의학계에서 인정되는 검사방법으로 이와 동등한 정도로 판정되는 경우 포함",
+          "exception_quote": "(단, 국내 의학계에서 인정되는 검사방법으로 이와 동등한 정도로 판정되는 경우를 포함합니다)"
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "정신질환, 의사의 처방 없는 약물 투여, 알코올 중독 등으로 인한 보험금 지급 제외",
+          "reason": "특정 질병 및 상태에 대해 보험금 지급을 하지 않음",
+          "severity": "높음",
+          "source_quote": "급사유가 발생한 때에는 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관 소멸 시 보험료납입지원금 지급 중단",
+          "reason": "특별약관이 소멸되면 보험료납입지원금을 더 이상 지급하지 않음",
+          "severity": "중간",
+          "source_quote": "위 2.(보험금의 지급사유)에도 불구하고 8.(특별약관의 소멸) 󰊱에 따라 특별약관이 소멸되는 경우 더 이상 보험료납입지원금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약일로부터 1년 미만의 경우 보험가입금액의 50%만 지급",
+          "reason": "보험계약일로부터 1년 미만인 경우 지급금액이 절반으로 줄어들어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "양전자단층촬영 보험계약일로부터 1년 미만 이 특별약관 보험가입금액의 50% 니다",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "만기환급금 및 중도인출금 지급하지 않음",
+          "reason": "계약자가 받을 수 있는 만기환급금 및 중도인출금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "통약관에서 정한 9.(만기환급금의 지급)의 만기환급금 및 37.(중도인출금)의 중도인출 별 금은 지급하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“4대안과질환(특정백내장및수정체질환)” 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특정백내장 및 수정체질환의 기계적 합병증 및 인공수정체안은 보장에서 제외됨",
+          "reason": "특정백내장 및 수정체질환 관련 보장이 제한됨",
+          "severity": "높음",
+          "source_quote": "다만, 선천성 수정체기형, 안구내렌즈 30-3 4대안과진단비(질병 시력저하 및 실명) 특별약관(인공수정체)의 기계적 합병증 및 인공수정체안은 보장에서 제외됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "“4대안과질환(질병 시력저하 및 실명)”의 정의 및 진단확정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "상해로 인한 시력저하 또는 실명 제외",
+          "reason": "상해로 인한 경우는 보장하지 않음",
+          "severity": "중간",
+          "source_quote": "상해로 인한 시력저하 또는 실명은 제외합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "중증질환자 뇌혈관질환 산정특례대상 진단비 지급 제한",
+          "reason": "연간 1회에 한하여 보험금 지급 제한",
+          "severity": "중간",
+          "source_quote": "진단 확정된 질병 또는 상해로 “중증질환자 뇌혈관질환 산정특례대상”으로 여러번 등록되더라도 보험금은 연간 1회에 한하여 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "법령 등의 개정에 따른 계약내용의 변경",
+      "toxic_clauses": [
+        {
+          "clause_summary": "법령의 개정 또는 폐지 등으로 '중증치매 산정특례대상'이 변경되는 경우",
+          "reason": "계약자에게 불리한 보장내용 변경 가능성",
+          "severity": "높음",
+          "source_quote": "법령의 개정 또는 폐지 등으로 “중증치매 산정특례대상”이 변경되는 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "법령의 개정 또는 폐지 등으로 '중증치매 산정특례대상'에 따른 신청이 불가능한 경우",
+          "reason": "계약자에게 불리한 보장내용 변경 가능성",
+          "severity": "높음",
+          "source_quote": "법령의 개정 또는 폐지 등으로 “중증치매 산정특례대상”에 따른 “중증치매 산정특례대상” 신청이 불가능한 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "법령의 개정 또는 폐지 등에 따라 계약유지 필요가 없어지는 경우",
+          "reason": "계약자에게 불리한 계약 효력 소멸 가능성",
+          "severity": "높음",
+          "source_quote": "법령의 개정 또는 폐지 등에 따라 계약유지 필요가 없어지는 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“수술”의 정의와 장소",
+      "toxic_clauses": [
+        {
+          "clause_summary": "정신 및 행동장애로 인한 질병은 보험금 지급하지 않음",
+          "reason": "정신 및 행동장애로 인한 질병은 보장하지 않으므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "정신 및 행동장애(F00~F99)으로 인한 질병",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "선천기형, 변형 및 염색체이상으로 인한 질병은 보험금 지급하지 않음",
+          "reason": "선천기형, 변형 및 염색체이상으로 인한 질병은 보장하지 않으므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "선천기형, 변형 및 염색체이상(Q00-Q99)으로 인한 질병",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "마약, 습관성 의약품 및 알코올중독으로 인한 경우 보험금 지급하지 않음",
+          "reason": "마약, 습관성 의약품 및 알코올중독으로 인한 경우는 보장하지 않으므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "마약, 습관성 의약품 및 알코올중독으로 인한 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "치료를 수반하지 않는 건강진단으로 인한 경우 보험금 지급하지 않음",
+          "reason": "치료를 수반하지 않는 건강진단은 보장하지 않으므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "치료를 수반하지 않는 건강진단으로 인한 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자가 고의로 자신을 해친 경우 보험금 지급하지 않음",
+          "reason": "피보험자가 고의로 해친 경우는 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "회사는 아래의 사유를 원인으로 하여 보험금 지급사유가 발생한 때에는 보장하지 않습니다. ① 피보험자가 고의로 자신을 해친 경우.",
+          "exception": "심신상실 등으로 자유로운 의사결정이 불가능했음이 증명되면 보상함",
+          "exception_quote": "다만, 피보험자가 심신상실 등으로 자유"
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "“수술”의 정의와 장소",
+      "toxic_clauses": [
+        {
+          "clause_summary": "정신 및 행동장애로 인한 질병은 보장하지 않음",
+          "reason": "정신 및 행동장애로 인한 질병에 대한 보장이 제외됨",
+          "severity": "높음",
+          "source_quote": "① 정신 및 행동장애(F00~F99)으로 인한 질병",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "선천기형, 변형 및 염색체이상으로 인한 질병은 보장하지 않음",
+          "reason": "선천기형, 변형 및 염색체이상으로 인한 질병에 대한 보장이 제외됨",
+          "severity": "높음",
+          "source_quote": "② 선천기형, 변형 및 염색체이상(Q00-Q99)으로 인한 질병",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "마약, 습관성 의약품 및 알코올중독으로 인한 경우는 보장하지 않음",
+          "reason": "마약, 습관성 의약품 및 알코올중독으로 인한 질병에 대한 보장이 제외됨",
+          "severity": "높음",
+          "source_quote": "③ 마약, 습관성 의약품 및 알코올중독으로 인한 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "치의보철 및 미용상의 처치로 인한 경우는 보장하지 않음",
+          "reason": "치의보철 및 미용상의 처치에 대한 보장이 제외됨",
+          "severity": "높음",
+          "source_quote": "④ 치의보철 및 미용상의 처치로 인한 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "정상임신, 분만전후의 간호 및 검사와 인공유산, 불법유산 등으로 인한 경우는 보장하지 않음",
+          "reason": "정상임신 및 관련된 처치에 대한 보장이 제외됨",
+          "severity": "높음",
+          "source_quote": "⑤ 정상임신, 분만전후의 간호 및 검사와 인공유산, 불법유산 등으로 인한 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "건강진단으로 인한 경우는 보장하지 않음",
+          "reason": "건강진단과 관련된 수술에 대한 보장이 제외됨",
+          "severity": "높음",
+          "source_quote": "⑦ 치료를 수반하지 않는 건강진단으로 인한 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자 및 그 법정대리인의 고의로 인한 손해는 보상하지 않음",
+          "reason": "계약자가 고의로 손해를 발생시킨 경우 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "③ 계약자 및 그 법정대리인의 고의",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자가 사고를 일으키고 도주하였을 때 보상하지 않음",
+          "reason": "피보험자가 도주한 경우에는 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "⑥ 피보험자가 사고를 일으키고 도주하였을 때",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "형법 제266조(과실치상) 또는 제267조(과실치사)에 따른 벌금형이 확정된 경우 보상하지 않음",
+          "reason": "형법에 따른 벌금형이 확정된 경우에는 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "형법 제266조(과실치상) 또는 제267조(과실치사)에 따른 벌금형이 확정된 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험금의 청구",
+      "toxic_clauses": [
+        {
+          "clause_summary": "벌금형에 해당하는 금액 지급 제외",
+          "reason": "특별법 위반에 따른 벌금형은 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "보험수익자 또는 계약자는 다음의 서류를 제출하고 보험금 또는 해약환급금을 청구해 형은 제외.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "특별약관의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지급하지 않는 사유",
+          "reason": "피보험자 또는 계약자의 고의로 인한 손해는 보상하지 않음",
+          "severity": "높음",
+          "source_quote": "회사는 아래의 사유를 원인으로 하여 생긴 손해는 보상하여 드리지 아니합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "보험금의 지급사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "형법 제170조(실화)에 의한 벌금 1,500만원 한도",
+          "reason": "벌금에 대한 보상 한도가 설정되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "형법 제170조(실화)에 의한 벌금 1,500만원 한도",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "형법 제171조(업무상실화, 중실화)에 의한 벌금 2,000만원 한도",
+          "reason": "벌금에 대한 보상 한도가 설정되어 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "형법 제171조(업무상실화, 중실화)에 의한 벌금 2,000만원 한도",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자에게 계약일 이전에 의료사고가 발생한 경우 보험금 지급하지 않음",
+          "reason": "계약일 이전의 의료사고는 보상하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "① 피보험자에 기재된 피보험자에게 계약일 이전에 의료사고가 발생한 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "무면허 또는 무자격자의 의료행위로 의료사고가 발생한 경우 보험금 지급하지 않음",
+          "reason": "무면허 또는 무자격자의 의료행위로 인한 의료사고는 보상하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "② 무면허 또는 무자격자의 의료행위로 의료사고가 발생한 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험계약자나 피보험자의 고의로 인한 의료사고는 보험금 지급하지 않음",
+          "reason": "고의로 인한 의료사고는 보상하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "③ 보험계약자나 피보험자의 고의 또는 피보험자의 배우자 및 직계존비속에 의해",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자나 피보험자의 고의에 의한 손해는 보상하지 않음",
+          "reason": "계약자나 피보험자가 고의로 손해를 발생시킨 경우 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "회사는 아래의 사유를 원인으로 하여 생긴 손해는 보상하지 않습니다. ① 계약자나 피보험자의 고의(소송사기를 포함합니다)에 의한 손해",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 11,
+      "article_title": "보험금의 지급절차",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자 또는 피보험자가 통지를 게을리 할 경우 손해 증가분 보상하지 않음",
+          "reason": "계약자가 통지를 게을리 할 경우 손해가 증가된 부분에 대해 보상하지 않음",
+          "severity": "높음",
+          "source_quote": "계약자 또는 피보험자가 위 󰊱의 ①의 통지를 게을리 하여 손해가 증가된 때에는 회사는 그 증가된 손해를 보상하여 드리지 않으며",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "서류 미제출 시 보상하지 않음",
+          "reason": "서류를 접수하지 않으면 보상할 수 없다고 인정되는 부분은 보상하지 않음",
+          "severity": "높음",
+          "source_quote": "위 󰊱, ②의 통지를 게을리 󰊱 회사는 10.(보험금의 청구)에서 정한 서류를 접수한 때에는 접수증을 드리고, 그 한 때에는 회사가 보상할 수 없다고 인정되는 부분은 보상하여 드리지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 13,
+      "article_title": "조사",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급 시 자기부담금 공제",
+          "reason": "보험금 지급 시 피보험자가 부담한 금액에서 자기부담금이 공제됨",
+          "severity": "중간",
+          "source_quote": "위 󰊱, ①의 경우 자기부담금을 공제하고 지급하며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자나 피보험자의 고의에 의한 손해는 보상하지 않음",
+          "reason": "고의에 의한 손해는 계약자가 통제할 수 없는 상황일 수 있음",
+          "severity": "높음",
+          "source_quote": "① 계약자나 피보험자의 고의(소송사기를 포함합니다)에 의한 손해",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "전쟁, 내란 등으로 인한 손해는 보상하지 않음",
+          "reason": "자연재해나 전쟁 등은 계약자가 통제할 수 없는 상황임",
+          "severity": "높음",
+          "source_quote": "② 지진, 분화, 전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동, 소요, 기타 이들 과 유사한 사태에 기인한 손해",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "방사선에 의한 손해는 보상하지 않음",
+          "reason": "방사선 노출은 계약자가 통제할 수 없는 상황임",
+          "severity": "높음",
+          "source_quote": "④ 위 󰊳 이외의 방사선을 쬐는 것 또는 방사능 오염에 의한 손해",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "소송의 포기, 인낙, 소의 취하 등으로 인한 손해는 보상하지 않음",
+          "reason": "계약자가 소송 관련 결정을 스스로 내린 경우에 해당함",
+          "severity": "중간",
+          "source_quote": "⑤ 『행정소송법』(행정소송법에 따라 행정소송상 준용되는 『민사소송법』을 포함합 용어의 정의 관니다)에 정한 청구의 포기(원고가 변론에서 자기의 소송상의 청구가 이유 없음 을 자인한 것을 말합니다), 인낙(피고가 원고의 소송상의 청구가 이유 있음을 용어 정의 인정한 것을 말합니다), 소의 취하, 소의 각하",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특허, 저작권 등 지적재산권 관련 소송으로 인한 손해는 보상하지 않음",
+          "reason": "지적재산권 관련 소송은 계약자가 통제할 수 없는 상황임",
+          "severity": "중간",
+          "source_quote": "⑥ 특허법에 정한 특허, 저작권법에 정한 저작권, 상표법에 정한 상표권, 실용신 상 안법에 정한 실용신안권 및 지적재산권에 관련된 소송",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "단체소송 관련 손해는 보상하지 않음",
+          "reason": "단체소송은 계약자가 통제할 수 없는 상황임",
+          "severity": "중간",
+          "source_quote": "⑧ 『소비자기본법』 제70조(단체소송의 대상등)에 따라 제기된 소송",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "의무보험에서 보상되는 손해는 보상하지 않음",
+          "reason": "의무보험은 계약자가 선택할 수 없는 사항임",
+          "severity": "중간",
+          "source_quote": "⑬ 가입여부와 관계없이 법률에 의하여 의무적으로 가입하여야 하는 보험(공제계약 상 항소장 심사권), 동법주) 제425조(항소심절차에 준용)에 따라 소",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 8,
+      "article_title": "손해방지의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자 또는 피보험자가 고의 또는 중대한 과실로 손해 방지 의무를 게을리한 경우 손해액에서 부활 계약이 방지 또는 경감할 수 있었던 값을 뺌",
+          "reason": "계약자가 손해 방지 의무를 소홀히 할 경우 손해액이 줄어들어 보험금 지급이 감소할 수 있음",
+          "severity": "중간",
+          "source_quote": "만약, 계약자 또는 피보험자가 고의 또는 중대한 과실로 이를 게을리한 때에는 이 계약이 부활(효력회복)된 경우에는 부활(효력회복)계약을 위 󰊴의 최초계약으 방지 또는 경감할 수 있었을 것으로 밝혀진 값을 손해액에서 뺍니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "피보험자 또는 그 법정대리인의 고의 또는 방화로 인한 손해는 보상하지 않음",
+          "reason": "고의 또는 방화에 의한 손해는 보험금 지급이 제외됨",
+          "severity": "높음",
+          "source_quote": "회사는 아래의 사유를 원인으로 하여 생긴 손해는 보상하지 않습니다. ① 피보험자 또는 그 법정대리인의 고의 또는 방화",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보험금 지급에 관한 세부규정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "자기부담금이 약정된 경우에는 그 자기부담금을 초과한 부분만 보상합니다.",
+          "reason": "자기부담금이 발생하여 계약자가 실제로 받을 수 있는 보험금이 줄어듭니다.",
+          "severity": "중간",
+          "source_quote": "하되, 자기부담금이 약정된 경우에는 그 자기부담금을 초과한 부분만 보상합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 9,
+      "article_title": "특별약관의 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "회사는 이 특별약관에 의하여 보상하여야 하는 금액이 의무보험에서 보상하는 금액을 초과할 때에 한하여 그 초과액만을 보상합니다.",
+          "reason": "의무보험에서 보상하는 금액을 초과하는 경우에만 보상하므로 계약자에게 불리함.",
+          "severity": "중간",
+          "source_quote": "회사는 이 특별약관에 의하여 보상하여야 하는 금액이 의무보험에서 보상하는 금액을 초과할 때에 한하여 그 초과액만을 보상합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약자는 손해가 발생하기 전에는 언제든지 이 특별약관을 해지할 수 있습니다.",
+          "reason": "계약자가 손해 발생 전 해지할 수 있지만, 이는 계약자가 불리한 상황에 처할 수 있음을 의미함.",
+          "severity": "중간",
+          "source_quote": "계약자는 손해가 발생하기 전에는 언제든지 이 특별약관을 해지할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약을 맺을 때에 보험사고가 이미 발생했을 경우 이 특별약관은 무효로 합니다.",
+          "reason": "보험사고 발생 시 계약이 무효가 되어 계약자에게 불리함.",
+          "severity": "높음",
+          "source_quote": "계약을 맺을 때에 보험사고가 이미 발생했을 경우 이 특별약관은 무효로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 12,
+      "article_title": "양도",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자 또는 피보험자가 사실대로 알리지 않거나 부실한 사항을 알렸다고 인정되는 경우 계약을 해지할 수 있음",
+          "reason": "계약자가 사실대로 알리지 않거나 부실한 사항을 알릴 경우 계약 해지의 위험이 있음",
+          "severity": "높음",
+          "source_quote": "계약자 또는 피보험자가 사실대로 알리지 않거나 부실한 사항을 알렸다고 인정되는 경우에는 계약을 해지할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 13,
+      "article_title": "손해의 발생과 통지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "손해가 발생한 후 특별약관 해지 시 보상하지 않음",
+          "reason": "손해 발생 후 해지된 경우 보상하지 않음으로 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "위 󰊳에 의한 특별약관의 해지는 손해가 생긴 후에 이루어진 경우에도 회사는 그 손해를 보상하여 드리지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험금을 지급하지 아니하는 보험사고",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자 또는 지정대리청구인의 고의에 의하여 피보험자가 지급사유에 해당하는 경우 보험금을 지급하지 않음",
+          "reason": "계약자의 고의로 인해 보험금 지급이 제한됨",
+          "severity": "높음",
+          "source_quote": "계약자 또는 지정대리청구인의 고의에 의하여 피보험자가 2.(지급사유)의 󰊱에 해당",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "여명기간 상당의 경우 보험금을 지급하지 않음",
+          "reason": "여명기간에 해당하는 경우 보험금 지급이 제한됨",
+          "severity": "중간",
+          "source_quote": "이 특별약관의 보험금 지급에 있어서는 회사가 정하는 바에 따라 여명기간 상당된 경우에는 이 특별약관의 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보험금의 지정대리 청구인",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 청구시 계약자가 특별한 사정이 있을 경우 청구할 수 없음",
+          "reason": "계약자가 보험금을 청구할 수 없는 특별한 사정이 발생할 경우, 보험금 청구가 제한됨",
+          "severity": "중간",
+          "source_quote": "계약자가 이 특별약관의 보험금을 청구할 수 없는 특별한 사정이 있을 때에는",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "특별약관의 체결 및 적용계약",
+      "toxic_clauses": [
+        {
+          "clause_summary": "만기유지환급금이 0원보다 작거나 같은 경우 지급하지 않음",
+          "reason": "만기유지환급금이 0원 이하일 경우 계약자는 환급금을 받을 수 없음",
+          "severity": "높음",
+          "source_quote": "만기유지환급금이 0원보다 작거나 같은 경우 만기유지환급금을 지급하지 않으며",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "신청대상에 관한 사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 납입연체가 있는 경우",
+          "reason": "보험료 연체 시 납입유예를 신청할 수 없도록 제한함",
+          "severity": "중간",
+          "source_quote": "보험료 납입연체가 있는 경우",
+          "exception": "연체된 보험료를 모두 납입한 경우 납입유예 신청이 가능합니다.",
+          "exception_quote": "단, 연체된 보험료를 모두 납입한 경우 납입유예 신청이 가능합니다."
+        },
+        {
+          "clause_summary": "보험료 납입 일시중지, 자동대출납입 또는 전액자동대체납입이 적용된 계약",
+          "reason": "특정 계약에 대해 납입유예를 신청할 수 없도록 제한함",
+          "severity": "중간",
+          "source_quote": "보험료 납입 일시중지, 자동대출납입 또는 전액자동대체납입이 적용된 계약",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "중도인출 또는 보험계약대출이 적용된 계약",
+          "reason": "특정 계약에 대해 납입유예를 신청할 수 없도록 제한함",
+          "severity": "중간",
+          "source_quote": "중도인출 또는 보험계약대출이 적용된 계약",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험료 납입유예에 관한 사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "납입유예기간 동안 보험료 납입을 중지하며, 계약자는 납입유예기간 종료 후 도래하는 해당계약 보험료 납입기일까지 보험료를 납입하여야 합니다.",
+          "reason": "납입유예기간 동안 보험료를 납입하지 않으면 계약이 해지될 수 있습니다.",
+          "severity": "높음",
+          "source_quote": "납입유예 보험료 납입기간 동안 납입유예 보험료와 정상보험료를 납입하지 않아 보험료의 납입이 연체되는 경우에는 해당계약 보통약관 28.(보험료의 납입이 연체되는 경우 납입최고(독촉)와 계약의 해지)에 따라 해당 계약은 해지 될 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약자는 납입유예기간 및 납입유예 보험료 납입기간 동안 보험가입금액 감액, 계약자, 납입기간 및 기타 계약의 내용을 변경할 수 없습니다.",
+          "reason": "계약자가 계약 내용을 변경할 수 없으므로 불리합니다.",
+          "severity": "중간",
+          "source_quote": "계약자는 납입유예기간 및 납입유예 보험료 납입기간 동안 보험가입금액 감액, 계약자, 납입기간 및 기타 계약의 내용을 변경할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약자는 납입유예기간 및 납입유예 보험료 납입기간 동안 중도인출, 보험계약대출 및 중도부가서비스를 신청할 수 없습니다.",
+          "reason": "계약자가 중도인출 및 대출을 신청할 수 없으므로 불리합니다.",
+          "severity": "중간",
+          "source_quote": "계약자는 납입유예기간 및 납입유예 보험료 납입기간 동안 중도인출, 보험계약대출 및 중도부가서비스를 신청할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "해약환급금 또는 보험금 지급 시 납입유예 보험료를 차감하여 지급할 수 있습니다.",
+          "reason": "해약환급금에서 납입유예 보험료가 차감되므로 계약자에게 불리합니다.",
+          "severity": "중간",
+          "source_quote": "회사는 해당계약의 전부 또는 일부에 대해 해약환급금 또는 보험금 등의 지급사유가 발생한 경우 지급사유가 발생하기 전까지의 ‘각 지급금에 해당하는 해당계약의 납입유예 보험료’를 해약환급금 또는 보험금에서 차감하여 지급하거나, 일시 납입을 요구할 수 있으며 이 경우 계약자는 이를 납입하여야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    }
+  ]
+}

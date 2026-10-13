@@ -1,0 +1,123 @@
+{
+  "source": "무배당 프로미라이프 노후실손의료비보험2604.pdf",
+  "total_articles": 141,
+  "toxic_summary": {
+    "total_toxic_clauses": 9,
+    "affected_articles": 6,
+    "with_exception": 1,
+    "excluded_short_quote": 0,
+    "excluded_not_in_source": 91,
+    "deduped": 1,
+    "total_excluded": 92
+  },
+  "toxic_clauses": [
+    {
+      "article_number": 23,
+      "article_title": "자동갱신 적용",
+      "toxic_clauses": [
+        {
+          "clause_summary": "재가입 시 피보험자의 나이에 대한 제한",
+          "reason": "재가입 시 피보험자의 나이가 최초가입 당시 정한 범위 내여야 하며, 변경된 약관이 적용될 수 있음.",
+          "severity": "중간",
+          "source_quote": "회사는 보험가입 후 갱신계약에 대하여 가입시점의 약관 당시 정한 재가입 나이의 범위 내일 것 을 적용합니다.",
+          "exception": "법령 및 금융위원회의 명령에 따라 변경된 약관이 적용될 수 있음",
+          "exception_quote": "(단, 법령 및 금융위원회의 명령, 제도적인 (단, 제②항에 따라 재가입하는 노후실손의료보험 상품의 약관개정에 따라 약관이 변경된 경우에는 변경된 약관을 재가입 가능한 피보험자 최대 나이가 최초가입 당시 정한 적용합니다)"
+        }
+      ]
+    },
+    {
+      "article_number": 49,
+      "article_title": "개인정보보호",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자 등의 책임으로 보험금 지급이 지연된 경우 이자는 지급되지 않을 수 있음",
+          "reason": "계약자의 귀책사유로 인해 보험금 지급이 지연될 경우 이자를 지급하지 않을 수 있어 계약자에게 불리함",
+          "severity": "낮음",
+          "source_quote": "계약자 등에게 책임이 있는 사유로 보험금 지급이 지연된 경우에는 그 해당 기간에 대한 이자는 지급되지 않을 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "가산이율 적용 시 특정 사유로 지연된 경우 가산이율이 적용되지 않음",
+          "reason": "보험금 지급 지연에 대한 가산이율이 적용되지 않아 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "가산이율 적용시 보통약관(기본형) 7.(보험금의 지급 절차)의 󰊲, ① 내지 ⑥ 의 어느 하나에 해당되는 사유로 지연된 경우에는 해당기간에 대하여 가산이율을 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "금융위원회 또는 금융감독원이 정당한 사유로 인정하는 경우 가산이율이 적용되지 않음",
+          "reason": "가산이율 적용이 금융당국의 판단에 의존하게 되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "가산이율 적용시 금융위원회 또는 금융감독원이 정당한 사유로 인정하는 경우에는 해당 기간에 대하여 가산이율을 적용하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보상하지 않는 사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 고의로 피보험자를 해친 경우 보상하지 않음",
+          "reason": "계약자가 고의로 피보험자를 해친 경우에는 보상하지 않음",
+          "severity": "높음",
+          "source_quote": "③ 계약자가 고의로 피보험자를 해친 경우.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "정당한 이유 없이 의사의 지시를 따르지 않은 경우 보상하지 않음",
+          "reason": "정당한 이유 없이 의사의 지시를 따르지 않은 경우에는 보상하지 않음",
+          "severity": "낮음",
+          "source_quote": "⑥ 피보험자가 정당한 이유 없이 입원기간 중 의사의 지시를 따르지 않거나 의사가 통원치료가 가능하다고 인정함에도 피보험자 본인이 자의적으로 입원하여 발생한 입원의료비 및 통원기간 중 의사의 지시를 따르지 않아 발생한 통원의료비는 보상하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 11,
+      "article_title": "계약 전 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험자는 고지의무위반을 이유로 보험계약을 해지할 수 있습니다.",
+          "reason": "계약자가 질문표에 사실과 다르게 기재할 경우 보험회사가 계약을 해지할 수 있어 불리함.",
+          "severity": "높음",
+          "source_quote": "질문표에 사실과 다르게 기재하였다면 보험자는 고지의무위반을 이유로 보험계약을 해지할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 35,
+      "article_title": "중대사유로 인한 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 고의로 상해 또는 질병을 발생시킨 경우 계약 해지 가능",
+          "reason": "계약자가 고의로 상해 또는 질병을 발생시킨 경우 계약이 해지될 수 있어 불리함",
+          "severity": "높음",
+          "source_quote": "계약자, 피보험자 또는 보험수익자가 보험금을 지급 받 수 있습니다. 을 목적으로 고의로 상해 또는 질병을 발생시킨 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 23,
+      "article_title": "자동갱신 적용",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험가입 후 갱신계약에 대하여 가입시점의 약관 사유가 더 이상 발생할 수 없는 경우에는 이 계약은 그을 적용합니다.",
+          "reason": "가입 시점의 약관 사유가 더 이상 발생하지 않으면 계약이 적용되지 않음",
+          "severity": "중간",
+          "source_quote": "회사는 보험가입 후 갱신계약에 대하여 가입시점의 약관 사유가 더 이상 발생할 수 없는 경우에는 이 계약은 그을 적용합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    }
+  ]
+}

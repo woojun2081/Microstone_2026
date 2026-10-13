@@ -1,0 +1,458 @@
+{
+  "source": "무배당 삼성화재 실손의료비보험(2501.5).pdf",
+  "total_articles": 210,
+  "candidate_articles": 44,
+  "coverage_filtered_articles": 44,
+  "extracted_coverages": 5,
+  "results": [
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "특별약관에서 보상하는 사항",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 6,
+      "title": "보험가입금액 한도 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 7,
+      "title": "보험가입금액 한도 등에 대한 설명 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 8,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 47,
+      "title": "계약의 갱신 및 보험기간",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 6,
+      "title": "보험가입금액 한도 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 8,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 9,
+      "title": "보험금의 청구",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 11,
+      "title": "보험금을 받는 방법의 변경",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 15,
+      "title": "상해보험계약 후 알릴 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 17,
+      "title": "사기에 의한 계약",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 22,
+      "title": "계약내용의 변경 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 24,
+      "title": "계약의 소멸",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 27,
+      "title": "보험료의 자동대출납입",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 31,
+      "title": "계약자의 임의해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 34,
+      "title": "회사의 파산선고와 해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 47,
+      "title": "계약의 갱신 및 보험기간",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 94,
+      "coverages": [
+        {
+          "coverage_name": "상해비급여",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "피보험자가 상해로 인하여 의료기관에 입원 또는 통원(외래 및 처방조제)하여 치료를 받은 경우에는 비급여의료비(3대비급여는 제외합니다)를 제5조(보험가입금액 한도 등)에서 정한 연간 보험가입금액의 한도 내에서 보상합니다.",
+          "contract_type": "특약",
+          "coverage_type": "입원 | 통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "70%",
+          "source_quote": "비급여의료비(3대비급여는 제외합니다)를 제5조(보험가입금액 한도 등)에서 정한 연간 보험가입금액의 한도 내에서 다음과 같이 보상합니다.",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병비급여",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "피보험자가 질병으로 의료기관에 입원 또는 통원(외래 및 처방조제)하여 치료를 받은 경우에는 비급여의료비(3대비급여는 제외합니다)를 제5조(보험가입금액 한도 등)에서 정한 연간 보험가입금액의 한도 내에서 보상합니다.",
+          "contract_type": "특약",
+          "coverage_type": "입원 | 통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "70%",
+          "source_quote": "비급여의료비(3대비급여는 제외합니다)를 제5조(보험가입금액 한도 등)에서 정한 연간 보험가입금액의 한도 내에서 다음과 같이 보상합니다.",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "도수치료∙체외충격파치료∙증식치료",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 3500000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "350만원"
+          },
+          "payment_condition": "계약일 또는 매년 계약해당일부터 1년 단위로 각 상해∙질병 치료행위를 합산하여 350만원 이내에서 50회까지 보상합니다.",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "계약일 또는 매년 계약해당일부터 1년 단위로 각 상해∙질병 치료행위를 합산하여 350만원 이내에서 50회까지 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "주사치료",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 2500000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "250만원"
+          },
+          "payment_condition": "계약일 또는 매년 계약해당일부터 1년 단위로 각 상해∙질병 치료행위를 합산하여 250만원 이내에서 50회까지 보상합니다.",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "계약일 또는 매년 계약해당일부터 1년 단위로 각 상해∙질병 치료행위를 합산하여 250만원 이내에서 50회까지 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "자기공명영상진단",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 3000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "300만원"
+          },
+          "payment_condition": "계약일 또는 매년 계약해당일부터 1년 단위로 각 상해∙질병 치료행위를 합산하여 300만원 이내에서 보상합니다.",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "계약일 또는 매년 계약해당일부터 1년 단위로 각 상해∙질병 치료행위를 합산하여 300만원 이내에서 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험가입금액 한도 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 7,
+      "title": "비급여 진료비용 공개제도 등의 안내",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "특별약관의 체결 및 효력",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보험료납입",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "보험료의 영수",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "지정대리청구인의 지정",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 6,
+      "title": "보험금의 청구",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 4,
+      "title": "지정대리청구인의 변경지정",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "특별약관의 내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "특별약관의 부가조건",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "특별약관의 적용 및 방법",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "계약중지에 관한 사항",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "기타사항",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "특별약관의 적용 및 방법",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 6,
+      "title": "계약전환의 철회",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "계약재개에 관한 사항",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 4,
+      "title": "기타사항",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "청약의 철회",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "개인실손 전환에 관한 사항",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "청약의 철회",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 28,
+      "title": "개인신용정보의 제공·활용에 대한 동의",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 19,
+      "title": "설명의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    }
+  ]
+}

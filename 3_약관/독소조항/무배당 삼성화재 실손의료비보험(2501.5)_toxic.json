@@ -1,0 +1,391 @@
+{
+  "source": "무배당 삼성화재 실손의료비보험(2501.5).pdf",
+  "total_articles": 210,
+  "toxic_summary": {
+    "total_toxic_clauses": 32,
+    "affected_articles": 20,
+    "with_exception": 3,
+    "excluded_short_quote": 0,
+    "excluded_not_in_source": 65,
+    "deduped": 1,
+    "total_excluded": 66
+  },
+  "toxic_clauses": [
+    {
+      "article_number": 16,
+      "article_title": "알릴 의무 위반의 효과",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 납입 연체 시 계약 해지",
+          "reason": "보험료 납입이 연체 중인 경우 보험계약이 해지될 수 있으며, 이로 인해 보험금 지급이 어려워질 수 있음.",
+          "severity": "중간",
+          "source_quote": "보험료 납입이 연체 중인 경우 보험회사는 납입을 독촉하는 안내를 하며, 납입최고(독촉) 기간 내에 보험료를 납입하지 않으면 보험계약이 해지됩니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "비급여 의료비는 보상하지 않음",
+          "reason": "비급여 의료비는 보상하지 않으며, 이는 계약자에게 불리한 조건임.",
+          "severity": "높음",
+          "source_quote": "기본형 실손의료보험의 경우 비급여의료비는 보상하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보장종목별 보상내용",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전쟁, 외국의 무력행사 등으로 인한 경우 보상하지 않음",
+          "reason": "전쟁 등으로 인한 상해는 보상하지 않기 때문에 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "5. 전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동으로 인한 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "임신, 출산으로 인한 경우 보상하지 않음",
+          "reason": "임신, 출산으로 인한 의료비는 보상하지 않기 때문에 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "4. 피보험자가 임신, 출산(제왕절개를 포함합니다), 산후기로 입원 또는 통원한 경우. 다만, 회사가 보상하는 상해로 인하여 입원 또는 통원한 경우에는 보상합니다.",
+          "exception": "상해로 인한 경우에는 보상함",
+          "exception_quote": "다만, 회사가 보상하는 상해로 인하여 입원 또는 통원한 경우에는 보상합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 20,
+      "article_title": "약관 교부 및 설명 의무 등",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험가입금액 감액 시 해약환급금이 없거나 적어질 수 있음",
+          "reason": "계약자가 보험가입금액을 감액할 경우 해약환급금이 없거나 최초 안내한 해약환급금보다 적어질 수 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "다만, 보험가입금액을 감액할 때 해약환급금이 없거나 최초 가입할 때 안내한 해약환급금보다 적어질 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 27,
+      "article_title": "보험료의 자동대출납입",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료의 자동대출납입이 불가능한 경우에 대한 조건",
+          "reason": "계약자가 보험료 납입에 실패할 경우 보험료가 납입되지 않은 것으로 간주됨",
+          "severity": "높음",
+          "source_quote": "계약자가 서면 외에 인터넷 또는 전화(음성녹음을 포함합니다) 등으로 자동대출납입을 신청할 경우 회사는 자동대출",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험료의 자동대출납입이 중단되는 조건",
+          "reason": "계약자의 채무액이 해약환급금을 초과할 경우 자동대출납입이 중단됨",
+          "severity": "중간",
+          "source_quote": "보험료의 자동대출납입을 더는 할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "알릴 의무 위반 시 보장하지 않을 수 있는 조건",
+          "reason": "계약자가 알릴 의무를 위반할 경우 보장이 제한될 수 있음",
+          "severity": "중간",
+          "source_quote": "제16조(알릴 의무 위반의 효과)를 준용하여 회사가 보장을 하지 않을 수 있는 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 34,
+      "article_title": "회사의 파산선고와 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "회사가 파산의 선고를 받은 경우 계약자는 계약을 해지할 수 있습니다. 회사는 이 보험에 대하여 계약자에게 배당금을 지급하지 않습니다.",
+          "reason": "회사가 파산할 경우 계약자는 해지할 수 있으나, 배당금을 지급받지 못함.",
+          "severity": "높음",
+          "source_quote": "회사는 이 보험에 대하여 계약자에게 배당금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "제1항에 따라 해지하지 않은 계약은 파산선고 후 3개월이 지나면 그 효력을 잃습니다.",
+          "reason": "계약자가 해지하지 않으면 계약 효력이 상실됨.",
+          "severity": "중간",
+          "source_quote": "제1항에 따라 해지하지 않은 계약은 파산선고 후 3개월이 지나면 그 효력을 잃습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보상하지 않는 사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험수익자가 고의로 피보험자를 해친 경우 보상하지 않음",
+          "reason": "보험수익자가 고의로 피보험자를 해친 경우에는 보상하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "2. 보험수익자가 고의로 피보험자를 해친 경우. 다만, 그 보험수익자가 보험금의 일부 약제중 어느 하나라도 상기 가.목 부터 다.목에 해당하지 않는 경우 제외)",
+          "exception": "보험금의 일부 약제중 어느 하나라도 상기 가.목 부터 다.목에 해당하지 않는 경우에는 보상하지 않음",
+          "exception_quote": "다만, 그 보험수익자가 보험금의 일부 약제중 어느 하나라도 상기 가.목 부터 다.목에 해당하지 않는 경우 제외)"
+        },
+        {
+          "clause_summary": "계약자가 고의로 피보험자를 해친 경우 보상하지 않음",
+          "reason": "계약자가 고의로 피보험자를 해친 경우에는 보상하지 않기 때문에 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "3. 계약자가 고의로 피보험자를 해친 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "계약 후 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자는 지정계좌의 번호가 변경 또는 거래정지된 경우에는 그 사실을 즉시 회사에 알려야 합니다.",
+          "reason": "계약자가 계좌 변경이나 거래정지 사실을 즉시 알리지 않으면 불이익을 받을 수 있음",
+          "severity": "중간",
+          "source_quote": "계약자는 지정계좌의 번호가 변경 또는 거래정지된 경우에는 그 사실을 즉시 회사에 알려야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "지정대리청구인의 변경지정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료 납입면제사유 발생 시 보험료 납입 면제하지 않음",
+          "reason": "계약자가 보험료 납입면제를 기대할 수 없음",
+          "severity": "중간",
+          "source_quote": "보험료 납입면제사유가 발생한 경우에 회사는 보험료 납입을 면제하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 1,
+      "article_title": "계약의 체결 및 효력",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약 전 알릴 의무 위반 시 보장 제한",
+          "reason": "계약자가 계약 전 알릴 의무를 위반할 경우 보장이 제한됨",
+          "severity": "높음",
+          "source_quote": "보험계약을 체결한 후 계약 전 알릴 의무 위반의 효과 등으로 보장을 제한할 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "특별면책조건의 내용",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급 사유가 발생한 경우에도 특정 질병이 악화되지 않고 유지된 경우 보험금을 지급하지 않음",
+          "reason": "특정 질병이 악화되지 않고 유지된 경우 보험금 지급이 제한됨",
+          "severity": "높음",
+          "source_quote": "제1항 제1호에서 정한 특정신체부위에 발생한 질병 또는 제1항 제2호에서 정한 특정질병이 악화되지 않고 유지된 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금 지급 사유가 발생한 경우에도 보험료 납입 면제 사유가 발생하지 않음",
+          "reason": "특정 질병이 직접적인 원인이 아닌 경우 보험료 납입 면제가 제한됨",
+          "severity": "중간",
+          "source_quote": "회사는 제2조(특별면책조건의 내용) 제1항 각 호의 질병을 직접적인 원인으로 보험료 납입면제 사유가 발생한 경우 보험료 납입을 면제하여 드리지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "특별약관의 부가조건",
+      "toxic_clauses": [
+        {
+          "clause_summary": "특별약관보험료는 계약자가 추가 납입해야 함",
+          "reason": "계약자가 보장보험료로 추가 납입해야 하므로 재정적 부담이 증가함",
+          "severity": "중간",
+          "source_quote": "관보험료는 보험계약의 보험료 납입방법에 관계없이 계약자가 보장보험료로 추가 납입하여야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험계약의 보험기간 내에서 회사가 정한 기간으로 함",
+          "reason": "보험기간이 회사의 기준에 따라 제한되므로 계약자가 선택할 수 있는 범위가 좁아짐",
+          "severity": "중간",
+          "source_quote": "이 특별약관의 보험기간은 보험계약의 보험기간 내에서 회사가 정한 기간으로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특별약관 내용은 변경할 수 없음",
+          "reason": "계약자가 원할 경우에도 보험기간이나 감액완납보험으로의 변경이 불가능함",
+          "severity": "높음",
+          "source_quote": "이 특별약관이 부가된 보험계약의 경우에는 보험계약 약관의 규정에도 불구하고 다음과 같은 내용은 변경할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "계약중지에 관한 사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자는 계약중지 청약을 철회할 수 없으며, 철회 시 중지지급금을 반환하지 않으면 거절당할 수 있음",
+          "reason": "계약자가 계약중지 청약을 철회할 수 있는 기간이 제한되어 있으며, 중지지급금을 반환하지 않으면 철회가 거절될 수 있어 불리함",
+          "severity": "중간",
+          "source_quote": "그럼에도 불구하고 계약중지를 청약한 날부터 30일(다만, 65세 이상의 계약자가 전화를 이용하여 계약을 체결한 경우 45일)이 지나면 계약중지 청약을 철회할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약자는 중지지급금을 반환하지 않을 경우 철회 신청이 거절될 수 있음",
+          "reason": "중지지급금을 반환하지 않으면 계약자의 철회 신청이 거절될 수 있어 불리함",
+          "severity": "중간",
+          "source_quote": "계약자는 계약중지 청약철회 신청 시 이미 지급받은 중지지급금을 회사에 반환하지 않을 경우 회사는 철회 신청을 거절할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "기타사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "조건부 특약의 효력 소멸",
+          "reason": "조건부 특약에서 정한 질병으로 진단 또는 치료사실이 없을 경우 5년 후 효력이 소멸됨",
+          "severity": "중간",
+          "source_quote": "조건부 특약의 경우 계약중지된 개인실손의 청약일로부터 5년간 조건부 특약에서 정한 질병으로 진단(단순 건강검진 제외) 또는 치료사실이 없을 경우 조건부 특약의 효력은 소멸합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "유산 또는 사산",
+      "toxic_clauses": [
+        {
+          "clause_summary": "유산 또는 사산 시 계약 무효",
+          "reason": "태아가 유산 또는 사산 등에 의해 출생하지 못한 경우 계약이 무효가 됨",
+          "severity": "높음",
+          "source_quote": "태아가 유산 또는 사산 등에 의해 출생하지 못한 경우에는 계약을 무효로 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "계약재개에 관한 사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "기본계약이 소멸된 경우 계약재개 청약 불가",
+          "reason": "기본계약이 해지, 무효, 취소된 경우 계약재개 청약이 불가능하여 불리함",
+          "severity": "높음",
+          "source_quote": "기본계약이 소멸되면 계약재개를 청약할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "기타사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약재개 시 조건부 특약의 경우 심사 후 승낙 여부 결정",
+          "reason": "계약재개가 조건부 특약의 심사에 따라 결정되며, 승낙 거절 시 효력이 소멸됨",
+          "severity": "중간",
+          "source_quote": "조건부 특약의 경우 계약중지된 개인실손의 청약일부터 5년간 조는 회사의 계약인수지침에 따라 심사를 하여 승낙하거나 승낙을 거절할 수 있으며, 별건부 특약에서 정한 질병으로 진단(단순 건강검진 제외) 또는 치료사실이 없을 경우도의 조건(보험가입금액 제한, 일부보장 제외, 보험금 삭감, 보험료 할증 등)을 붙여 승낙할 수 있습니다.",
+          "exception": "승낙 거절 시 조건부 특약의 효력 소멸",
+          "exception_quote": "다만, 승낙을 거절한 경우에는 개인실손의료비보험 중지제도 특 조건부 특약의 효력은 소멸합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "청약의 철회",
+      "toxic_clauses": [
+        {
+          "clause_summary": "청약한 날부터 30일이 지나면 청약을 철회할 수 없음",
+          "reason": "계약자가 청약 철회 권리를 행사할 수 있는 기간이 제한됨",
+          "severity": "중간",
+          "source_quote": "② 제1항에도 불구하고 청약한 날부터 30일(다만, 65세 이상의 계약자가 전화를 이용하여 계약을 체결한 경우 45일)이 지나면 청약을 철회할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "청약의 철회",
+      "toxic_clauses": [
+        {
+          "clause_summary": "청약한 날부터 30일이 지나면 청약을 철회할 수 없음",
+          "reason": "계약자가 청약을 철회할 수 있는 기간이 제한됨",
+          "severity": "중간",
+          "source_quote": "제1항에도 불구하고 청약한 날부터 30일(다만, 65세 이상의 계약자가 전화를 이용하여 계약을 체결한 경우 45일)이 지나면 청약을 철회할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금 지급사유 발생 시 청약철회의 효력 없음",
+          "reason": "보험금 지급사유가 발생한 경우 청약철회가 무효가 됨",
+          "severity": "중간",
+          "source_quote": "청약을 철회할 때에 이미 보험금 지급사유가 발생하였으나 계약자가 그 보험금 지급사유가 발생한 사실을 알지 못한 경우에는 청약철회의 효력이 발생하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "기타사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "조건부 특약의 효력 소멸 조건",
+          "reason": "조건부 특약에서 정한 질병으로 진단 또는 치료사실이 없을 경우 효력이 소멸됨",
+          "severity": "중간",
+          "source_quote": "조건부 특약의 경우 중지된 개인실손의 최초가입 청약일로부터 5년간 조건부 특약에서 정한 질병으로 진단(단순 건강검진 제외) 또는 치료사실이 없을 경우, 조건부 특약의 효력은 소멸합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "재개 기간 중 보험금 지급사유 발생 시 중지 청약 거절",
+          "reason": "재개 기간 중 보험금 지급사유가 발생하면 중지 청약을 거절할 수 있음",
+          "severity": "중간",
+          "source_quote": "다만, 재개 기간 중 보험금 지급사유가 발생한 경우 회사는 중지 승낙을 거절할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 42,
+      "article_title": "장기등의 적출ㆍ이식 비용의 부담 등",
+      "toxic_clauses": [
+        {
+          "clause_summary": "장기등의 적출 및 이식에 드는 비용은 이식받은 사람이 부담한다.",
+          "reason": "이식받은 사람이 모든 비용을 부담해야 하므로 계약자에게 불리하다.",
+          "severity": "높음",
+          "source_quote": "장기등의 적출 및 이식에 드는 비용은 해당 장기등을 이식받은 사람이 부담한다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    }
+  ]
+}

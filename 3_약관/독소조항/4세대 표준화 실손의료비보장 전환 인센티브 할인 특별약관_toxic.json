@@ -1,0 +1,14 @@
+{
+  "source": "4세대 표준화 실손의료비보장 전환 인센티브 할인 특별약관.pdf",
+  "total_articles": 3,
+  "toxic_summary": {
+    "total_toxic_clauses": 0,
+    "affected_articles": 0,
+    "with_exception": 0,
+    "excluded_short_quote": 0,
+    "excluded_not_in_source": 0,
+    "deduped": 0,
+    "total_excluded": 0
+  },
+  "toxic_clauses": []
+}

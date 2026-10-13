@@ -1,0 +1,268 @@
+{
+  "source": "걸을수록THE좋은건강보험 프리미엄형(40대,주방장 및 조리사,비갱신형, 80년만기, 20년납)",
+  "document_type": "가입화면",
+  "contract_summary": {
+    "insurer": "DB손해보험",
+    "product_name": "걸을수록THE좋은건강보험",
+    "product_case": "걸을수록THE좋은건강보험",
+    "job": "주방장 및 조리사",
+    "gender": "상관없음",
+    "age": null,
+    "age_raw": "40대",
+    "payment_cycle": "월납",
+    "medical_aid": null,
+    "tier": "프리미엄형",
+    "renewal_type": "비갱신형",
+    "maturity": "80세",
+    "payment_period": "20년납",
+    "total_premium": 98340,
+    "total_premium_raw": "월 98,340원",
+    "renewal": "80세만기/20년납/월납"
+  },
+  "coverages": [
+    {
+      "coverage_name": "암진단비 II (유사암제외)(소액암1년감액지급)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 30000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "3천만원"
+      },
+      "premium": 44970,
+      "is_enrolled": true,
+      "coverage_category": null,
+      "coverage_name_raw": "암진단비 II (유사암제외)(소액암1년간액지급)"
+    },
+    {
+      "coverage_name": "유사암진단비 II (1년감액지급)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 4000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "4백만원"
+      },
+      "premium": 920,
+      "is_enrolled": true,
+      "coverage_category": null,
+      "coverage_name_raw": "유사암진단비 II (1년간매지급)"
+    },
+    {
+      "coverage_name": "표적항암약물허가치료비(최초1회한)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 2000,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "하이클래스항암약물치료비 II (연간1회한)(10년지급대상)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 3320,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "하이클래스암주요치료비 II (연간1회한)(10년지급대상)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 4520,
+      "is_enrolled": true,
+      "coverage_category": null,
+      "coverage_name_raw": "하이클래스양주요치료비 II (연간1회한)(10년지급대상)"
+    },
+    {
+      "coverage_name": "뇌졸중진단비",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 8530,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "뇌혈관질환진단비",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 12710,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "뇌혈관질환수술비",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 5000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5백만원"
+      },
+      "premium": 1300,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "급성심근경색증진단비",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 2630,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "허혈심장질환진단비",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 5780,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "허혈심장질환수술비",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 5000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5백만원"
+      },
+      "premium": 1900,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "혈전용해치료비III(연간1회한)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 3530,
+      "is_enrolled": true,
+      "coverage_category": null,
+      "coverage_name_raw": "혈전용해치료비II(연간1회한)"
+    },
+    {
+      "coverage_name": "통풍진단비",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 500000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "50만원"
+      },
+      "premium": 1360,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "폐렴진단비(최초1회한)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 1000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1백만원"
+      },
+      "premium": 4200,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "양전자단층촬영(PET)검사지원비(급여,연간1회한)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5만원"
+      },
+      "premium": 13,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "독감(인플루엔자)항바이러스제치료비 II (10일면책,연간1회한)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 200000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "20만원"
+      },
+      "premium": 480,
+      "is_enrolled": true,
+      "coverage_category": null,
+      "coverage_name_raw": "독감(인플루엔자)항바이러스제치료비 II (10만원한도,연간1회한)(갱신형)"
+    },
+    {
+      "coverage_name": "상해사망·후유장해(20-100%)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 1000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1백만원"
+      },
+      "premium": 169,
+      "is_enrolled": true,
+      "coverage_category": null
+    }
+  ],
+  "error": null
+}

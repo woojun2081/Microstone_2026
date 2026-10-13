@@ -1,0 +1,586 @@
+{
+  "source": "무배당 프로미라이프 노후실손의료비보험2604.pdf",
+  "total_articles": 141,
+  "candidate_articles": 42,
+  "coverage_filtered_articles": 42,
+  "extracted_coverages": 10,
+  "results": [
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 29,
+      "title": "보험료의 자동대출납입",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 95,
+      "coverages": [
+        {
+          "coverage_name": "상해형 입원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 100000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "1억원"
+          },
+          "payment_condition": "의료기관에 입원 또는 통원하여 치료를 받거나 처방조제를 받은 경우 보상",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "80%",
+          "source_quote": "회사는 피보험자가 상해로 인하여 의료기관에 입원 또는 통원하여 치료를 받거나 처방조제를 받은 경우에는 의료비로서 계약일 또는 매년 계약해당일로부터 1년 단위로 다음과 같이 보험가입금액(1억원 이내에서 계약자가 정한 통구분 보상하는 내용",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해형 통원의료비",
+          "amount": {
+            "per_time": 1000000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "100만원"
+          },
+          "payment_condition": "통원 치료의 경우 회(건)당 최고 100만원을 한도로 보상",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "80%",
+          "source_quote": "(다만, 통원의 경우 회(건)당 최고 100만원을 한도로 보상합니다)",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해형 비급여 본인부담금",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "비급여 본인부담금에서 우선 공제한 후 급여 본인부담금에서 공제",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "70%",
+          "source_quote": "회사는 아래 의료비(대상금액)에 ‘공제금액(Deductible)’을 차감한 후 ‘보상비율(Co-insurance)’을 곱하여 산출된 금액(이하 ‘보상금액’이라 합니다)을 보상합니다",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병형 입원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 100000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "1억원"
+          },
+          "payment_condition": "의료기관에 입원 또는 통원하여 치료를 받거나 처방조제를 받은 경우 보상",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "80%",
+          "source_quote": "회사는 피보험자가 질병으로 인하여 의료기관에 입원 또는 통원하여 치료를 받거나 처방조제를 받은 경우에는 의료비로서 계약일 또는 매년 계약해당일로부터 1년 단위로 다음과 같이 보험가입금액(1억원을 최고한도로 계약자가 정하는 금액으로 합니다)",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병형 통원의료비",
+          "amount": {
+            "per_time": 1000000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "100만원"
+          },
+          "payment_condition": "통원 치료의 경우 회(건)당 최고 100만원을 한도로 보상",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "80%",
+          "source_quote": "(다만, 통원의 경우 회(건)당 최고 100만원을 한도로 보상합니다)",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병형 비급여 본인부담금",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "비급여 본인부담금에서 우선 공제한 후 급여 본인부담금에서 공제",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "70%",
+          "source_quote": "회사는 아래 의료비(대상금액)에 ‘공제금액(Deductible)’을 차감한 후 ‘보상비율(Co-insurance)’을 곱하여 산출된 금액(이하 ‘보상금액’이라 합니다)을 보상합니다",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 6,
+      "title": "보험금의 청구",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 10,
+      "title": "대표자의 지정",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 9,
+      "title": "주소변경의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 21,
+      "title": "계약의 소멸",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 23,
+      "title": "자동갱신 적용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 24,
+      "title": "갱신보장계약의 보장개시",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 26,
+      "title": "제1회 보험료 및 회사의 보장개시",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 14,
+      "title": "사기에 의한 계약",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 32,
+      "title": "강제집행 등으로 인한 해지계약의 특별부활(효력회복)",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 34,
+      "title": "계약자의 임의해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 41,
+      "title": "다수보험의 처리",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 43,
+      "title": "분쟁의 조정",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 95,
+      "coverages": [
+        {
+          "coverage_name": "요양병원 의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "5,000만원"
+          },
+          "payment_condition": "계약일 또는 매년 계약해당일로부터 1년 단위로 보상",
+          "contract_type": "주계약",
+          "coverage_type": "입원 | 통원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "요양병원 의료비를 계약일 또는 매년 계약해당일로부터 1년 단위로 이 약관의 보험가입금액(질병 및 상해를 통합하여 5,000만원 이내에서 계약자 정한 금액을 말합니다)을 연간한도로 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "입원 의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "입원당 30만원 공제 후 보상비율 80%",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "80%",
+          "source_quote": "입원당 30만원, 통원당주2) 3만원 차감한 후 ‘보상비율(Co-insurance)’을 곱하여 산출된 금액(이하 ‘보상금액’이라 합니다)을 보상합니다.",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "통원 의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": 30000,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "3만원"
+          },
+          "payment_condition": "통원당 3만원 공제 후 보상비율 50%",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "50%",
+          "source_quote": "비급여 본인부담금에서 공제금액을 차감한 후 금액에 대해 50%",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 7,
+      "title": "보험금의 지급절차",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 12,
+      "title": "상해보험계약 후 알릴 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 16,
+      "title": "청약의 철회",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 19,
+      "title": "계약내용의 변경 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 21,
+      "title": "계약의 소멸",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 25,
+      "title": "계약의 재가입",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 33,
+      "title": "보험료의 계산",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 34,
+      "title": "계약자의 임의해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 35,
+      "title": "중대사유로 인한 해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 39,
+      "title": "보험계약대출",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 43,
+      "title": "분쟁의 조정",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 92,
+      "coverages": [
+        {
+          "coverage_name": "상급병실료차액",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "2,000만원"
+          },
+          "payment_condition": "상급병실에 입원하여 치료를 받은 경우 실제 사용 후의 금액에서 병실료 차액 중 50%를 공제한 후의 금액을 보상",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "50%",
+          "source_quote": "피보험자가 상해 또는 질병으로 인하여 상급병실에 입원하여 치료를 받은 경우에는 실제 사용 후의 금액(이하 “상급병실료차액보험금”이라 합니다)을 기준병실과의 병실료 차액 중 50%를 공제한 후의 금액을 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "용어정의",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 7,
+      "title": "보험금의 지급절차",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 11,
+      "title": "계약 전 알릴 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 19,
+      "title": "계약내용의 변경 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 22,
+      "title": "보험기간 및 자동갱신",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 24,
+      "title": "갱신보장계약의 보장개시",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 29,
+      "title": "보험료의 자동대출납입",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 32,
+      "title": "강제집행 등으로 인한 해지계약의 특별부활(효력회복)",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 33,
+      "title": "보험료의 계산",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    }
+  ]
+}

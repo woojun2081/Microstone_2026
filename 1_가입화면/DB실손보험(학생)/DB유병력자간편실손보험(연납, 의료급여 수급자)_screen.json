@@ -1,0 +1,77 @@
+{
+  "source": "DB유병력자간편실손보험(연납, 의료급여 수급자).png",
+  "document_type": "가입화면",
+  "contract_summary": {
+    "insurer": "DB손해보험",
+    "product_name": "실손보험",
+    "product_case": "유병력자간편실손보험",
+    "job": "학생",
+    "gender": "상관없음",
+    "age": null,
+    "age_raw": null,
+    "payment_cycle": "연납",
+    "medical_aid": "수급자",
+    "total_premium": 20248,
+    "total_premium_raw": "연 242,980원",
+    "renewal": "매년 갱신, 3년 재가입, 최대 110세 보장"
+  },
+  "coverages": [
+    {
+      "coverage_name": "상해입원의료비(간편고지)(1년갱신)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 33266,
+      "coverage_category": null,
+      "is_enrolled": true
+    },
+    {
+      "coverage_name": "상해외래의료비(간편고지)(1년갱신)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 200000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "20만원"
+      },
+      "premium": 9664,
+      "coverage_category": null,
+      "is_enrolled": true
+    },
+    {
+      "coverage_name": "질병입원의료비(간편고지)(1년갱신)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 133685,
+      "coverage_category": null,
+      "is_enrolled": true
+    },
+    {
+      "coverage_name": "질병외래의료비(간편고지)(1년갱신)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 200000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "20만원"
+      },
+      "premium": 79944,
+      "coverage_category": null,
+      "is_enrolled": true
+    }
+  ],
+  "error": null
+}

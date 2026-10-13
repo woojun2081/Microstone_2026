@@ -1,0 +1,115 @@
+{
+  "source": "공무원 약관(실손의료비보험).pdf",
+  "total_articles": 69,
+  "toxic_summary": {
+    "total_toxic_clauses": 8,
+    "affected_articles": 6,
+    "with_exception": 0,
+    "excluded_short_quote": 0,
+    "excluded_not_in_source": 30,
+    "deduped": 0,
+    "total_excluded": 30
+  },
+  "toxic_clauses": [
+    {
+      "article_number": 3,
+      "article_title": "보장종목별 보상내용",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 고의로 피보험자를 해친 경우 보상하지 않음",
+          "reason": "계약자의 고의적인 행위에 대해 보상하지 않음으로써 계약자가 불리함",
+          "severity": "높음",
+          "source_quote": "③ 계약자가 고의로 피보험자를 해친 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "특정 직업, 직무 또는 동호회 활동으로 인한 상해 보상하지 않음",
+          "reason": "특정 활동에 대한 보상 제한으로 계약자가 불리함",
+          "severity": "중간",
+          "source_quote": "회사는 다른 약정이 없으면 피보험자가 직업, 직무 또는 동호회 활동 목적으로 한 다음의 어느 하나에 해당하는 행위로 인하여 생긴 상해에 대해서는 보상하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "고의적인 상해에 대한 보상 제한",
+          "reason": "고의적인 행위에 대해 보상하지 않음으로써 계약자가 불리함",
+          "severity": "높음",
+          "source_quote": "회사는 다음의 사유로 인하여 생긴 급여의료비는 보상하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 17,
+      "article_title": "청약의 철회",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자는 보험증권을 받은 날부터 15일 이내에 그 청약을 철회할 수 있습니다. 다만, 다음 각 호의 어느 하나에 해당하는 계약은 철회할 수 없습니다.",
+          "reason": "청약 철회가 불가능한 경우가 명시되어 있어 계약자에게 불리함.",
+          "severity": "중간",
+          "source_quote": "다만, 다음 각 호의 어느 하나에 해당하는 계약은 철회할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 28,
+      "article_title": "갱신계약 제1회 보험료의 납입연체시 납입최고(독촉)와 계약의 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료를 납입하지 않으면 지급할 보험금에서 이를 공제할 수 있음",
+          "reason": "계약자가 보험료를 납입하지 않으면 보험금이 줄어들어 실질적인 손해를 입게 됨",
+          "severity": "중간",
+          "source_quote": "이 보험료를 납입하지 않으면 회사는 지급할 보험금에서 이를 공제할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 39,
+      "article_title": "보험계약대출",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약 해지 시 해약환급금에서 보험계약대출 원금과 이자를 차감함",
+          "reason": "계약 해지 시 보험계약대출의 원금과 이자를 차감하여 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "회사는 즉시 해약환급금에서 보험계약대출의 원금과 이자를 차감합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "보상하지 않는 사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "비급여 의료비에 대한 보상 제한",
+          "reason": "특정 비급여 의료비에 대해서는 보상하지 않으며, 이는 계약자에게 불리함.",
+          "severity": "높음",
+          "source_quote": "회사가 보상하지 않는 사항은 보장 종목별로 다음과 같습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 6,
+      "article_title": "보험료의 계산",
+      "toxic_clauses": [
+        {
+          "clause_summary": "갱신계약의 보험료는 매년 보험업감독규정에서 정한 범위 내에서 인상 또는 인하될 수 있음",
+          "reason": "보험료가 계약자의 동의 없이 인상될 수 있어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "갱신계약의 보험료는 매년 보험업감독규정에서 정한 범위(나이의 증가로 인한 보험료 증감분은 제외) 내에서 인상 또는 인하될 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    }
+  ]
+}

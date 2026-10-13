@@ -1,0 +1,557 @@
+{
+  "source": "무배당 참 편한 실손의료보험(간편고지, 갱신형)2101.pdf",
+  "total_articles": 104,
+  "toxic_summary": {
+    "total_toxic_clauses": 46,
+    "affected_articles": 29,
+    "with_exception": 4,
+    "excluded_short_quote": 0,
+    "excluded_not_in_source": 12,
+    "deduped": 2,
+    "total_excluded": 14
+  },
+  "toxic_clauses": [
+    {
+      "article_number": 32,
+      "article_title": "해지환급금",
+      "toxic_clauses": [
+        {
+          "clause_summary": "해지환급금 지급되지 않음",
+          "reason": "보험계약을 중도에 해지할 경우 해지환급금이 지급되지 않음",
+          "severity": "높음",
+          "source_quote": "해당 상품은 순수보장형 상품으로 보험계약을 중도에 해지할 경우 해지환급금이 지급되지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "갱신 시 보험료 인상 가능성",
+          "reason": "갱신할 때마다 보험료가 인상될 수 있음",
+          "severity": "중간",
+          "source_quote": "갱신형 계약은 갱신할 때 마다 연령의 증가, 위험률 변동 등으로 보험료가 인상될 수 있으니 주의하시기 바랍니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금 지급이 제한될 수 있음",
+          "reason": "알릴의무를 위반하는 경우 보험금 지급이 제한될 수 있음",
+          "severity": "높음",
+          "source_quote": "이를 위반하는 경우 보험금 지급이 제한될 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "부활 시 보장 제한 가능",
+          "reason": "부활(효력회복)을 거절하거나 보장의 일부를 제한할 수 있음",
+          "severity": "중간",
+          "source_quote": "부활(효력회복)을 거절하거나 보장의 일부를 제한할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "보장종목별 보상내용",
+      "toxic_clauses": [
+        {
+          "clause_summary": "상해외래형에서 본인부담금 및 보상금액 제한",
+          "reason": "본인부담금 2만원과 보상대상의료비의 30% 중 큰 금액을 뺀 후 보상하며, 방문 180회 한도로 제한됨.",
+          "severity": "높음",
+          "source_quote": "통원의료비 명목으로 매년 계약해당일부터 1년을 단위로 하여 다음과 같이 외래(외래제비용, 외래수술비)를 보상하며 처방조제비는 보상하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 7,
+      "article_title": "보험금의 지급절차",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자, 피보험자 또는 보험수익자가 조사 요청에 동의하지 않을 경우 이자 지급 지연",
+          "reason": "정당한 사유 없이 조사 요청에 동의하지 않으면 이자를 지급하지 않음",
+          "severity": "낮음",
+          "source_quote": "정당한 사유 없이 이에 동의하지 않을 경우 회사는 사실 확인이 끝날 때까지 보험금 지급지연에 따른 이자를 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약자, 피보험자 또는 보험수익자가 조사 요청에 동의하지 않을 경우 지급 지연",
+          "reason": "조사 요청에 동의하지 않으면 지급이 지연될 수 있음",
+          "severity": "낮음",
+          "source_quote": "계약자, 피보험자 또는 보험수익자는 제13조(알릴 의무 위반의 효과) 및 제2항의 보험금 지급사유조사와 관련하여 의료기관, 국민 건강보험공단, 경찰서 등 관공서에 대한 회사의 서면에 의한 조사 요청에 동의하여야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 10,
+      "article_title": "대표자의 지정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 2명 이상인 경우에는 계약 전 알릴 의무, 보험료 납입 의무 등 보험계약에 따른 계약자의 의무를 계약자들이 연대하여 부담합니다.",
+          "reason": "계약자들이 연대하여 의무를 부담하므로, 한 계약자가 의무를 이행하지 않을 경우 다른 계약자에게도 불리한 영향을 미칠 수 있습니다.",
+          "severity": "중간",
+          "source_quote": "계약자가 2명 이상인 경우에는 계약 전 알릴 의무, 보험료 납입 의무 등 보험계약에 따른 계약자의 의무를 계약자들이 연대(連帶)하여 부담합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 11,
+      "article_title": "계약 전 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "고지의무 위반 시 계약 해지 가능",
+          "reason": "계약자가 고의 또는 중대한 과실로 중요한 사항을 고지하지 않으면 보험자가 계약을 해지할 수 있음",
+          "severity": "높음",
+          "source_quote": "보험계약당시에 보험계약자 또는 피보험자가 고의 또는 중대한 과실로 인하여 중요한 사항을 고지하지 아니하거나 부실의 고지를 한 때에는 보험자는 그 사실을 안 날부터 1월내에, 계약을 체결한 날부터 3년내에 한하여 계약을 해지할 수 있다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 12,
+      "article_title": "상해보험계약 후 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "고의 또는 중대한 과실로 변경사실을 알리지 않을 경우 보험금 지급 통보",
+          "reason": "계약자가 변경사실을 알리지 않으면 보험금 지급이 지연될 수 있음",
+          "severity": "중간",
+          "source_quote": "계약자 또는 피보험자가 고의 또는 중대한 과실로 제1항 각 호의 변경사실을 회사에 알리지 않았을 경우 변경후 요율이 변경전 요율보다 높을 때에는 회사는 그 변경사실을 안 날부터 1개월 이내에 계약자 또는 피보험자에게 제4항에 의해 보장됨을 통보하고 이에 따라 보험금을 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 13,
+      "article_title": "알릴 의무 위반의 효과",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자나 피보험자가 고의 또는 중대한 과실로 알릴 의무를 위반한 경우, 회사는 계약을 해지하거나 보장을 제한할 수 있음",
+          "reason": "계약자에게 불리한 해지 및 보장 제한 조건",
+          "severity": "높음",
+          "source_quote": "회사는 다음과 같은 사실이 있을 경우에는 보험금 지급사유의 발생여부에 관계없이 그 사실을 안 날부터 1개월 이내에 회사가 별도로 정하는 방법에 따라 계약을 해지하거나 보장을 제한할 수 있습니다.",
+          "exception": "계약 해지 및 보장 제한이 이루어지지 않는 경우가 있음",
+          "exception_quote": "제1항 제1호의 경우라도 다음의 어느 하나에 해당하는 경우에는 회사는 계약을 해지하거나 보장을 제한할 수 없습니다."
+        },
+        {
+          "clause_summary": "계약의 해지 및 보장 제한이 보험금 지급사유 발생 후에 이루어진 경우, 회사는 보험금을 지급하지 않음",
+          "reason": "보험금 지급을 거부하는 조건",
+          "severity": "높음",
+          "source_quote": "제1항 제1호에 따른 계약의 해지 및 보장의 제한이 보험금 지급사유가 발생한 후에 이루어진 경우에 회사는 보험금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "알릴 의무를 위반한 사실이 보험금 지급사유 발생에 영향을 미쳤음을 회사가 증명하지 못한 경우에도 보험금을 지급함",
+          "reason": "계약자에게 불리한 조건이지만, 회사의 증명 책임이 있음",
+          "severity": "중간",
+          "source_quote": "제1항에도 불구하고 알릴 의무를 위반한 사실이 보험금 지급사유 발생에 영향을 미쳤음을 회사가 증명하지 못한 경우에는 제4항 및 제5항에도 불구하고 해당 보험금을 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 14,
+      "article_title": "사기에 의한 계약",
+      "toxic_clauses": [
+        {
+          "clause_summary": "사기에 의한 계약 취소",
+          "reason": "계약자가 사기를 통해 계약이 성립된 경우, 회사가 계약을 취소할 수 있음",
+          "severity": "높음",
+          "source_quote": "계약자 또는 피보험자가 대리진단이나 약물사용을 통하여 진단절차를 통과하거나, 진단서를 위조 또는 변조하거나, 청약일 이전에 암 또는 인간면역결핍바이러스(HIV) 감염의 진단 확정을 받은 후 이를 숨기고 가입하는 등 사기에 의하여 계약이 성립되었음을 회사가 증명하는 경우에는 회사는 계약일부터 5년 이내(사기사실을 안 날부터 1개월 이내)에 계약을 취소할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 16,
+      "article_title": "청약의 철회",
+      "toxic_clauses": [
+        {
+          "clause_summary": "청약 철회 불가 계약 조건",
+          "reason": "특정 계약은 청약 철회가 불가능하여 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "다만, 다음 각 호의 어느 하나에 해당하는 계약은 철회할 수 없습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "청약 철회 후 보험금 지급사유 발생 시 효력 없음",
+          "reason": "보험금 지급사유가 발생한 경우 청약 철회의 효력이 발생하지 않아 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "청약을 철회할 때에 이미 보험금 지급사유가 발생하였으나 계약자가 그 보험금 지급사유가 발생한 사실을 알지 못한 경우에는 청약철회의 효력이 발생하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 19,
+      "article_title": "계약내용의 변경 등",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험수익자 변경 통지 의무",
+          "reason": "계약자가 보험수익자 변경 사실을 통지하기 전에 보험금 지급사유가 발생하면 변경 전 보험수익자에게 보험금을 지급할 수 있어 계약자에게 불리함.",
+          "severity": "중간",
+          "source_quote": "계약자가 회사에 보험수익자가 변경되었음을 통지하기 전에 보험금 지급사유가 발생한 경우 회사는 변경 전 보험수익자에게 보험금을 지급할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험수익자 변경 시 피보험자 동의 필요",
+          "reason": "계약자가 보험수익자를 변경하고자 할 경우 보험금 지급사유 발생 전에 피보험자의 서면 동의가 필요하여 계약자에게 불리함.",
+          "severity": "중간",
+          "source_quote": "계약자가 제4항에 따라 보험수익자를 변경하고자 할 경우에는 보험금의 지급사유가 발생하기 전에 피보험자가 서면으로 동의하여야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 21,
+      "article_title": "계약의 소멸",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자는 책임준비금을 청구해야 하며, 지급기일의 다음 날부터 지급일까지의 이자는 보험계약대출이율로 계산됨",
+          "reason": "계약자가 책임준비금을 청구하지 않으면 지급받지 못할 수 있으며, 이자 계산 방식이 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "계약자는 제6조(보험금의 청구) 제1항의 서류 중 책임준비금 지급과 관련된 서류를 제출하고 책임준비금을 청구하여야 합니다. 책임준비금 지급절차는 제7조(보험금의 지급절차)의 규정을 따르며, 지급기일의 다음 날부터 지급일까지의 기간에 대한 이자의 계산은 보험계약대출이율을 연단위 복리로 계산합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약이 소멸되는 경우 대출원금과 이자를 차감한 후 지급됨",
+          "reason": "계약자가 대출을 받은 경우, 지급받는 금액이 줄어들어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "계약이 소멸되는 경우 제33조(보험계약대출)에서 정한 보험계약대출이 있을 때에는 회사가 지급하여야 할 금액에서 대출원금과 이자의 합계액을 차감한 후 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 22,
+      "article_title": "제1회 보험료 및 회사의 보장개시",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 제1회 보험료를 자동이체 또는 신용카드로 납입하는 경우, 납입이 불가능하면 보험료가 납입되지 않은 것으로 간주됨",
+          "reason": "계약자가 자동이체 또는 신용카드 매출승인에 필요한 정보를 제공하지 않으면 보험료가 납입되지 않은 것으로 처리되어 보장이 개시되지 않을 수 있음",
+          "severity": "낮음",
+          "source_quote": "계약자에게 책임이 있는 사유로 자동이체 또는 매출승인이 불가능한 경우에는 보험료가 납입되지 않은 것으로 봅니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약자 또는 피보험자가 알릴 의무를 위반한 경우 보장을 하지 않을 수 있음",
+          "reason": "계약자 또는 피보험자가 회사에 알린 내용이 보험금 지급사유의 발생에 영향을 미쳤음을 회사가 증명하면 보장이 거부될 수 있음",
+          "severity": "높음",
+          "source_quote": "회사가 보장을 하지 않을 수 있는 경우",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 24,
+      "article_title": "보험료의 자동대출납입",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험료의 자동대출납입 기간은 최초 자동대출납입일부터 1년을 한도로 하며, 그 이후의 기간에 대한 보험료의 자동대출 납입을 위해서는 재신청을 하여야 함",
+          "reason": "계약자가 자동대출납입을 지속하기 위해 매년 재신청해야 하므로 불리함",
+          "severity": "중간",
+          "source_quote": "제1항과 제2항에 따른 보험료의 자동대출납입 기간은 최초 자동대출납입일부터 1년을 한도로 하며, 그 이후의 기간에 대한 보험료의 자동대출 납입을 위해서는 제1항에 따라 재신청을 하여야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험료의 자동대출납입이 이루어진 경우에도 계약자가 해지를 청구하면 자동대출납입을 없었던 것으로 간주함",
+          "reason": "계약자가 해지를 청구할 경우 자동대출납입이 무효가 되어 불리함",
+          "severity": "중간",
+          "source_quote": "보험료의 자동대출납입이 이루어진 경우에도 자동대출납입 전 납입최고(독촉)기간이 끝나는 날의 다음날부터 1개월 이내에 계약자가 계약의 해지를 청구하였을 때에는 회사는 보험료의 자동대출납입을 없었던 것으로 하여 제32조(해지환급금) 제1항에 따른 해지환급금을 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 25,
+      "article_title": "해외장기체류자의 보험료 운영에 관한 사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "해외체류기간 동안 회사의 보장도 중지됨",
+          "reason": "납입중지기간 동안 보장이 중지되어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "이 경우 해당 납입중지기간동안 회사의 보장도 중지됩니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "납입중지기간 종료 후 계약자는 재산출된 보험료를 납입해야 함",
+          "reason": "납입중지 후 보험료가 재산출되어 계약자에게 추가 부담이 발생함",
+          "severity": "중간",
+          "source_quote": "납입중지기간 종료 후 계약자는 갱신계약일 현재의 기초율을 적용하여 재산출된 보험료를 납입하여야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "해외체류기간 중 보장내용 변경주기 종료일 포함 시 납입중지 신청 불가",
+          "reason": "보장내용 변경주기 종료일이 포함된 경우 납입중지 신청이 불가능하여 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "제1항에도 불구하고 해외체류기간 중 보장내용 변경주기 종료일이 포함되어 있는 경우에는 보험료 납입중지를 신청할 수 없습니 다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "연체 시 계약 해지 및 해지환급금 차감",
+          "reason": "연체 시 계약이 해지되고 해지환급금에서 차감되어 계약자에게 불리함",
+          "severity": "높음",
+          "source_quote": "이 경우 계약이 해지되면 즉시 해지환급금에서 보험계약대출원금과 이자가 차감된다는 내용을 포함합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 27,
+      "article_title": "보험료의 납입을 연체하여 해지된 계약의 부활(효력회복)",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 해지된 날부터 3년 이내에 계약의 부활을 청약해야 하며, 연체된 보험료와 연체이자를 납입해야 함",
+          "reason": "계약자가 해지된 계약을 부활하기 위해 추가 비용을 부담해야 함",
+          "severity": "중간",
+          "source_quote": "계약자는 부활(효력회복)을 청약한 날까지의 연체된 보험료와 이에 대한 연체이자(평균공시이율+1%로 계산한 금액)를 더하여 납입하여야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 30,
+      "article_title": "중대사유로 인한 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자, 피보험자 또는 보험수익자가 고의로 상해 또는 질병을 발생시킨 경우 계약 해지",
+          "reason": "고의로 상해 또는 질병을 발생시킨 경우 계약 해지로 인해 보험금 지급이 불가능해짐",
+          "severity": "높음",
+          "source_quote": "계약자, 피보험자 또는 보험수익자가 보험금을 지급받을 목적으로 고의로 상해 또는 질병을 발생시킨 경우",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험금 청구 서류에 고의로 사실과 다른 내용을 적거나 위조·변조한 경우 계약 해지",
+          "reason": "고의로 사실과 다른 내용을 적거나 서류를 위조·변조한 경우 계약 해지로 인해 보험금 지급이 불가능해짐",
+          "severity": "높음",
+          "source_quote": "계약자, 피보험자 또는 보험수익자가 보험금 청구에 관한 서류에 고의로 사실과 다른 것을 적었거나 그 서류 또는 증거를 위조 또는 변조한 경우",
+          "exception": "이미 발생한 보험금 지급 사유에 대해서는 보험금을 지급함",
+          "exception_quote": "다만, 이미 보험금 지급 사유가 발생한 경우에는 이에 대한 보험금은 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 33,
+      "article_title": "보험계약대출",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약대출금과 이자를 지급금에서 차감할 수 있음",
+          "reason": "계약자가 보험금, 해지환급금 등의 지급사유가 발생한 날에 보험계약대출금과 이자를 상환하지 않은 경우, 지급금에서 차감되므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "계약자가 보험금, 해지환급금 등의 지급사유가 발생한 날에 보험계약대출금과 이자를 상환하지 않은 경우 회사는 그 지급금에서 보험계약대출 원금과 이자를 차감할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "계약 해지 시 해지환급금에서 차감할 수 있음",
+          "reason": "계약이 해지되는 경우 해지환급금에서 보험계약대출 원금과 이자를 차감하므로 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "회사는 제26조(보험료의 납입이 연체되는 경우 납입최고(독촉)와 계약의 해지)에 따라 계약이 해지되는 경우 회사는 즉시 해지환급금에서 보험계약대출 원금과 이자를 차감합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 34,
+      "article_title": "배당금의 지급",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자에게 배당금을 지급하지 않음",
+          "reason": "계약자가 받을 수 있는 배당금이 없으므로 불리함",
+          "severity": "높음",
+          "source_quote": "회사는 이 계약에 대하여 계약자에게 배당금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 39,
+      "article_title": "자동갱신의 적용",
+      "toxic_clauses": [
+        {
+          "clause_summary": "갱신후 계약의 제1회 보험료 납입 연체 시 계약 해제",
+          "reason": "계약자가 보험료를 납입하지 않으면 계약이 해제됨",
+          "severity": "높음",
+          "source_quote": "만약, 이 보험료를 납입하지 않으면 회사는 지급할 보험금에서 이를 공제할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 43,
+      "article_title": "계약의 재가입에 관한 사항",
+      "toxic_clauses": [
+        {
+          "clause_summary": "재가입 의사 표시가 없을 경우 재가입하지 않는 것으로 간주",
+          "reason": "계약자가 재가입 의사를 명시하지 않으면 자동으로 재가입이 이루어지지 않음",
+          "severity": "중간",
+          "source_quote": "재가입일 전일까지 계약자로부터 별도의 의사표시가 없을 때에는 재가입하지 않는 것으로 봅니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "회사의 안내가 계약자에게 도달하지 않은 경우 재가입 의사 표시가 필요 없음",
+          "reason": "회사의 안내가 도달하지 않으면 계약자가 재가입 의사를 표시하지 않아도 재가입이 이루어질 수 있음",
+          "severity": "중간",
+          "source_quote": "다만, 회사의 안내가 계약자에게 도달하지 않은 경우는 그렇지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 44,
+      "article_title": "재가입후 계약 제1회 보험료의 납입최고(독촉)와 계약의 해제",
+      "toxic_clauses": [
+        {
+          "clause_summary": "재가입후 계약의 제1회 보험료를 납입하지 않으면 계약 해제",
+          "reason": "계약자가 보험료를 납입하지 않으면 계약이 해제되어 보험 혜택을 상실함",
+          "severity": "높음",
+          "source_quote": "재가입후 계약의 제1회 보험료를 재가입일까지 납입하지 않은 경우 회사는 제26조(보험료의 납입이 연체되는 경우 납입최고(독촉)와 계약의 해지)에 따라 납입최고(독촉)하며, 이 납입최고(독촉)기간 안에 보험료를 납입하지 않은 경우에는 납입최고(독촉)기간이 끝나는 날의 다음날에 재가입후 계약은 해제됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 2,
+      "article_title": "보험금을 지급하지 않는 사유",
+      "toxic_clauses": [
+        {
+          "clause_summary": "이륜자동차 운전 중 발생한 사고에 대한 보험금 지급 면책",
+          "reason": "이륜자동차를 운전 중 발생한 사고는 원칙적으로 보험금을 지급하지 않음",
+          "severity": "높음",
+          "source_quote": "회사는 보험계약의 내용에도 불구하고 보험증권에 기재된 보험기간 중에 이륜자동차를 운전(탑승을 포함합니다. 이하 같습니다)하는 중에 발생한 급격하고도 우연한 외래의 상해사고를 직접적인 원인으로 보험계약에서 정한 보험금 지급사유가 발생한 경우에 보험금을 지급하지 않습니다.",
+          "exception": "피보험자가 이륜자동차를 주기적으로 운전한 사실을 회사가 입증하지 못한 경우에는 보상함",
+          "exception_quote": "다만, 피보험자가 이륜자동차를 직업, 직무 또는 동호회 활동 등 주기적으로 운전한 사실을 회사가 입증하지 못한 때에는 보험금을 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "계약 후 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자는 지정계좌의 번호가 변경 또는 거래 정지된 경우에는 그 사실을 즉시 알려야 합니다.",
+          "reason": "계약자가 계좌 변경이나 거래 정지 사실을 즉시 알리지 않을 경우 불이익을 받을 수 있음",
+          "severity": "중간",
+          "source_quote": "계약자는 지정계좌의 번호가 변경 또는 거래 정지된 경우에는 그 사실을 즉시 알려야 합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "지정대리청구인의 지정",
+      "toxic_clauses": [
+        {
+          "clause_summary": "지정대리청구인이 지정된 이후 보험수익자가 변경되면 자격 상실",
+          "reason": "보험수익자 변경 시 지정대리청구인의 자격이 자동으로 상실되어 계약자에게 불리함",
+          "severity": "중간",
+          "source_quote": "제1항에도 불구하고, 지정대리청구인이 지정된 이후에 제1조(적용 대상)의 보험수익자가 변경되는 경우에는 이미 지정된 지정대리청구인의 자격은 자동적으로 상실된 것으로 봅니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 5,
+      "article_title": "보험금의 지급절차",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금을 지정대리청구인에게 지급한 경우 이후 청구는 지급하지 않음",
+          "reason": "지정대리청구인에게 지급된 보험금에 대해 추가 청구를 인정하지 않음",
+          "severity": "중간",
+          "source_quote": "회사가 보험금을 지정대리청구인에게 지급한 경우에는 그 이후 보험금 청구를 받더라도 회사는 이를 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 4,
+      "article_title": "계약자의 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "전자우편 주소를 사실과 다르게 알리거나 알리지 않은 경우 불이익 부담",
+          "reason": "계약자가 전자우편 주소를 잘못 알리거나 알리지 않으면 발생하는 불이익을 계약자가 부담해야 함",
+          "severity": "중간",
+          "source_quote": "전자우편(이메일) 주소를 사실과 다르게 알리거나 알리지 않은 경우에는 회사가 알고 있는 최근의 전자우편(이메일) 주소로 보험계약 안내자료를 교부함으로써 회사의 보험계약 안내자료 제공의무를 다한 것으로 보며, 전자우편(이메일) 주소를 사실과 다르게 알리거나 알리지 않아 발생하는 불이익은 계약자가 부담합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 41,
+      "article_title": "요양급여",
+      "toxic_clauses": [
+        {
+          "clause_summary": "업무나 일상생활에 지장이 없는 질환에 대한 치료는 요양급여대상에서 제외될 수 있음",
+          "reason": "계약자가 필요로 하는 치료가 보장되지 않을 수 있음",
+          "severity": "중간",
+          "source_quote": "보건복지부장관은 제3항에 따라 요양급여의 기준을 정할 때 업무나 일상생활에 지장이 없는 질환에 대한 치료 등 보건복지부령으로 정하는 사항은 요양급여대상에서 제외되는 사항(이하 \"비급여대상\"이라 한다)으로 정할 수 있다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 13,
+      "article_title": "급여비용의 부담",
+      "toxic_clauses": [
+        {
+          "clause_summary": "본인부담금 초과 시 지급 조건",
+          "reason": "본인부담금이 초과할 경우 수급권자가 부담해야 하는 조건이 있음",
+          "severity": "중간",
+          "source_quote": "다만, 초과금액이 2천원 미만인 경우에는 이를 수급권자가 부담한다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 42,
+      "article_title": "장기등의 적출ㆍ이식 비용의 부담 등",
+      "toxic_clauses": [
+        {
+          "clause_summary": "장기등의 적출 및 이식에 드는 비용은 이식받은 사람이 부담한다.",
+          "reason": "계약자가 장기 이식에 따른 모든 비용을 부담해야 하므로 불리하다.",
+          "severity": "높음",
+          "source_quote": "장기등의 적출 및 이식에 드는 비용은 해당 장기등을 이식받은 사람이 부담한다.",
+          "exception": "다른 법령에서 정하는 경우에는 해당 법령에서 정하는 바에 따른다.",
+          "exception_quote": "다만, 이식받은 사람이 부담하는 비용에 대하여 다른 법령에서 따로 정하는 경우에는 해당 법령에서 정하는 바에 따른다."
+        }
+      ]
+    }
+  ]
+}

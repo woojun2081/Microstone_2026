@@ -1,0 +1,234 @@
+{
+  "source": "무배당 프로미라이프 간편실손의료비보험(유병력자용)2604(TM)(만기재가입용).pdf",
+  "total_articles": 65,
+  "candidate_articles": 16,
+  "coverage_filtered_articles": 16,
+  "extracted_coverages": 4,
+  "results": [
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 92,
+      "coverages": [
+        {
+          "coverage_name": "상해입원(간편고지)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "5천만원"
+          },
+          "payment_condition": "피보험자가 상해로 인하여 의료기관에 입원하여 치료를 받은 경우에는 상해당 보험가입금액의 한도 내에서 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "10만원과 보상대상의료비의 30% 중 큰 금액",
+          "source_quote": "피보험자가 상해로 인하여 의료기관에 입원하여 치료를 받은 경우에는 상해당 보험가입금액의 한도 내에서 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해통원(간편고지)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "null"
+          },
+          "payment_condition": "피보험자가 상해로 인하여 의료기관에 통원하여 치료를 받은 경우에는 통원의료비 명목으로 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "2만원과 보상대상의료비의 30% 중 큰 금액",
+          "source_quote": "피보험자가 상해로 인하여 의료기관에 통원하여 치료를 받은 경우에는 통원의료비 명목으로 보상합니다.",
+          "confidence": 70,
+          "level": "보통",
+          "checks": {
+            "coverage_name": true,
+            "amount": false,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병입원(간편고지)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "5천만원"
+          },
+          "payment_condition": "피보험자가 질병으로 인하여 의료기관에 입원하여 치료를 받은 경우에는 질병당 보험가입금액의 한도 내에서 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "10만원과 보상대상의료비의 30% 중 큰 금액",
+          "source_quote": "피보험자가 질병으로 인하여 의료기관에 입원하여 치료를 받은 경우에는 질병당 보험가입금액의 한도 내에서 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병통원(간편고지)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "20만원"
+          },
+          "payment_condition": "피보험자가 질병으로 인하여 의료기관에 통원하여 치료를 받은 경우에는 통원의료비 명목으로 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "2만원과 보상대상의료비의 30% 중 큰 금액",
+          "source_quote": "피보험자가 질병으로 인하여 의료기관에 통원하여 치료를 받은 경우에는 통원의료비 명목으로 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 7,
+      "title": "보험금의 지급절차",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 12,
+      "title": "상해보험계약 후 알릴 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 14,
+      "title": "사기에 의한 계약",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 21,
+      "title": "계약의 소멸",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 22,
+      "title": "보험기간 및 자동갱신",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 23,
+      "title": "자동갱신 적용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 26,
+      "title": "제1회 보험료 및 회사의 보장개시",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 19,
+      "title": "계약내용의 변경 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 33,
+      "title": "보험료의 계산",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 35,
+      "title": "중대사유로 인한 해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    }
+  ]
+}

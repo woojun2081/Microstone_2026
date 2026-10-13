@@ -1,0 +1,201 @@
+{
+  "source": "KB손보 간편가입 실손의료비보장보험(무배당)(26.01).pdf",
+  "total_articles": 145,
+  "toxic_summary": {
+    "total_toxic_clauses": 15,
+    "affected_articles": 11,
+    "with_exception": 2,
+    "excluded_short_quote": 0,
+    "excluded_not_in_source": 22,
+    "deduped": 0,
+    "total_excluded": 22
+  },
+  "toxic_clauses": [
+    {
+      "article_number": 13,
+      "article_title": "알릴 의무 위반의 효과",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험계약자 또는 피보험자는 보험계약을 청약할 때 청약서의 질문사항에 대하여 사실대로 기재하고 자필서명을 하셔야 합니다.",
+          "reason": "고지의무를 위반할 경우 계약 해지 및 보험금 지급 제한 가능성이 있음.",
+          "severity": "높음",
+          "source_quote": "계약자 또는 고의 또는 중과실로 (회사) 피보험자 사실과 다르게 알린 경우 보장 제한 가능 (회사)",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험계약자 등은 피보험자의 직업·직무 변경 등이 발생한 경우 지체 없이 보험회사에 알려야 하며, 이를 위반하는 경우 보험금 지급이 제한될 수 있습니다.",
+          "reason": "직업 변경을 알리지 않을 경우 보험금 지급이 제한될 수 있어 계약자에게 불리함.",
+          "severity": "높음",
+          "source_quote": "보험금 지급이 제한될 수 있습니다.",
+          "exception": "위험이 감소한 경우 보험료를 감액하고 정산금액을 환급하여 드리며, 위험이 증가한 경우 보험료가 증액되고 정산금액의 추가 납입이 필요할 수 있습니다.",
+          "exception_quote": "보험회사는 피보험자의 직업·직무 변경 등으로 ① 위험이 감소한 경우 보험료를 감액하고 정산금액을 환급하여 드리며, ② 위험이 증가한 경우 보험료가 증액되고 정산금액의 추가 납입이 필요할 수 있습니다."
+        },
+        {
+          "clause_summary": "보험료 납입이 연체 중인 경우 보험회사는 납입을 독촉하는 안내를 하며, 납입최고(독촉)기간 내에 보험료를 납입하지 않으면 보험계약이 해지됩니다.",
+          "reason": "납입최고기간 내에 보험료를 납입하지 않으면 계약이 해지되어 계약자에게 불리함.",
+          "severity": "높음",
+          "source_quote": "납입최고(독촉)기간 내에 보험료를 납입하지 않으면 보험계약이 해지됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 12,
+      "article_title": "상해보험계약 후 알릴 의무",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험증권 등에 기재된 피보험자의 운전 목적이 변경된 경우 보험금을 삭감하여 지급합니다.",
+          "reason": "운전 목적 변경 시 보험금이 삭감되어 지급되므로 계약자에게 불리함.",
+          "severity": "높음",
+          "source_quote": "보험증권 등에 기재된 피보험자의 운전 목적이 변경된 경우 보험금을 삭감하여 지급합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 13,
+      "article_title": "알릴 의무 위반의 효과",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급사유 발생 후 1개월 이내에 계약 해지 가능",
+          "reason": "보험금 지급사유 발생 후에도 계약자가 알릴 의무를 위반한 경우 회사가 계약을 해지할 수 있음",
+          "severity": "중간",
+          "source_quote": "보험금 지급사유 발생 후에 이루어진 경우에는 그 사실을 안 날부터 1개월 이내에 이 계약을 해지할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 14,
+      "article_title": "사기에 의한 계약",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보장 제외 조건",
+          "reason": "청약일로부터 5년이 지나기 전 추가 진단 또는 치료 사실이 없을 경우 보장이 제외됨.",
+          "severity": "중간",
+          "source_quote": "제5항의 추가 진단(단순 건강검진 제외) 또는 치료 사실이 없는 경우는 다음 각 호의 경우를 포함합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 17,
+      "article_title": "약관교부 및 설명의무 등",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 청약서에 자필서명을 하지 않은 경우 계약이 무효로 됨",
+          "reason": "계약자가 자필서명을 하지 않으면 계약이 무효가 되어 불리함",
+          "severity": "높음",
+          "source_quote": "계약을 체결할 때 계약자가 청약서에 자필서명을 하지 않은 경우(자필서명에는 도장을 찍는 날인과 전자서명법 제2조 제2호에 따른 전자서명을 포함합니다)",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 23,
+      "article_title": "제1회 보험료 및 회사의 보장개시",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 지급사유 발생 시까지 피보험자가 진단을 받지 않은 경우 보장을 하지 않음",
+          "reason": "피보험자가 진단을 받지 않은 경우 보험금 지급이 제한됨",
+          "severity": "중간",
+          "source_quote": "진단계약에서 보험금 지급사유 발생 시까지 피보험자가 진단을 받지 않은 경우.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 30,
+      "article_title": "위법계약의 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자가 위반사항을 안 날부터 1년 이내에 계약해지요구서에 증빙서류를 첨부하여 위법계약의 해지를 요구할 수 있음",
+          "reason": "계약자가 위반사항을 인지한 후 1년 이내에 해지 요구를 해야 하므로, 이 기간을 넘기면 권리가 소멸됨",
+          "severity": "중간",
+          "source_quote": "계약자가 위반사항을 안 날부터 1년 이내에 계약해지요구서에 증빙서류를 첨부하여 위법계약의 해지를 요구할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 35,
+      "article_title": "배당금의 지급",
+      "toxic_clauses": [
+        {
+          "clause_summary": "계약자에게 배당금을 지급하지 않음",
+          "reason": "계약자에게 불리한 배당금 지급 면책 조항",
+          "severity": "높음",
+          "source_quote": "회사는 이 보험에 대하여 계약자에게 배당금을 지급하지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "고의로 사실과 다른 서류 작성 시 보험금 지급 제한",
+          "reason": "고의로 사실과 다른 내용을 적거나 서류를 위조한 경우 보험금 지급이 제한됨",
+          "severity": "중간",
+          "source_quote": "계약자, 피보험자 또는 보험수익자가 보험금 청구에 관한 서류에 고의로 사실과 다른 것을 적었거나 그 서류 또는 증거를 위조 또는 변조한 경우.",
+          "exception": "이미 보험금 지급사유가 발생한 경우에는 보험금 지급",
+          "exception_quote": "다만, 이미 보험금 지급사유가 발생한 경우에는 이에 대한 보험금은 지급합니다."
+        }
+      ]
+    },
+    {
+      "article_number": 38,
+      "article_title": "적용대상",
+      "toxic_clauses": [
+        {
+          "clause_summary": "보험금 청구는 계약자, 피보험자 및 보험수익자가 모두 동일한 경우에만 가능",
+          "reason": "계약자, 피보험자 및 보험수익자가 동일해야 보험금 청구가 가능하므로, 계약자에게 불리한 조건",
+          "severity": "중간",
+          "source_quote": "다만, 2인의 지정대 이 계약의 계약자, 피보험자 및 보험수익자가 모두 동일한 경우에 한하여 적용됩니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 55,
+      "article_title": "갱신계약 제1회 보험료의 납입최고(독촉)와 계약의 해지",
+      "toxic_clauses": [
+        {
+          "clause_summary": "갱신보장의 제1회 보험료를 갱신 일까지 납입하지 않으면 보장이 해지됨",
+          "reason": "계약자가 보험료를 납입하지 않으면 보장이 해지되어 보험금 지급이 불가능해짐",
+          "severity": "높음",
+          "source_quote": "계약자가 갱신 일까지 갱신보장의 제1회 보험료를 납입하지 않 법은 때에는 제26조(보험료의 납입이 연체되는 경우 납입최고(독촉)와 계약의 해지) ㆍ에 따라 납입최고(독촉)하며, 이 납입최고(독촉)기간 안에 보험료를 납입하지 않 규는 경우 납입최고(독촉)기간이 끝나는 날의 다음날 해당 보장은 해지된 것으로 봅 정니다.",
+          "exception": null,
+          "exception_quote": null
+        },
+        {
+          "clause_summary": "보험료를 납입하지 않으면 지급할 보험금에서 공제 가능",
+          "reason": "계약자가 보험료를 납입하지 않으면 지급받을 보험금이 줄어들 수 있음",
+          "severity": "중간",
+          "source_quote": "만약, 이 보험료를 납입하지 않으면 회사는 지급할 보험금에서 이를 공제할 수 있습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    },
+    {
+      "article_number": 3,
+      "article_title": "피보험자의 추가, 감소 또는 교체",
+      "toxic_clauses": [
+        {
+          "clause_summary": "제1항을 위반하였을 경우에는 회사는 새로이 추가 또는 교체되는 해당 피보험자에 대하여는 보상하여 드리지 않습니다.",
+          "reason": "계약자 또는 피보험자가 서면으로 회사에 알리지 않으면 보상을 받지 못함",
+          "severity": "높음",
+          "source_quote": "제1항을 위반하였을 경우에는 회사는 새로이 추가 또는 교체되는 해당 피보험자에 대하여는 보상하여 드리지 않습니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    }
+  ]
+}

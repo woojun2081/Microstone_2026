@@ -1,0 +1,513 @@
+{
+  "source": "DB실손보험(20대,중고등교사,연납,의료급여 수급자)",
+  "document_type": "가입화면",
+  "contract_summary": {
+    "insurer": "DB손해보험",
+    "product_name": "실손의료비보험+암보험",
+    "product_case": "실손의료비보험+암보험",
+    "job": "중고등교사",
+    "gender": "상관없음",
+    "age": null,
+    "age_raw": "20대",
+    "payment_cycle": "연납",
+    "medical_aid": "수급자",
+    "tier": null,
+    "renewal_type": null,
+    "maturity": null,
+    "payment_period": null,
+    "total_premium": 17760,
+    "total_premium_raw": "연 213,120원",
+    "renewal": "갱신형 (갱신주기 20년, 최대 100세 보장)"
+  },
+  "coverages": [
+    {
+      "coverage_name": "(기본형)상해급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 16881,
+      "is_enrolled": true,
+      "coverage_category": "기본형"
+    },
+    {
+      "coverage_name": "(기본형)질병급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 36137,
+      "is_enrolled": true,
+      "coverage_category": "기본형"
+    },
+    {
+      "coverage_name": "(특약형1,중증)상해비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 248,
+      "is_enrolled": true,
+      "coverage_category": "특약형1,중증",
+      "coverage_name_raw": "(특약형1,종종)상해비급여의료비(갱신형)"
+    },
+    {
+      "coverage_name": "(특약형1,중증)질병비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 1422,
+      "is_enrolled": true,
+      "coverage_category": "특약형1,중증",
+      "coverage_name_raw": "(특약형1,종종)질병비급여의료비(갱신형)"
+    },
+    {
+      "coverage_name": "(특약형1,중증)3대비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 3500000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "350만원"
+      },
+      "premium": 455,
+      "is_enrolled": true,
+      "coverage_category": "특약형1,중증",
+      "coverage_name_raw": "(특약형1,종종)3대비급여의료비(갱신형)"
+    },
+    {
+      "coverage_name": "(특약형2,비중증)상해비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 9971,
+      "is_enrolled": true,
+      "coverage_category": "특약형2,비중증",
+      "coverage_name_raw": "(특약형2,비종종)상해비급여의료비(갱신형)"
+    },
+    {
+      "coverage_name": "(특약형2,비중증)질병비급여의료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 17866,
+      "is_enrolled": true,
+      "coverage_category": "특약형2,비중증",
+      "coverage_name_raw": "(특약형2,비종종)질병비급여의료비(갱신형)"
+    },
+    {
+      "coverage_name": "(특약형2,비중증)비급여자기공명영상진단(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 2000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "2백만원"
+      },
+      "premium": 11518,
+      "is_enrolled": true,
+      "coverage_category": "특약형2,비중증",
+      "coverage_name_raw": "(특약형2,비종종)비급여자기공명영상진단(갱신형)"
+    },
+    {
+      "coverage_name": "암진단비 II (유사암제외)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 50000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5천만원"
+      },
+      "premium": 44250,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "유사암진단비 II (갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 8000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "8백만원"
+      },
+      "premium": 5160,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "암수술비(유사암제외)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 5000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5백만원"
+      },
+      "premium": 6440,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "유사암수술비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 2000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "2백만원"
+      },
+      "premium": 1640,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "다빈치로봇암수술비III(최초1회한,특정암제외)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 5000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5백만원"
+      },
+      "premium": 1230,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "다빈치로봇암수술비III(최초1회한,특정암)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 1000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1백만원"
+      },
+      "premium": 62,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "암직접치료통원비 II (상급종합병원제외)(연간30회한도)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 10000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 30,
+          "unit": "회"
+        },
+        "is_shared_limit": false,
+        "raw": "1만원"
+      },
+      "premium": 211,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "암직접치료통원비 II (상급종합병원)(연간30회한도)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 100000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 30,
+          "unit": "회"
+        },
+        "is_shared_limit": false,
+        "raw": "10만원"
+      },
+      "premium": 4350,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "암입원일당(요양병원)(1일이상90일한도)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 20000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 90,
+          "unit": "일"
+        },
+        "is_shared_limit": false,
+        "raw": "2만원"
+      },
+      "premium": 128,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "암직접치료입원일당(요양병원제외)(1일이상180일한도)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 100000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 180,
+          "unit": "일"
+        },
+        "is_shared_limit": false,
+        "raw": "10만원"
+      },
+      "premium": 6570,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "간병인사용질병입원일당(1일이상180일한도)(요양병원)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 20000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 180,
+          "unit": "일"
+        },
+        "is_shared_limit": false,
+        "raw": "2만원"
+      },
+      "premium": 352,
+      "is_enrolled": true,
+      "coverage_category": null,
+      "coverage_name_raw": "간병인사용질병입원일당(1일이상180일한도)(요양병원제외)(갱신형)"
+    },
+    {
+      "coverage_name": "간병인사용질병입원일당(요양병원제외)(1일당8시간이상)(1일이상180일한도)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 50000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 180,
+          "unit": "일"
+        },
+        "is_shared_limit": false,
+        "raw": "5만원"
+      },
+      "premium": 10850,
+      "is_enrolled": true,
+      "coverage_category": null,
+      "coverage_name_raw": "간병인사용질병입원일당(요양병원제외)(1일당5만원)(1일이상180일한도)(갱신형)"
+    },
+    {
+      "coverage_name": "간호·간병통합서비스사용질병입원일당(1일이상180일한도)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 20000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 180,
+          "unit": "일"
+        },
+        "is_shared_limit": false,
+        "raw": "2만원"
+      },
+      "premium": 1850,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "간병인사용상해입원일당(1일이상180일한도)(요양병원)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 20000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 180,
+          "unit": "일"
+        },
+        "is_shared_limit": false,
+        "raw": "2만원"
+      },
+      "premium": 100,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "간병인사용상해입원일당(요양병원제외)(1일당8시간이상)(1일이상180일한도)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 50000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 180,
+          "unit": "일"
+        },
+        "is_shared_limit": false,
+        "raw": "5만원"
+      },
+      "premium": 7860,
+      "is_enrolled": true,
+      "coverage_category": null,
+      "coverage_name_raw": "간병인사용상해입원일당(요양병원제외)(1일당5만원)(1일이상180일한도)(갱신형)"
+    },
+    {
+      "coverage_name": "간호·간병통합서비스사용상해입원일당(1일이상180일한도)(갱신형)",
+      "subscribed_amount": {
+        "per_time": 20000,
+        "annual_limit": null,
+        "deductible": null,
+        "visit_limit": {
+          "value": 180,
+          "unit": "일"
+        },
+        "is_shared_limit": false,
+        "raw": "2만원"
+      },
+      "premium": 1094,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "항암방사선,약물치료비(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 5000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "5백만원"
+      },
+      "premium": 2245,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "암주요치료비III(유사암제외)(연간1회한)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 15740,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "기타피부암,갑상선암주요치료비III(연간1회한)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 2000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "2백만원"
+      },
+      "premium": 904,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "계속받는항암방사선·약물치료비 II (급여,연간1회한)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 1000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1백만원"
+      },
+      "premium": 2470,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "항암양성자방사선치료비 II (최초1회한)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 170,
+      "is_enrolled": true,
+      "coverage_category": null,
+      "coverage_name_raw": "항암성장방사선치료비 II (최초1회한)(갱신형)"
+    },
+    {
+      "coverage_name": "표적항암방사선치료비 II (항암세기조절방사선)(최초1회한)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 10000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "1천만원"
+      },
+      "premium": 570,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "표적항암약물허가치료비 II (최초1회한)(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 40000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "4천만원"
+      },
+      "premium": 4400,
+      "is_enrolled": true,
+      "coverage_category": null
+    },
+    {
+      "coverage_name": "암사망(갱신형)",
+      "subscribed_amount": {
+        "per_time": null,
+        "annual_limit": 30000000,
+        "deductible": null,
+        "visit_limit": null,
+        "is_shared_limit": false,
+        "raw": "3천만원"
+      },
+      "premium": 4710,
+      "is_enrolled": true,
+      "coverage_category": null
+    }
+  ],
+  "error": null
+}

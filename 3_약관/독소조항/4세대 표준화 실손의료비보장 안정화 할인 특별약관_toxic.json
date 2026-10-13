@@ -1,0 +1,29 @@
+{
+  "source": "4세대 표준화 실손의료비보장 안정화 할인 특별약관.pdf",
+  "total_articles": 3,
+  "toxic_summary": {
+    "total_toxic_clauses": 1,
+    "affected_articles": 1,
+    "with_exception": 0,
+    "excluded_short_quote": 0,
+    "excluded_not_in_source": 0,
+    "deduped": 0,
+    "total_excluded": 0
+  },
+  "toxic_clauses": [
+    {
+      "article_number": 1,
+      "article_title": "특별약관의 적용대상 및 적용기간",
+      "toxic_clauses": [
+        {
+          "clause_summary": "갱신 시 4세대 안정화 할인을 적용하지 않음",
+          "reason": "갱신 시 보험료가 증가할 수 있음",
+          "severity": "중간",
+          "source_quote": "차회 이후 갱신시에는 4세대 안정화 할인을 적용하지 아니합니다.",
+          "exception": null,
+          "exception_quote": null
+        }
+      ]
+    }
+  ]
+}

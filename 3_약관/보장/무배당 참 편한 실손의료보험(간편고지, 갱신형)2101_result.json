@@ -1,0 +1,549 @@
+{
+  "source": "무배당 참 편한 실손의료보험(간편고지, 갱신형)2101.pdf",
+  "total_articles": 104,
+  "candidate_articles": 28,
+  "coverage_filtered_articles": 28,
+  "extracted_coverages": 12,
+  "results": [
+    {
+      "number": 32,
+      "title": "해지환급금",
+      "avg_confidence": 85,
+      "coverages": [
+        {
+          "coverage_name": "실손의료비(상해입원형)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 10000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "1,000만원"
+          },
+          "payment_condition": "1일 평균금액 10만원 한도 (단, 상급병실료 차액에 한함)",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "10만원과 보상대상의료비의 30% 중 큰 금액",
+          "source_quote": "실손의료비(상해입원형) (단, 상급병실료 차액에 한함) 1일 평균금액 10만원 한도",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "실손의료비(상해외래형)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": {
+              "value": 180,
+              "unit": "회"
+            },
+            "is_shared_limit": false,
+            "raw": "null"
+          },
+          "payment_condition": "년간 방문 180회 한도로 보상",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "2만원과 보상대상의료비의 30% 중 큰 금액",
+          "source_quote": "실손의료비(상해외래형) 년간 방문 180회 한도로 보상",
+          "confidence": 70,
+          "level": "보통",
+          "checks": {
+            "coverage_name": true,
+            "amount": false,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "실손의료비(질병입원형)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 10000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "1,000만원"
+          },
+          "payment_condition": "1일 평균금액 10만원 한도 (단, 상급병실료 차액에 한함)",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "10만원과 보상대상의료비의 30% 중 큰 금액",
+          "source_quote": "실손의료비(질병입원형) (단, 상급병실료 차액에 한함) 1일 평균금액 10만원 한도",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "실손의료비(질병외래형)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": {
+              "value": 180,
+              "unit": "회"
+            },
+            "is_shared_limit": false,
+            "raw": "null"
+          },
+          "payment_condition": "년간 방문 180회 한도로 보상",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "2만원과 보상대상의료비의 30% 중 큰 금액",
+          "source_quote": "실손의료비(질병외래형) 년간 방문 180회 한도로 보상",
+          "confidence": 70,
+          "level": "보통",
+          "checks": {
+            "coverage_name": true,
+            "amount": false,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "보장종목 및 보험료 납입방식",
+      "avg_confidence": 85,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 80,
+      "coverages": [
+        {
+          "coverage_name": "상해입원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "5,000만원"
+          },
+          "payment_condition": "입원의료비에서 10만원과 보상대상의료비의 30% 중 큰 금액을 뺀 금액을 보상합니다. 다만, 나머지 금액(10만원과 보상대상의료비의 30% 중 큰 금액)이 연간 200만원을 초과하는 경우 그 초과금액은 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "입원의료비를 다음과 같이 하나의 상해당 보험가입금액의 한도 내에서 보상합니다. 다만, 보험가입금액은 5천만원으로 합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해입원의료비 (비급여)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "입원의료비 중 본인이 실제로 부담한 금액에서 10만원과 보상대상의료비의 30% 중 큰 금액을 뺀 금액의 40%를 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "40%",
+          "source_quote": "피보험자가 「국민건강보험법」 또는 「의료급여법」을 적용받지 못하는 경우에는 입원의료비 중 본인이 실제로 부담한 금액에서 10만원과 보상대상의료비의 30% 중 큰 금액을 뺀 금액의 40%를 하나의 상해당 보험가입금액의 한도 내에서 보상합니다.",
+          "confidence": 60,
+          "level": "보통",
+          "checks": {
+            "coverage_name": false,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해외래의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 200000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "20만원"
+          },
+          "payment_condition": "통원의료비에서 2만원과 보상대상의료비의 30% 중 큰 금액을 뺀 금액을 외래의 보험가입금액의 한도 내에서 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "회사는 피보험자가 상해로 인하여 병원에 통원하여 치료를 받은 경우에는 통원의료비 명목으로 매년 계약해당일부터 1년을 단위로 하여 다음과 같이 외래(외래제비용, 외래수술비)를 보상하며 처방조제비는 보상하지 않습니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해외래의료비 (비급여)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "통원의료비 중 본인이 실제로 부담한 금액에서 2만원과 보상대상 의료비의 30% 중 큰 금액을 뺀 금액의 40%를 보험가입금액의 한도 내에서 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "40%",
+          "source_quote": "피보험자가 「국민건강보험법」 또는 「의료급여법」을 적용받지 못하는 경우에는 통원의료비 중 본인이 실제로 부담한 금액에서 2만원과 보상대상 의료비의 30% 중 큰 금액을 뺀 금액의 40%를 보험가입금액의 한도 내에서 보상합니다.",
+          "confidence": 60,
+          "level": "보통",
+          "checks": {
+            "coverage_name": false,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병입원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "5,000만원"
+          },
+          "payment_condition": "입원의료비에서 10만원과 보상대상의료비의 30% 중 큰 금액을 뺀 금액을 보상합니다. 다만, 나머지 금액(10만원과 보상대상의료비의 30% 중 큰 금액)이 연간 200만원을 초과하는 경우 그 초과금액은 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "회사는 피보험자가 질병으로 인하여 병원에 입원하여 치료를 받은 경우에는 입원의료비를 다음과 같이 하나의 질병당 보험가입금액의 한도 내에서 보상합니다. 다만, 보험가입금액은 5천만원으로 합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병입원의료비 (비급여)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "입원의료비 중 본인이 실제로 부담한 금액에서 10만원과 보상대상의료비의 30% 중 큰 금액을 뺀 금액의 40%를 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "40%",
+          "source_quote": "피보험자가 「국민건강보험법」 또는 「의료급여법」을 적용받지 못하는 경우에는 입원의료비 중 본인이 실제로 부담한 금액에서 10만원과 보상대상의료비의 30% 중 큰 금액을 뺀 금액의 40%를 하나의 질병당 보험가입금액의 한도 내에서 보상합니다.",
+          "confidence": 60,
+          "level": "보통",
+          "checks": {
+            "coverage_name": false,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병외래의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 200000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "20만원"
+          },
+          "payment_condition": "통원의료비에서 2만원과 보상대상의료비의 30% 중 큰 금액을 뺀 금액을 외래의 보험가입금액의 한도 내에서 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여+비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "회사는 피보험자가 질병으로 인하여 병원에 통원하여 치료를 받은 경우에는 통원의료비 명목으로 매년 계약해당일부터 1년을 단위로 하여 다음과 같이 외래(외래제비용, 외래수술비)를 보상하며 처방조제비는 보상하지 않습니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병외래의료비 (비급여)",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "통원의료비 중 본인이 실제로 부담한 금액에서 2만원과 보상대상 의료비의 30% 중 큰 금액을 뺀 금액의 40%를 보험가입금액의 한도 내에서 보상합니다.",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "40%",
+          "source_quote": "피보험자가 「국민건강보험법」 또는 「의료급여법」을 적용받지 못하는 경우에는 통원의료비 중 본인이 실제로 부담한 금액에서 2만원과 보상대상 의료비의 30% 중 큰 금액을 뺀 금액의 40%를 보험가입금액의 한도 내에서 보상합니다.",
+          "confidence": 60,
+          "level": "보통",
+          "checks": {
+            "coverage_name": false,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 7,
+      "title": "보험금의 지급절차",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 9,
+      "title": "주소변경의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 12,
+      "title": "상해보험계약 후 알릴 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 14,
+      "title": "사기에 의한 계약",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 18,
+      "title": "계약의 무효",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 22,
+      "title": "제1회 보험료 및 회사의 보장개시",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 24,
+      "title": "보험료의 자동대출납입",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 28,
+      "title": "강제집행 등으로 인하여 해지된 계약의 특별부활(효력회복)",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 29,
+      "title": "계약자의 임의해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 30,
+      "title": "중대사유로 인한 해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 31,
+      "title": "회사의 파산선고와 해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 33,
+      "title": "보험계약대출",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 35,
+      "title": "다수보험의 처리",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 39,
+      "title": "자동갱신의 적용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 42,
+      "title": "보장내용 변경주기",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "지정대리청구인의 지정",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금의 지급절차",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "특별약관의 적용범위",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "법률연계보장의 계약내용 변경에 관한 사항",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 6,
+      "title": "전문보험계약자의 범위 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "정의",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "정의",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 4,
+      "title": "정의",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 47,
+      "title": "벌칙",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    }
+  ]
+}

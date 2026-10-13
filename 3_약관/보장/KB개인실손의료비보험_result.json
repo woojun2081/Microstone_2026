@@ -1,0 +1,1133 @@
+{
+  "source": "KB개인실손의료비보험.pdf",
+  "total_articles": 190,
+  "candidate_articles": 31,
+  "coverage_filtered_articles": 31,
+  "extracted_coverages": 32,
+  "results": [
+    {
+      "number": 1,
+      "title": "보장종목",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 4,
+      "title": "특별약관에서 보상하는 사항",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험가입금액 한도 등",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험가입금액 한도 등에 대한 설명 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 6,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 68,
+      "coverages": [
+        {
+          "coverage_name": "상해입원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "80%"
+          },
+          "payment_condition": "「국민건강보험법」에서 정한 요양급여 또는 「의료급여법」에 서 정한 의료급여 중 본인부담금(본인이 실제로 부담한 금액으로서 요양급여 비용 또는 의료급여 비용의 일부를 본인이 부담하는 일부본인부담금과 요양급여 비용 또는 의료급여 비용의 전부를 본인이 부담하는 전액본인부담금을 말합니다.)의 80%에 해당하는 금액",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "입원「국민건강보험법」에서 정한 요양급여 또는 「의료급여법」에 서 정한 의료급여 중 본인부담금(본인이 실제로 부담한 금액으로서 요양급여 비용 또는 의료급여 비용의 일부를 본인이 부담하는 일부본인부담금과 요양급여 비용 또는 의료급여 비용의 전부를 본인이 부담하는 전액본인부담금을 말합니다.)의 80%에 해당하는 금액",
+          "confidence": 75,
+          "level": "보통",
+          "checks": {
+            "coverage_name": false,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해통원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": null
+          },
+          "payment_condition": "1회당(외래 및 처방조제 합산)「국민건강보험법」에서 정한 요양급여 또는 「의료급여법」에서 정한 의료급여 중 본인 부담금(본인이 실제로 부담한 금액으로서 요양급여 비용 또는 의료급여 비용의 일부를 본인이 부담하는 일부본인부담금을 말합니다.)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "통원 1회당(외래 및 처방조제 합산)「국민건강보험법」에서 정 한 요양급여 또는 「의료급여법」에서 정한 의료급여 중 본인 부담금(본인이 실제로 부담한 금액으로서 요양급여 비용 또는 의료급여 비용의 일부를 본인이 부담하는 일부본인부담금을 말합니다.)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "confidence": 60,
+          "level": "보통",
+          "checks": {
+            "coverage_name": false,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병입원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "80%"
+          },
+          "payment_condition": "「국민건강보험법」에서 정한 요양급여 또는 「의료급여법」에 서 정한 의료급여 중 본인부담금(본인이 실제로 부담한 금액으로서 요양급여 비용 또는 의료급여 비용의 일부를 본인이 부담하는 일부본인부담금과 요양급여 비용 또는 의료급여 비용의 전부를 본인이 부담하는 전액본인부담금을 말합니다.)의 80%에 해당하는 금액",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "질병급여입원「국민건강보험법」에서 정한 요양급여 또는 「의료급여법」에 서 정한 의료급여 중 본인부담금(본인이 실제로 부담한 금액으로서 요양급여 비용 또는 의료급여 비용의 일부를 본인이 부담하는 일부본인부담금과 요양급여 비용 또는 의료급여 비용의 전부를 본인이 부담하는 전액본인부담금을 말합니다.)의 80%에 해당하는 금액",
+          "confidence": 75,
+          "level": "보통",
+          "checks": {
+            "coverage_name": false,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병통원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": null
+          },
+          "payment_condition": "1회당(외래 및 처방조제 합산)「국민건강보험법」에서 정한 요양급여 또는 「의료급여법」에서 정한 의료급여 중 본인 부담금(본인이 실제로 부담한 금액으로서 요양급여 비용 또는 의료급여 비용의 일부를 본인이 부담하는 일부본인부담금을 말합니다.)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "통원 1회당(외래 및 처방조제 합산)「국민건강보험법」에서 정 한 요양급여 또는 「의료급여법」에서 정한 의료급여 중 본인 부담금(본인이 실제로 부담한 금액으로서 요양급여 비용 또는 의료급여 비용의 일부를 본인이 부담하는 일부본인부담금을 말합니다.)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "confidence": 60,
+          "level": "보통",
+          "checks": {
+            "coverage_name": false,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 4,
+      "title": "특별약관에서 보상하는 사항",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험가입금액 한도 등",
+      "avg_confidence": 94,
+      "coverages": [
+        {
+          "coverage_name": "상해급여 입원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "5천만원"
+          },
+          "payment_condition": "입원과 통원의 보상금액을 합산하여",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "상해급여에 대하여 입원과 통원의 보상금액을 합산하여 5천만원 이내에서",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해급여 통원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "5천만원"
+          },
+          "payment_condition": "입원과 통원의 보상금액을 합산하여",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "상해급여에 대하여 입원과 통원의 보상금액을 합산하여 5천만원 이내에서",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병급여 입원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "5천만원"
+          },
+          "payment_condition": "입원과 통원의 보상금액을 합산하여",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "질병급여에 대하여 입원과 통원의 보상금액을 합산하여 5천만원 이내에서",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병급여 통원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "5천만원"
+          },
+          "payment_condition": "입원과 통원의 보상금액을 합산하여",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "질병급여에 대하여 입원과 통원의 보상금액을 합산하여 5천만원 이내에서",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해급여 통원 1회당",
+          "amount": {
+            "per_time": 200000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "20만원"
+          },
+          "payment_condition": "통원 1회당",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "통원 1회당 20만원 이내에서 회사가 정한 금액 중 계약자가 선택한 금액의 한도 내에서 보상합니다.",
+          "confidence": 80,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": false,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병급여 통원 1회당",
+          "amount": {
+            "per_time": 200000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "20만원"
+          },
+          "payment_condition": "통원 1회당",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "통원 1회당 20만원 이내에서 회사가 정한 금액 중 계약자가 선택한 금액의 한도 내에서 보상합니다.",
+          "confidence": 80,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": false,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "입원 본인부담금 초과금액",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 2000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "200만원"
+          },
+          "payment_condition": "계약일 또는 매년 계약해당일부터 기산하여 연간 200만원을 초과하는 경우",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "급여",
+          "self_payment_ratio": "20%",
+          "source_quote": "본인부담금의 20%에 해당하는 금액이 계약일 또는 매년 계약해당일부터 기산하여 연간 200만원을 초과하는 경우",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험가입금액 한도 등에 대한 설명 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 6,
+      "title": "보험금 지급사유 발생의 통지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 8,
+      "title": "보험금의 지급절차",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 9,
+      "title": "보험금을 받는 방법의 변경",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 13,
+      "title": "상해보험계약 후 알릴 의무",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 22,
+      "title": "계약의 소멸",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 23,
+      "title": "제1회 보험료 및 회사의 보장개시",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 28,
+      "title": "보험료의 계산",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 30,
+      "title": "중대사유로 인한 해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 31,
+      "title": "회사의 파산선고와 해지",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 33,
+      "title": "다수보험의 처리",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 86,
+      "coverages": [
+        {
+          "coverage_name": "상해입원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "300만원"
+          },
+          "payment_condition": "비급여 의료비(비급여 병실료는 제외합니다)(본인이 실제로 부담한 금액을 말합니다)의 70%에 해당하는 금액",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "70%",
+          "source_quote": "비급여 의료비(비급여 병실료는 제외합니다)(본인이 실제로 부담한 금액을 말합니다)의 70%에 해당하는 금액",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해통원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "비급여 의료비(비급여 병실료는 제외합니다)(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "비급여 의료비(비급여 병실료는 제외합니다)(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병입원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "300만원"
+          },
+          "payment_condition": "비급여 의료비(비급여 병실료는 제외합니다)(본인이 실제로 부담한 금액을 말합니다)의 70%에 해당하는 금액",
+          "contract_type": "주계약",
+          "coverage_type": "입원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "70%",
+          "source_quote": "비급여 의료비(비급여 병실료는 제외합니다)(본인이 실제로 부담한 금액을 말합니다)의 70%에 해당하는 금액",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병통원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "비급여 의료비(비급여 병실료는 제외합니다)(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "contract_type": "주계약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "비급여 의료비(비급여 병실료는 제외합니다)(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해비급여의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "본인이 실제로 부담한 금액의 40%",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "40%",
+          "source_quote": "의료비 중 본인이 실제로 부담한 금액(통원의 경우 본인이 실제로 부담한 금액에서 같은 조 제1항 <표1>의 ‘공제금액’을 뺀 금액)의 40%를 제5조(보험가입금액 한도 등)에서 정한 연간 보험가입금액의 한도 내에서 보상합니다.",
+          "confidence": 65,
+          "level": "보통",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": false,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병비급여의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "본인이 실제로 부담한 금액의 40%",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "40%",
+          "source_quote": "의료비 중 본인이 실제로 부담한 금액(통원의 경우 본인이 실제로 부담한 금액에서 같은 조 제1항 <표1>의 ‘공제금액’을 뺀 금액)의 40%를 제5조(보험가입금액 한도 등)에서 정한 연간 보험가입금액의 한도 내에서 보상합니다.",
+          "confidence": 65,
+          "level": "보통",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": false,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "근골격계 이학요법 치료",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 3500000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "350만원"
+          },
+          "payment_condition": "본인이 실제로 부담한 비급여의료비에서 공제금액을 뺀 금액",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "본인이 실제로 부담한 비급여의료비(행위료, 약제비, 치료재료대, 조영제, 판독료 포함)에서 공제금액을 뺀 금액을 아래의 보장한도 범위 내에서 각각 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "주사치료",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 2500000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "250만원"
+          },
+          "payment_condition": "본인이 실제로 부담한 비급여의료비에서 공제금액을 뺀 금액",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "본인이 실제로 부담한 비급여의료비(행위료, 약제비, 치료재료대, 조영제, 판독료 포함)에서 공제금액을 뺀 금액을 아래의 보장한도 범위 내에서 각각 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "자기공명영상진단",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 3000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "300만원"
+          },
+          "payment_condition": "본인이 실제로 부담한 비급여의료비에서 공제금액을 뺀 금액",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "30%",
+          "source_quote": "본인이 실제로 부담한 비급여의료비(행위료, 약제비, 치료재료대, 조영제, 판독료 포함)에서 공제금액을 뺀 금액을 아래의 보장한도 범위 내에서 각각 보상합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험가입금액 한도 등",
+      "avg_confidence": 89,
+      "coverages": [
+        {
+          "coverage_name": "상해비급여 입원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "5천만원"
+          },
+          "payment_condition": "입원과 통원의 보상금액을 합산하여",
+          "contract_type": "특약",
+          "coverage_type": "입원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "상해비급여에 대하여 입원과 통원의 보상금액을 합산하여 5천만원 이내에서",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해비급여 통원",
+          "amount": {
+            "per_time": 200000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "20만원"
+          },
+          "payment_condition": "통원 1회당",
+          "contract_type": "특약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "상해비급여 또는 질병비급여 각각에 대하여 통원 1회당 20만원 이내에서",
+          "confidence": 80,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": false,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병비급여 입원",
+          "amount": {
+            "per_time": null,
+            "annual_limit": 50000000,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": true,
+            "raw": "5천만원"
+          },
+          "payment_condition": "입원과 통원의 보상금액을 합산하여",
+          "contract_type": "특약",
+          "coverage_type": "입원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "질병비급여에 대하여 입원과 통원의 보상금액을 합산하여 5천만원 이내에서",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병비급여 통원",
+          "amount": {
+            "per_time": 200000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "20만원"
+          },
+          "payment_condition": "통원 1회당",
+          "contract_type": "특약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "상해비급여 또는 질병비급여 각각에 대하여 통원 1회당 20만원 이내에서",
+          "confidence": 80,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": false,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "3대비급여",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "각 비급여의료비별 보장한도로",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "3대 비급여의 경우 각 비급여의료비별 보장한도로 합니다.",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 8,
+      "title": "특별약관의 소멸",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장종목별 보상내용",
+      "avg_confidence": 96,
+      "coverages": [
+        {
+          "coverage_name": "상해입원의료비",
+          "amount": {
+            "per_time": 3000000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "300만원"
+          },
+          "payment_condition": "‘비급여 의료비(비급여 병실료는 제외합니다)’(본인이 실제로 부담한 금액을 말합니다)의 50%에 해당하는 금액. 다만, 「의료법」 제3조제2항에 의한 의료기관(동법 제3조의3에 의한 종합병원은 제외)에서 발생한 비급여 의료비는 1회당 300만원을 한도로 합니다.",
+          "contract_type": "특약",
+          "coverage_type": "입원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "50%",
+          "source_quote": "다만, 「의료법」 제3조제2항에 의한 의료기관(동법 제3조의3에 의한 종합병원은 제외)에서 발생한 비급여 의료비는 1회당 300만원을 한도로 합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해통원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": {
+              "value": 100,
+              "unit": "일"
+            },
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "‘비급여 의료비(비급여 병실료는 제외합니다)’(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액(매년 계약해당일부터 1년간 통원 100일을 한도로 합니다.)",
+          "contract_type": "특약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "‘비급여 의료비(비급여 병실료는 제외합니다)’(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액(매년 계약해당일부터 1년간 통원 100일을 한도로 합니다.)",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "상해통원의료비 공제금액",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": 50000,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "5만원"
+          },
+          "payment_condition": "‘비급여 의료비(비급여 병실료는 제외합니다)’(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "contract_type": "특약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "통원항목별 공제금액 5만원과 보장대상 의료비의 50% 중 큰 금액",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병입원의료비",
+          "amount": {
+            "per_time": 3000000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "300만원"
+          },
+          "payment_condition": "‘비급여 의료비(비급여 병실료는 제외합니다)’(본인이 실제로 부담한 금액을 말합니다)의 50%에 해당하는 금액. 다만, 「의료법」 제3조제2항에 의한 의료기관(동법 제3조의3에 의한 종합병원은 제외)에서 발생한 비급여 의료비는 1회당 300만원을 한도로 합니다.",
+          "contract_type": "특약",
+          "coverage_type": "입원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "50%",
+          "source_quote": "다만, 「의료법」 제3조제2항에 의한 의료기관(동법 제3조의3에 의한 종합병원은 제외)에서 발생한 비급여 의료비는 1회당 300만원을 한도로 합니다.",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병통원의료비",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": {
+              "value": 100,
+              "unit": "일"
+            },
+            "is_shared_limit": false,
+            "raw": null
+          },
+          "payment_condition": "‘비급여 의료비(비급여 병실료는 제외합니다)’(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액(매년 계약해당일부터 1년간 통원 100일을 한도로 합니다.)",
+          "contract_type": "특약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "‘비급여 의료비(비급여 병실료는 제외합니다)’(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액(매년 계약해당일부터 1년간 통원 100일을 한도로 합니다.)",
+          "confidence": 85,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": null,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "질병통원의료비 공제금액",
+          "amount": {
+            "per_time": null,
+            "annual_limit": null,
+            "deductible": 50000,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "5만원"
+          },
+          "payment_condition": "‘비급여 의료비(비급여 병실료는 제외합니다)’(본인이 실제로 부담한 금액을 말합니다)에서 ＜표1>의 ‘통원항목별 공제금액’을 뺀 금액",
+          "contract_type": "특약",
+          "coverage_type": "통원",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "통원항목별 공제금액 5만원과 보장대상 의료비의 50% 중 큰 금액",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        },
+        {
+          "coverage_name": "자기공명영상진단",
+          "amount": {
+            "per_time": 2000000,
+            "annual_limit": null,
+            "deductible": null,
+            "visit_limit": null,
+            "is_shared_limit": false,
+            "raw": "200만원"
+          },
+          "payment_condition": "1회당 5만원과 보장대상 의료비의 50%중 큰 금액",
+          "contract_type": "특약",
+          "coverage_type": "불명",
+          "benefit_type": "비급여",
+          "self_payment_ratio": "없음",
+          "source_quote": "200만원 이내에서 보상",
+          "confidence": 100,
+          "level": "높음",
+          "checks": {
+            "coverage_name": true,
+            "amount": true,
+            "payment_condition": true,
+            "source_quote": true,
+            "contract_type_valid": true,
+            "coverage_type_valid": true,
+            "benefit_type_valid": true
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "number": 2,
+      "title": "보험가입금액",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 5,
+      "title": "보험금 지급 등의 절차",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "보장내용",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "적용대상",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 3,
+      "title": "사망보험금의 청구",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 1,
+      "title": "적용범위",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    },
+    {
+      "number": 42,
+      "title": "소액분쟁사건에 관한 특례",
+      "avg_confidence": 0,
+      "coverages": [],
+      "error": null
+    }
+  ]
+}
