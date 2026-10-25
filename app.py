@@ -558,18 +558,59 @@ if evaluated_products:
             else:
                 st.info("✅ **독소조항 안전:** 입력하신 기피 조건에 위배되는 독소조항이 1순위 추천 상품에서는 발견되지 않았습니다.")
 
+# 독소조항 감지로 인해 밀려난 후보들 필터링
             dropped_due_to_toxic = [
                 p for p in evaluated_products[1:] 
                 if p["llm_toxics"] or p["user_risks"]
             ]
             if dropped_due_to_toxic:
                 st.error("🚨 **독소조항 감지로 인한 대체 추천 안내:**")
+                
+                seen_base_names = set()  # 직업군만 다른 동일 상품 중복 출력 방지용 집합
+                displayed_cnt = 0
+
                 for other in dropped_due_to_toxic:
-                    reasons = []
-                    for t in other["llm_toxics"]:
-                        reasons.append(f"'{t.get('target_name')}' 약관의 면책 사유({t.get('issue_summary')})")
-                    for r in other["user_risks"]:
-                        reasons.append(r)
-                    st.markdown(f"> **{other['name']}** 상품은 약관상 **{', '.join(reasons)}** 등의 이유로 **보장을 받지 못할 위험**이 있습니다. 따라서 해당 위험이 없는 상품을 대신 1순위로 추천합니다.")
+                    full_p_name = other.get("name", "타 후보 보험")
+                    base_p_name = full_p_name.split("(")[0].strip()
+
+                    # 이미 안내한 보험 상품이면 건너뜀 (건설/공무원/주방장 중복 방지)
+                    if base_p_name in seen_base_names:
+                        continue
+                    seen_base_names.add(base_p_name)
+
+                    # 1) LLM이 찾은 독소조항 요약
+                    llm_reasons = [f"'{t.get('target_name')}' 약관의 면책 사유({t.get('issue_summary')})" for t in other["llm_toxics"]]
+                    
+                    # 2) 키워드 매칭된 특약들을 키워드별로 묶어서 요약 ("전이암 관련 면책 조건(암진단비Ⅱ 외 12건)")
+                    raw_matched = other.get("user_risks", [])
+                    grouped_riders = {}
+                    for item_str in raw_matched:
+                        if item_str.startswith("[") and "]" in item_str:
+                            rk_part, r_name = item_str.split("]", 1)
+                            rk_key = rk_part.replace("[", "").strip()
+                            grouped_riders.setdefault(rk_key, []).append(r_name.strip())
+                        else:
+                            grouped_riders.setdefault("기타", []).append(item_str)
+
+                    summary_parts = []
+                    for rk_key, r_list in grouped_riders.items():
+                        sample_names = ", ".join(r_list[:2])  # 대표 특약 최대 2개만 노출
+                        extra_cnt = len(r_list) - 2
+                        if extra_cnt > 0:
+                            summary_parts.append(f"약관 내 **'{rk_key}'** 관련 면책/제약 조건({sample_names} 외 {extra_cnt}건)")
+                        else:
+                            summary_parts.append(f"약관 내 **'{rk_key}'** 관련 면책/제약 조건({sample_names})")
+
+                    all_reasons = llm_reasons + summary_parts
+                    reason_text = " 및 ".join(all_reasons) if all_reasons else "약관 내 면책/감액 조건"
+
+                    st.markdown(
+                        f"> • **{base_p_name}** 상품은 {reason_text} 등의 이유로 **보장을 받지 못할 위험**이 있습니다. "
+                        f"따라서 해당 위험이 없는 상품을 대신 1순위로 추천합니다."
+                    )
+
+                    displayed_cnt += 1
+                    if displayed_cnt >= 2:  # 최대 2개 상품까지만 깔끔하게 비교 안내
+                        break
         else:
             st.caption("💡 사이드바 3번에 기피 조건을 적고 **[🔍 독소조항 분석하기]** 버튼을 누르면, 약관 내 면책·독소조항을 RAG-LLM으로 검증하여 대체 상품 추천 사유를 안내합니다.")

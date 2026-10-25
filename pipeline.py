@@ -274,9 +274,21 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
             if any(k in full_text for k in ["면책", "부담보", "제외", "감액", "미지급"]):
                 inherent_toxic_cnt += 1
 
+            # 연관성 검증 및 중복 방지 포맷팅
             for rk in validated_risk_keys:
                 if rk in full_text:
-                    matched_user_risks.append(f"약관 내 '{rk}' 관련 면책/제약 조건 포함 ({c_name})")
+                    # '전이암' 등 암 키워드가 통풍/독감/심근경색 같은 무관한 특약에서 잡히는 것 방지
+                    if rk in ["전이암", "암"] and not any(k in c_name for k in ["암", "항암", "표적", "양전자", "소액암", "유사암"]):
+                        continue
+                    if rk == "뇌혈관" and not any(k in c_name for k in ["뇌", "혈관"]):
+                        continue
+                    if rk == "심혈관" and not any(k in c_name for k in ["심장", "허혈", "심근", "부정맥", "혈관"]):
+                        continue
+                    
+                    # '[키워드] 특약명' 형태로 저장하여 나중에 그룹화하기 쉽게 만듦
+                    risk_entry = f"[{rk}] {c_name}"
+                    if risk_entry not in matched_user_risks:
+                        matched_user_risks.append(risk_entry)
 
             if "암진단비" in c_name:
                 cancer_scores.append(coverage_score)
@@ -342,14 +354,7 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         s2 = max(0.0, raw_s2)
         s3 = max(0.0, raw_s3)
 
-# ====================== 종합 점수 조절을 위한 수치  ========================
-        # [2] 100점 환산 기준값 (지수 모델 매핑)
-        theoretical_max_s3 = max(base_weight * 0.65, 0.22)  # 앞 숫자가 높을수록 100점 환산 점수 기준이 올라감, 뒤 숫자는 오버슈팅 방지 안전장치
-        calculated_100 = (s3 / theoretical_max_s3) * 100.0
-        score_100 = round(min(max(calculated_100, 10.0), 100.0), 1) # 앞 숫자는 패널티 맞은 점수 최소 보장 마지노선, 뒤 숫자는 100점 넘지 못하게 하는 친구
-# ==============================================================================
-
-        # [3] 5대 영역별 가중 만족도 점수 산출
+# [2] 5대 영역별 가중 만족도 점수 산출 (먼저 계산!)
         weight_keys = {
             "암": "암",
             "뇌 질환": "뇌혈관",
@@ -358,23 +363,55 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
             "입원/수술": "입원/수술",
         }
 
-
-# ================= 항목별 결과 상태바 점수 조절 수치 =================
+        # ================= 항목별 결과 상태바 점수 조절 수치 (동적 편차 & 민감도 적용) =================
         category_raw = {
-            "암": c_score_avg(cancer_scores) if cancer_scores else 0.35,            # 특약 매칭이 안되었을 경우 최소 점수 0.35로 설정 (0~1 범위)
-            "뇌 질환": c_score_avg(brain_scores) if brain_scores else 0.35,
-            "심장 질환": c_score_avg(heart_scores) if heart_scores else 0.35,
-            "상해": c_score_avg(inj_scores) if inj_scores else 0.35,
-            "입원/수술": c_score_avg(inp_scores) if inp_scores else 0.35,
+            "암": c_score_avg(cancer_scores) if cancer_scores else 0.15,            # 특약 미매칭 기본점수를 낮추면 보험 간 편차 확대
+            "뇌 질환": c_score_avg(brain_scores) if brain_scores else 0.15,
+            "심장 질환": c_score_avg(heart_scores) if heart_scores else 0.15,
+            "상해": c_score_avg(inj_scores) if inj_scores else 0.15,
+            "입원/수술": c_score_avg(inp_scores) if inp_scores else 0.15,
         }
+
+        w_base_map = user_prefs.get("w_base", {})   # 성별/연령에 따른 통계 기준 가중치
+        deltas_map = user_prefs.get("deltas", {})   # 사용자가 기준선에서 슬라이더를 좌(-)우(+)로 움직인 편차
+
         category_scores = {}
         for cat_name, raw_val in category_raw.items():
             w_k = weight_keys[cat_name]
-            w_val = w_final.get(w_k, 0.20)
-            w_ratio = (w_val / 0.20) ** 0.7      # 앞 숫자는 슬라이더 항목별 균등 기본 비중 / 뒤 숫자는 슬라이더 반응 민감도 지수
-            scaled_score = 52.0 + (raw_val * 42.0 * w_ratio)  # 앞 숫자 기본 점수, 뒤 숫자는 "최대점수 = (기본점수 + @)" 에서  @값
-            category_scores[cat_name] = round(min(max(scaled_score, 20.0), 96.0), 1) # 앞 숫자는 최소 점수, 뒤 숫자는 최대 점수, 마지막은 반올림 자리수
-# ==============================================================================
+            
+            base_w = max(w_base_map.get(w_k, 0.20), 0.05)  # 앞 숫자(0.20)는 통계값 없을 때 기본 비중 / 뒤 숫자(0.05)는 0으로 나누기 방지용 최소 기준 하한선
+            final_w = w_final.get(w_k, 0.20)               # 편차 보정이 완료된 최종 사용자 가중치
+            delta_w = deltas_map.get(w_k, 0.0)             # 기준선 대비 슬라이더 이동량 (+면 우측 이동, -면 좌측 이동)
+
+            sensitivity_exp = 1.05 if delta_w >= 0 else 0.55  # 처음 숫자를 높이면 슬라이더 민감도 증가
+            w_ratio = (final_w / base_w) ** sensitivity_exp   # 고정값(0.20) 대신 각 항목의 통계 기준값(base_w) 대비 상대 배율 산출
+            amplified_raw = (raw_val ** 1.2)   #보장 좋은 보험과 나쁜 보험의 격차(Contrast)를 증폭
+
+            # 아래 두 코드를 통해 상태바 점수의 출발점과 가산폭을 동적으로 조정
+            dynamic_base = 50.0 + (delta_w * 45.0)            # 앞 숫자는 기본 출발 점수 / 뒤 숫자는 슬라이더 이동에 따른 출발점 변동 폭
+            scaled_score = dynamic_base + (amplified_raw * 15.0 * w_ratio)  # 숫자는 보장 충실도에 따른 가산 폭 => 최종 상태바 값에 영향을 줌.
+            
+            category_scores[cat_name] = round(min(max(scaled_score, 20.0), 96.0), 1) # 최소 20점 ~ 최대 96점
+        # ===============================================================================================
+
+        # ====================== 종합 점수 조절을 위한 수치 (상태바 점수와 직결!) ========================
+        # [3] 상태바 점수의 가중 평균(70% 비중) + 기존 S3 가성비/다양성 점수(30% 비중) 결합
+        weighted_bar_avg = sum(
+            category_scores[cat_name] * w_final.get(weight_keys[cat_name], 0.20)
+            for cat_name in category_scores
+        )
+        
+        theoretical_max_s3 = max(base_weight * 0.65, 0.22)  # 앞 숫자가 낮을수록 s3 환산 점수가 올라감
+        s3_100 = (s3 / theoretical_max_s3) * 100.0
+        
+        # 두 점수를 결합하고, 목표 지급률(면책 리스크 민감도)에 따른 감쇄(retention_s3)를 최종 반영
+        # 앞 비율(0.75)은 상태바 점수 반영 비중 / 뒤 비율(0.25)은 특약 다양성·가격 등 기존 S3 반영 비중
+        combined_100 = ((weighted_bar_avg * 0.75) + (s3_100 * 0.25)) * (retention_s3 ** 0.4)
+        score_100 = round(min(max(combined_100, 10.0), 98.0), 1) # 최소 10점 보장 ~ 최대 98점 제한
+        
+        # 종합 순위 정렬(sort)도 이 새로운 점수 흐름을 따라가도록 s3 값을 동기화
+        s3 = round((score_100 / 100.0) * theoretical_max_s3, 4)
+        # ===============================================================================================
 
         evaluated_products.append({
             "name": p_name,
