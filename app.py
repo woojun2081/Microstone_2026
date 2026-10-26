@@ -210,7 +210,7 @@ for i in range(5):
         matrix[i, j] = slider_scores[i] / slider_scores[j]
 
 w_user = calculate_ahp_weights(matrix, CRITERIA)
-w_final, delta_dict, alpha, D = apply_delta_correction(w_base, w_user, tau=0.3)
+w_final, delta_dict, alpha, D = apply_delta_correction(w_base, w_user, tau=0.65) # 슬라이더 상태바와 관련한 감쇄 해소를 위해 숫자를 키워야함.
 
 claim_rate_val = st.sidebar.slider("목표 지급률 (면책 리스크 민감도, %)", 0, 100, 50, 5)
 
@@ -297,7 +297,15 @@ user_prefs = {
     "heart_val": heart_val,
     "injury_val": injury_val,
     "inpatient_val": inpatient_val,
-    "deltas": delta_dict
+    "deltas": delta_dict,
+    # [추가] 사용자가 슬라이더를 실제로 몇 눈금 움직였는지(-9 ~ +9) 계산하여 전달
+    "slider_steps": {
+        "암": cancer_val - slider_defaults["cancer"],
+        "뇌혈관": brain_val - slider_defaults["brain"],
+        "심장": heart_val - slider_defaults["heart"],
+        "상해": injury_val - slider_defaults["injury"],
+        "입원/수술": inpatient_val - slider_defaults["inpatient"]
+    }
 }
 
 # [수정] 결과를 바로 evaluated_products로 수신하여 이름 충돌 및 NameError 방지
@@ -418,7 +426,45 @@ if evaluated_products:
             with sub_m2:
                 st.metric("보장 특약 수", f"{best['rider_count']} 개")
 
-            st.caption(f"⚠️ 독소/면책 탐지: **{best['toxic_count'] + len(best['llm_toxics'])}건** 검출됨")
+            # 플로팅 팝업창으로 상세 내역 표시
+            total_toxic_count = best.get("toxic_count", 0) + len(best.get("llm_toxics", []))
+
+            if total_toxic_count > 0:
+                with st.popover(f"⚠️ 독소/면책 탐지: **{total_toxic_count}건** (상세 확인 🔍)", use_container_width=True):
+                    st.markdown("#### 🔍 탐지된 독소 및 면책 조항 상세")
+                    st.caption("약관 분석 엔진이 해당 상품에서 감지한 제약 및 면책 조건입니다.")
+                    st.divider()
+
+                    has_content = False
+
+                    # 1) LLM 정밀 분석 독소조항
+                    if best.get("llm_toxics"):
+                        has_content = True
+                        st.markdown("**🤖 AI 정밀 분석 독소조항**")
+                        for item in best["llm_toxics"]:
+                            st.error(f"**[{item.get('target_name', '특약')}]** {item.get('issue_summary')}")
+
+                    # 2) 사용자 기피 키워드 매칭 내역
+                    if best.get("user_risks"):
+                        has_content = True
+                        st.markdown("**🎯 사용자 입력 기피 조건 매칭**")
+                        for r in best["user_risks"]:
+                            st.warning(f"• {r}")
+
+                    # 3) 약관 내재 면책/감액 특약 목록
+                    inherent_list = best.get("inherent_toxics", [])
+                    if inherent_list:
+                        has_content = True
+                        st.markdown("**📄 약관 내 면책/감액 조항 포함 특약**")
+                        for idx, item in enumerate(inherent_list, 1):
+                            st.markdown(f"**{idx}. {item['rider_name']}**")
+                            st.caption(f"↳ 탐지 사유: `{item['reason']}`")
+
+                    # 위 데이터가 아직 캐시에 없거나 비어있을 때의 안내
+                    if not has_content:
+                        st.info(f"약관 내 총 **{total_toxic_count}건**의 면책/감액 키워드가 감지되었습니다. (상세 내역을 보려면 Streamlit 서버를 재시작해 주세요.)")
+            else:
+                st.caption("✅ **독소/면책 탐지:** 발견된 위험 조항 없음 (안전)")
 
         with col_radar:
             st.caption("🕸️ **5대 보장 밸런스 프로필 (방사형 능력치)**")

@@ -244,6 +244,7 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         treat_cnt = 0
         renewable_cnt = 0
         inherent_toxic_cnt = 0
+        inherent_toxics = []
         matched_user_risks = []
         coverage_highlights = []
         raw_clause_texts = []
@@ -271,8 +272,14 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
             if "갱신" in c_name or "갱신" in pay_period:
                 renewable_cnt += 1
 
-            if any(k in full_text for k in ["면책", "부담보", "제외", "감액", "미지급"]):
+            found_words = [k for k in ["면책", "부담보", "제외", "감액", "미지급"] if k in full_text]
+            if found_words:
                 inherent_toxic_cnt += 1
+                words_str = ", ".join(found_words)
+                inherent_toxics.append({
+                    "rider_name": c_name,
+                    "reason": f"약관 내 '{words_str}' 조항 포함"
+                })
 
             # 연관성 검증 및 중복 방지 포맷팅
             for rk in validated_risk_keys:
@@ -375,23 +382,35 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         w_base_map = user_prefs.get("w_base", {})   # 성별/연령에 따른 통계 기준 가중치
         deltas_map = user_prefs.get("deltas", {})   # 사용자가 기준선에서 슬라이더를 좌(-)우(+)로 움직인 편차
 
+        # [pipeline.py] category_scores 계산 구간
+        slider_steps_map = user_prefs.get("slider_steps", {})
+
         category_scores = {}
         for cat_name, raw_val in category_raw.items():
             w_k = weight_keys[cat_name]
             
-            base_w = max(w_base_map.get(w_k, 0.20), 0.05)  # 앞 숫자(0.20)는 통계값 없을 때 기본 비중 / 뒤 숫자(0.05)는 0으로 나누기 방지용 최소 기준 하한선
-            final_w = w_final.get(w_k, 0.20)               # 편차 보정이 완료된 최종 사용자 가중치
-            delta_w = deltas_map.get(w_k, 0.0)             # 기준선 대비 슬라이더 이동량 (+면 우측 이동, -면 좌측 이동)
-
-            sensitivity_exp = 1.05 if delta_w >= 0 else 0.55  # 처음 숫자를 높이면 슬라이더 민감도 증가
-            w_ratio = (final_w / base_w) ** sensitivity_exp   # 고정값(0.20) 대신 각 항목의 통계 기준값(base_w) 대비 상대 배율 산출
-            amplified_raw = (raw_val ** 1.2)   #보장 좋은 보험과 나쁜 보험의 격차(Contrast)를 증폭
-
-            # 아래 두 코드를 통해 상태바 점수의 출발점과 가산폭을 동적으로 조정
-            dynamic_base = 50.0 + (delta_w * 45.0)            # 앞 숫자는 기본 출발 점수 / 뒤 숫자는 슬라이더 이동에 따른 출발점 변동 폭
-            scaled_score = dynamic_base + (amplified_raw * 15.0 * w_ratio)  # 숫자는 보장 충실도에 따른 가산 폭 => 최종 상태바 값에 영향을 줌.
+            # 1. 사용자가 기준선에서 실제로 움직인 슬라이더 눈금 수 (-9 ~ +9)
+            step_diff = slider_steps_map.get(w_k, 0)
             
-            category_scores[cat_name] = round(min(max(scaled_score, 20.0), 96.0), 1) # 최소 20점 ~ 최대 96점
+            # 2. 기본 출발 베이스라인: 
+            # 슬라이더를 건드리지 않았을 때(step_diff=0) 기본 보장 점수는 46점으로 안정적 유지 (위험 배지 방지)
+            # 슬라이더를 1칸 올릴 때마다 기본 점수가 +3.5점씩 정직하게 상승
+            dynamic_base = 46.0 + (step_diff * 3.5)
+
+            # 3. 보장 충실도 가산 (0.0 ~ 1.0 범위의 raw_val을 32점 만점 기준으로 가산)
+            # 슬라이더 눈금(step_diff)에 따라 가산 배율이 부드럽게 조정됨 (1칸당 약 5%씩 가감)
+            step_multiplier = max(0.6, min(1.0 + (step_diff * 0.05), 1.35))
+            calculated_score = dynamic_base + (raw_val * 32.0 * step_multiplier)
+
+            # 4. 상단 완충 곡선 (88점 초과 시 증가 폭을 부드럽게 조절하여 슬라이더 9~10에서 96~100점 도달)
+            if calculated_score > 88.0:
+                overshoot = calculated_score - 88.0
+                final_score = 88.0 + (overshoot * 0.4)
+            else:
+                final_score = calculated_score
+
+            # 5. 최소 25점 보장, 최대 100점 클램핑
+            category_scores[cat_name] = round(min(max(final_score, 25.0), 100.0), 1)
         # ===============================================================================================
 
         # ====================== 종합 점수 조절을 위한 수치 (상태바 점수와 직결!) ========================
@@ -420,6 +439,7 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
             "rider_count": len(riders),
             "renewable_count": renewable_cnt,
             "toxic_count": inherent_toxic_cnt,
+            "inherent_toxics": inherent_toxics,
             "user_risks": list(set(matched_user_risks)),
             "llm_toxics": [],
             "highlights": coverage_highlights,
