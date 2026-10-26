@@ -382,35 +382,36 @@ def run_evaluation_pipeline(raw_products: list, user_prefs: dict, user_notes: st
         w_base_map = user_prefs.get("w_base", {})   # 성별/연령에 따른 통계 기준 가중치
         deltas_map = user_prefs.get("deltas", {})   # 사용자가 기준선에서 슬라이더를 좌(-)우(+)로 움직인 편차
 
-        # [pipeline.py] category_scores 계산 구간
+        # [pipeline.py] category_scores 계산 구간 교체
         slider_steps_map = user_prefs.get("slider_steps", {})
 
         category_scores = {}
         for cat_name, raw_val in category_raw.items():
             w_k = weight_keys[cat_name]
             
-            # 1. 사용자가 기준선에서 실제로 움직인 슬라이더 눈금 수 (-9 ~ +9)
+            # 사용자가 통계 기준선 대비 실제로 움직인 슬라이더 눈금 수 (-9 ~ +9)
             step_diff = slider_steps_map.get(w_k, 0)
             
-            # 2. 기본 출발 베이스라인: 
-            # 슬라이더를 건드리지 않았을 때(step_diff=0) 기본 보장 점수는 46점으로 안정적 유지 (위험 배지 방지)
-            # 슬라이더를 1칸 올릴 때마다 기본 점수가 +3.5점씩 정직하게 상승
-            dynamic_base = 46.0 + (step_diff * 3.5)
+            # [1] 상품 고유의 기본 보장 점수 (30점 ~ 75점 베이스)
+            # - raw_val이 높을수록 기본 출발점이 높아 순위별 변별력이 유지됨
+            product_base = 32.0 + (raw_val * 42.0)
+            
+            # [2] 슬라이더 이동 반영량:
+            # 사용자가 슬라이더를 1칸 올릴 때마다 상품의 보장 충실도(raw_val)와 결합하여
+            # 모든 상품의 해당 상태바가 약 +3.5 ~ +5.0점씩 정직하게 동반 상승함
+            user_shift = step_diff * (3.2 + (raw_val * 1.8))
+            
+            calculated_score = product_base + user_shift
 
-            # 3. 보장 충실도 가산 (0.0 ~ 1.0 범위의 raw_val을 32점 만점 기준으로 가산)
-            # 슬라이더 눈금(step_diff)에 따라 가산 배율이 부드럽게 조정됨 (1칸당 약 5%씩 가감)
-            step_multiplier = max(0.6, min(1.0 + (step_diff * 0.05), 1.35))
-            calculated_score = dynamic_base + (raw_val * 32.0 * step_multiplier)
-
-            # 4. 상단 완충 곡선 (88점 초과 시 증가 폭을 부드럽게 조절하여 슬라이더 9~10에서 96~100점 도달)
+            # [3] 88점 초과 시 완충 (슬라이더를 9~10으로 끝까지 올려야 96~100점 도달)
             if calculated_score > 88.0:
                 overshoot = calculated_score - 88.0
                 final_score = 88.0 + (overshoot * 0.4)
             else:
                 final_score = calculated_score
 
-            # 5. 최소 25점 보장, 최대 100점 클램핑
-            category_scores[cat_name] = round(min(max(final_score, 25.0), 100.0), 1)
+            # 20점 ~ 100점 범위 클램핑
+            category_scores[cat_name] = round(min(max(final_score, 20.0), 100.0), 1)
         # ===============================================================================================
 
         # ====================== 종합 점수 조절을 위한 수치 (상태바 점수와 직결!) ========================
